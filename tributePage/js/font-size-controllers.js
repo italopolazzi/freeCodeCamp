@@ -1,6 +1,4 @@
-const getChangeFontSizeButtons = () => document.getElementsByName(CHANGE_FONT_SIZE)
-
-const getClickedButtonId = (event) => event.target.id
+const getChangeFontSizeInputRange = () => document.getElementById(CHANGE_FONT_SIZE)
 
 const setSizeForCSSFontSizeVariable = (size, scale) => document.documentElement.style.setProperty(PAGE_FONT_SIZE, `${size}${scale}`)
 
@@ -45,59 +43,27 @@ const setUserPreferences = ({
 }) => {
     setSizeForCSSFontSizeVariable(size, scale)
     multiplication_factor = multiplication_factor
-
-}
-
-const increaseFontSize = () => {
-    multiplication_factor += PERCENT_OF_CHANGE
-    const newSize = calculateNewSizeBasedOnTheMultiplicationFactor()
-    setSizeForCSSFontSizeVariable(newSize, initialFontSize.scale)
-}
-
-const decreaseFontSize = () => {
-    multiplication_factor -= PERCENT_OF_CHANGE
-    const newSize = calculateNewSizeBasedOnTheMultiplicationFactor()
-    setSizeForCSSFontSizeVariable(newSize, initialFontSize.scale)
+    getChangeFontSizeInputRange().value = multiplication_factor * 100
 }
 
 const initMultiplicationFactor = () => multiplication_factor = 1
 
-const resetFontSize = () => {
-    initMultiplicationFactor()
-    setSizeForCSSFontSizeVariable(initialFontSize.size, initialFontSize.scale)
-}
-
 const PAGE_FONT_SIZE = '--page-font-size'
-const INCREASE_FONT_SIZE = 'increaseFontSize'
-const RESET_FONT_SIZE = 'resetFontSize'
-const DECREASE_FONT_SIZE = 'decreaseFontSize'
 const CHANGE_FONT_SIZE = 'changeFontSize'
-const PERCENT_OF_CHANGE = 0.1
 var multiplication_factor = initMultiplicationFactor()
 
 const {
     initialFontSize
 } = getInitialCSSFontSizeAndScaleValues()
 
-const changeFontSize = () => {
-    getChangeFontSizeButtons().forEach(button => {
-        button.addEventListener('click', (event) => {
-            switch (getClickedButtonId(event)) {
-                case INCREASE_FONT_SIZE:
-                    increaseFontSize()
-                    break
-                case RESET_FONT_SIZE:
-                    resetFontSize()
-                    break
-                case DECREASE_FONT_SIZE:
-                    decreaseFontSize()
-                    break
-                default:
-                    break
-            }
-        })
-    })
+const getTheMultiplicationFactor = (value) => value/100
 
+const changeFontSize = () => {
+    getChangeFontSizeInputRange().addEventListener('change', (event) => {
+        multiplication_factor = getTheMultiplicationFactor(event.target.value)
+        const newSize = calculateNewSizeBasedOnTheMultiplicationFactor()
+        setSizeForCSSFontSizeVariable(newSize, initialFontSize.scale)
+    })
 }
 
 export {
