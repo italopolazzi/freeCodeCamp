@@ -1,6 +1,15 @@
 :root {
     --page-font-size: 20px;
+    --page-color: #000;
+    /* COLORS */
+    --primary-color: #D4ECD4;
+    --secondary-color: #f7797d;
+    --light-color: white;
+    --dark-color: #333;
+    --light-color-darken2: hsl(0, 0%, 80%);
+
     --material-icons-font-size: 1.2em;
+    --main-transition: all .3s linear;
 }
 
 html {
@@ -8,5 +17,14 @@ html {
 }
 
 *:focus {
-    outline: 0.15em solid black;
+    outline: 0.15em solid var(--dark-color);
+}
+
+a {
+    text-decoration: none;
+    color: var(--page-color);
+    border: 0.1rem solid currentColor;
+    background: transparent;
+    padding: 0.6em 1em;
+    border-radius: 0.4em;
 }
