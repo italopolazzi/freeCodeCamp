@@ -1,0 +1,16 @@
+#timeline {
+    background: white;
+    margin: 0 -1em;
+
+}
+
+.timeline-item {
+    background: red;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.timeline-item time {
+    align-self: flex-end
+}

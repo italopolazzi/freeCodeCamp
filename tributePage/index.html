@@ -12,24 +12,92 @@
 </head>
 
 <body>
-    <a class="sr-only" href="#main">Skip to Main Content</a>
-    <header id="header">
+    <ul class="sr-only">
+        <li><a href="#nav">Skip to Navigation</a></li>
+        <li><a href="#main">Skip to Main Content</a></li>
+    </ul>
+    <header id="header" role="banner">
         <div id="font-size-controllers">
             <input type="range" min="60" max="140" value="100" step="20" name="changeFontSize" id="changeFontSize">
         </div>
-        <h1>Britney Spears: A tribute page</h1>
     </header>
-    <nav id="nav">
+    <nav id="nav" role="navigation">
         <i class="material-icons">menu</i>
     </nav>
-    <main id="main">
-        <h1 id="title">Britney Spears</h1>
+    <main id="main" role="main">
+        <h1 id="title"><strong>Britney Spears</strong></h1>
         <p id="">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellat fugiat ullam mollitia cupiditate,
             praesentium est sequi eaque reiciendis dolores voluptate culpa iure. Minima, sapiente voluptatem labore
             dolor necessitatibus nobis deleniti.</p>
-    </main>
-    <footer id="footer">
 
+        <section id="timeline" role="region">
+            <div tabindex="0" class="timeline-item" aria-labelledby="time1">
+                <h2 id="time1">Antes da fama e início da carreira</h2>
+                <time datetime="1981-12-31">1981–97</time>
+            </div>
+            <div tabindex="0" class="timeline-item" aria-labelledby="time2">
+                <h2 id="time2">...Baby One More Time e Oops!... I Did It Again</h2>
+                <time datetime="1998-12-31">1998–2000</time>
+            </div>
+            <div tabindex="0" class="timeline-item" aria-labelledby="time3">
+                <h2 id="time3">Britney e estreia na atuação</h2>
+                <time datetime="2001-12-31">2001–02</time>
+            </div>
+            <div tabindex="0" class="timeline-item" aria-labelledby="time4">
+                <h2 id="time4">In the Zone e casamentos</h2>
+                <time datetime="2003-12-31">2003–05</time>
+            </div>
+            <div tabindex="0" class="timeline-item" aria-labelledby="time5">
+                <h2 id="time5">Problemas pessoais e Blackout</h2>
+                <time datetime="2006-12-31">2006–07</time>
+            </div>
+            <div tabindex="0" class="timeline-item" aria-labelledby="time6">
+                <h2 id="time6">Circus</h2>
+                <time datetime="2008-12-31">2008–10</time>
+            </div>
+            <div tabindex="0" class="timeline-item" aria-labelledby="time7">
+                <h2 id="time7">Femme Fatale e The X Factor</h2>
+                <time datetime="2011-12-31">2011–12</time>
+            </div>
+            <div tabindex="0" class="timeline-item" aria-labelledby="time8">
+                <h2 id="time8">Britney Jean e Britney: Piece of Me</h2>
+                <time datetime="2013-12-31">2013–15</time>
+            </div>
+            <div tabindex="0" class="timeline-item" aria-labelledby="time9">
+                <h2 id="time9">Glory</h2>
+                <time datetime="2016-12-31">2016</time>
+            </div>
+        </section>
+
+        <article>
+            <h3 id="texto1">Texto de exemplo 1</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti officia quaerat architecto. Corrupti
+                aspernatur fuga ullam quidem repellendus inventore, consequatur veniam eaque consequuntur tempore
+                perferendis aliquam sunt ducimus laboriosam. Iste.</p>
+            <a href="#1" aria-labelledby="texto1">Leia mais</a>
+        </article>
+        <article>
+            <h3 id="texto2">Texto de exemplo 2</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti officia quaerat architecto. Corrupti
+                aspernatur fuga ullam quidem repellendus inventore, consequatur veniam eaque consequuntur tempore
+                perferendis aliquam sunt ducimus laboriosam. Iste.</p>
+            <a href="#2" aria-labelledby="texto2">Leia mais</a>
+        </article>
+        <article>
+            <h3 id="texto3">Texto de exemplo 3</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti officia quaerat architecto. Corrupti
+                aspernatur fuga ullam quidem repellendus inventore, consequatur veniam eaque consequuntur tempore
+                perferendis aliquam sunt ducimus laboriosam. Iste.</p>
+            <a href="#3" aria-labelledby="texto3">Leia mais</a>
+        </article>
+
+
+    </main>
+    <!-- <aside role="complementary"></aside> -->
+    <footer id="footer" role="contentinfo">
+        &copy; Ítalo Polazzi - 2019
+        <br>
+        <a href="#header">Back to the top</a>
     </footer>
     <noscript>Your browser does not have JavaScript support or it is deactivated</noscript>
     <script src="js/index.js" type="module"></script>

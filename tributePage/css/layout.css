@@ -1,0 +1,60 @@
+body {
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    display: grid;
+    /* grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr); */
+    /* grid-template-areas:
+        "header main main main"
+        "nav main main main"
+        "nav main main main"
+        "footer main main main"; */
+        grid-template-columns: 1fr 2fr;
+        grid-template-rows: 1fr 1fr;
+    grid-gap: 1em;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+}
+
+@media (max-width: 720px){
+    body{
+        grid-template-areas:
+        "header"
+        "nav"
+        "main"
+        "footer";
+        grid-gap: 0;
+    }
+}
+
+body > * {
+    padding: 1em;
+}
+#header {
+    background-color: lightcoral;
+    /* grid-area: header; */
+    background-image: url('../img/britney_spears_photoshot_for_kenzo_1.jpg');
+    background-size: cover;
+}
+
+#nav {
+    background-color: lightgreen;
+    /* grid-area: nav; */
+    min-width: 20em;
+}
+
+#main {
+    background-color: lightblue;
+    /* grid-area: main; */
+    grid-column: 2/3;
+    grid-row: 1/4;
+    overflow-y: scroll;
+}
+
+#footer{
+    background-color: lightcoral;
+    /* grid-area: footer; */
+}
