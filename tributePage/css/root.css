@@ -28,3 +28,10 @@ a {
     padding: 0.6em 1em;
     border-radius: 0.4em;
 }
+
+@media (max-width: 600px) {
+    :root {
+
+        --page-font-size: 16px;
+    }
+}

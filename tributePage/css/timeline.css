@@ -1,45 +1,25 @@
-/* #timeline {
-    margin: 0 auto;
-    width: 90%;
-    border-left: 0.3em dashed  var(--light-color);
-    padding: 1em;
-}
-
-.timeline-item {
-    position: relative;
-}
-
-.timeline-item h2 {
-    margin-left: 1rem;
-}
-
-.timeline-item time {
-    line-height: 1em;
-    position: absolute;
-    background:  var(--light-color);
-    width: 3em;
-    height: 3em;
-    left: -3rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-} */
-
 #timeline {
     background: transparent;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
     justify-content: flex-start;
     position: relative;
-    /* width: 80%; */
     margin: 1em 0;
 }
 
 #timeline:before {
     content: '';
-    border-left: 0.5em double #0005;
+    border-left: 0.5em double var(--dark-color);
     z-index: 0;
     position: absolute;
     left: 1.75em;
@@ -47,39 +27,52 @@
     height: 100%;
 }
 
+
 .timeline-item {
     z-index: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
     flex-direction: row;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
     align-items: flex-start;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
     justify-content: flex-start;
-    /* background-color:  var(--light-color); */
     margin-bottom: 1em;
 }
 
 .timeline-item time {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
-    background-color:  var(--light-color);
+    background-color: var(--light-color);
     height: 4em;
+    -webkit-box-flex: 1;
+    -ms-flex: 1 0 4em;
     flex: 1 0 4em;
     border-radius: 50%;
     margin-top: 1em;
     line-height: 1.4em;
+    z-index: 1;
 }
 
 .timeline-item time strong {
     font-size: 2em;
-}
-
-.timeline-content {
-    /* width: 50%; */
-    background-color:  var(--light-color);
-    margin: 0;
-    margin-left: 1em;
-    padding: 1em;
 }
 
 .timeline-content h3 {
@@ -90,5 +83,79 @@
 .timeline-item:hover .timeline-content,
 .timeline-item:focus time,
 .timeline-item:focus .timeline-content {
+    -webkit-box-shadow: 0 0 10px #0005;
     box-shadow: 0 0 10px #0005;
+}
+
+.timeline-text {
+    padding: 1em;
+    word-wrap: break-word;
+}
+
+.timeline-content {
+    background-color: var(--light-color);
+    margin: 0;
+    margin-left: 1em;
+}
+
+#timeline .img-container {
+    overflow: hidden;
+}
+
+#timeline .img-container img {
+    width: 100%;
+}
+
+/* landscape */
+.timeline-landscape .img-container {
+    max-height: 300px;
+}
+
+
+/* portrait */
+
+.timeline-portrait .timeline-content {
+    position: relative;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 30% 70%;
+    grid-template-columns: 30% 70%;
+    -ms-grid-rows: 1fr;
+    grid-template-rows: 1fr;
+}
+
+.timeline-portrait .timeline-content>*:nth-child(1) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+}
+
+.timeline-portrait .timeline-content>*:nth-child(2) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
+}
+
+.timeline-portrait .img-container {
+    height: 100%;
+}
+
+.timeline-portrait .img-container img {
+    height: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+}
+
+@media (max-width: 600px) {
+    #timeline:before {
+        left: 0.5em;
+    }
+
+    .timeline-item {
+        margin-left: -1.25em;
+    }
+
+    .timeline-content {
+        background-color: var(--light-color);
+        margin: 0;
+        margin-left: -1em;
+    }
 }
