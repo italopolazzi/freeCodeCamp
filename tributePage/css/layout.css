@@ -1,0 +1,136 @@
+body {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    display: -ms-grid;
+    display: grid;
+    height: 100vh;
+    width: auto;
+}
+
+body>* {
+    padding: 1em;
+}
+
+#header {
+    background-color: var(--primary-color);
+    background-image: url('../img/britney_spears_photoshot_for_kenzo_2.jpg');
+    background-position: top right;
+    background-size: cover;
+    z-index: 1;
+}
+
+#nav {
+    background-color: var(--light-color);
+    z-index: 2;
+    /* display: none; */
+}
+
+#main {
+    background-color: var(--primary-color);
+}
+
+#footer {
+    background-color: var(--light-color-darken2);
+}
+
+@media (max-width: 1023px) {
+    body {
+        grid-template-areas:
+            "nav"
+            "header"
+            "main"
+            "footer";
+        grid-gap: 0;
+    }
+
+    #header {
+        grid-area: header;
+        min-height: 300px;
+    }
+
+    #nav {
+        grid-area: nav;
+    }
+
+    .nav-fixed {
+        width: 100%;
+        position: fixed;
+    }
+
+    #main {
+        grid-area: main;
+    }
+
+    #footer {
+        grid-area: footer;
+    }
+}
+
+@media (max-width: 1023px) {
+    #header {
+        -ms-grid-row: 3;
+        -ms-grid-column: 1;
+    }
+
+    #nav {
+        -ms-grid-row: 1;
+        -ms-grid-column: 1;
+    }
+
+    #main {
+        -ms-grid-row: 5;
+        -ms-grid-column: 1;
+    }
+
+    #footer {
+        -ms-grid-row: 7;
+        -ms-grid-column: 1;
+    }
+}
+
+@media (min-width: 1024px) {
+    body {
+        -ms-grid-columns: 1fr 0em 3fr;
+        grid-template-columns: 1fr 3fr;
+        -ms-grid-rows: 1fr 0em 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-gap: 0em;
+        overflow: hidden;
+    }
+
+    body>*:nth-child(1) {
+        -ms-grid-row: 1;
+        -ms-grid-column: 1;
+    }
+
+    body>*:nth-child(2) {
+        -ms-grid-row: 1;
+        -ms-grid-column: 3;
+    }
+
+    body>*:nth-child(3) {
+        -ms-grid-row: 3;
+        -ms-grid-column: 1;
+    }
+
+    body>*:nth-child(4) {
+        -ms-grid-row: 3;
+        -ms-grid-column: 3;
+    }
+
+    #main {
+        -ms-grid-column: 2;
+        -ms-grid-column-span: 1;
+        grid-column: 2/3;
+        -ms-grid-row: 1;
+        -ms-grid-row-span: 3;
+        grid-row: 1/4;
+        overflow-y: auto;
+    }
+
+    /* #back-to-the-top {
+        display: none;
+    } */
+}

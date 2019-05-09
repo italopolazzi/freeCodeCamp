@@ -1,23 +1,183 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="author" content="Ítalo Polazzi">
-        <meta name="description" content="A tribute page of female singer Britney Spears' life">
-        <title>Britney Spears: tribute page</title>
-        <link rel="stylesheet" href=""
-    </head>
-    <body>
-        <header id="header">
-            
-        </header>
-        <main id="main">
-            
-        </main>
-        <footer id="footer">
-            
-        </footer>
-        <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
-    </body>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Ítalo Polazzi">
+    <meta name="description" content="A tribute page of female singer Britney Spears' life">
+    <title>Britney Spears: tribute page</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <ul class="sr-only">
+        <!-- <li><a tabindex="0" href="#nav">Skip to Navigation</a></li> -->
+        <li><a tabindex="0" href="#main">Skip to Main Content</a></li>
+    </ul>
+    <header id="header" role="banner">
+        <span id="page-name">Home</span>
+        <div class="shadow"></div>
+    </header>
+    <!-- <nav id="nav" role="navigation">
+        <ul>
+            <li tabindex="0"><i aria-hidden="true" class="material-icons">menu</i>Open</li>
+            <li tabindex="0"><i aria-hidden="true" class="material-icons">home</i>Home</li>
+            <li tabindex="0"><i aria-hidden="true" class="material-icons">close</i>Close</li>
+            <li tabindex="0"><i aria-hidden="true" class="material-icons">arrow_left</i>Arrow left</li>
+            <li tabindex="0"><i aria-hidden="true" class="material-icons">arrow_right</i>Arrow right</li>
+        </ul>
+    </nav> -->
+    <main id="main" role="main">
+        <h1 id="title"><strong>Britney Spears</strong></h1>
+        <h2>Who is she?</h2>
+        <p id="tribute-info">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis dolorem reprehenderit
+            at odit laudantium sint, ex ullam ad nulla aperiam, similique repellat? Blanditiis, animi tenetur. Adipisci
+            illo facere ea eligendi.</p>
+
+
+        <div id="img-div">
+            <img id="image" src="./img/britney_spears_photoshot_for_kenzo_4.jpg"
+                alt="Britney Spears wearing cap and red jacket for advertising brand Kenzo clothing">
+            <div id="img-caption">Britney Spears wearing cap and red jacket for advertising brand Kenzo clothing
+            </div>
+        </div>
+        <h2>Career</h2>
+        <section id="timeline" role="region">
+            <div tabindex="0" class="timeline-item" aria-labelledby="time1">
+                <time datetime="1981-12-31">19<br><strong>81</strong></time>
+                <div class="timeline-content">
+                    <div class="img-container"><img src="./img/britney_spears_1981.jpg" alt=""></div>
+                    <div class="timeline-text">
+                        <h3 id="time1">Early life and career beginnings</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta eos saepe quod voluptate
+                            placeat
+                            debitis expedita dolor itaque obcaecati sed voluptatem quisquam amet praesentium totam quo,
+                            dicta autem exercitationem error!</p>
+                    </div>
+                </div>
+            </div>
+            <div tabindex="0" class="timeline-item" aria-labelledby="time2">
+                <time datetime="1998-12-31">19<br><strong>98</strong></time>
+                <div class="timeline-content">
+                    <div class="img-container"><img src="./img/britney_spears_1998.jpg" alt=""></div>
+                    <div class="timeline-text">
+                        <h3 id="time2">...Baby One More Time and Oops!... I Did It Again</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta eos saepe quod voluptate
+                            placeat
+                            debitis expedita dolor itaque obcaecati sed voluptatem quisquam amet praesentium totam quo,
+                            dicta autem exercitationem error!</p>
+                    </div>
+                </div>
+            </div>
+            <div tabindex="0" class="timeline-item" aria-labelledby="time3">
+                <time datetime="2001-12-31">20<br><strong>01</strong></time>
+                <div class="timeline-content">
+                    <div class="img-container"><img src="./img/britney_spears_2001.jpg" alt=""></div>
+                    <div class="timeline-text">
+                        <h3 id="time3">Britney and Crossroads</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta eos saepe quod voluptate
+                            placeat
+                            debitis expedita dolor itaque obcaecati sed voluptatem quisquam amet praesentium totam quo,
+                            dicta autem exercitationem error!</p>
+                    </div>
+                </div>
+            </div>
+            <div tabindex="0" class="timeline-item" aria-labelledby="time4">
+                <time datetime="2003-12-31">20<br><strong>03</strong></time>
+                <div class="timeline-content">
+                    <div class="img-container"><img src="./img/britney_spears_2003.jpg" alt=""></div>
+                    <div class="timeline-text">
+                        <h3 id="time4">In the Zone and marriages</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta eos saepe quod voluptate
+                            placeat
+                            debitis expedita dolor itaque obcaecati sed voluptatem quisquam amet praesentium totam quo,
+                            dicta autem exercitationem error!</p>
+                    </div>
+                </div>
+            </div>
+            <div tabindex="0" class="timeline-item" aria-labelledby="time5">
+                <time datetime="2006-12-31">20<br><strong>06</strong></time>
+                <div class="timeline-content">
+                    <div class="img-container"><img src="./img/britney_spears_2006.jpg" alt=""></div>
+                    <div class="timeline-text">
+                        <h3 id="time5">Personal struggles and Blackout</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta eos saepe quod voluptate
+                            placeat
+                            debitis expedita dolor itaque obcaecati sed voluptatem quisquam amet praesentium totam quo,
+                            dicta autem exercitationem error!</p>
+                    </div>
+                </div>
+            </div>
+            <div tabindex="0" class="timeline-item" aria-labelledby="time6">
+                <time datetime="2008-12-31">20<br><strong>08</strong></time>
+                <div class="timeline-content">
+                    <div class="img-container"><img src="./img/britney_spears_2008.jpg" alt=""></div>
+                    <div class="timeline-text">
+                        <h3 id="time6">Conservatorship and Circus</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta eos saepe quod voluptate
+                            placeat
+                            debitis expedita dolor itaque obcaecati sed voluptatem quisquam amet praesentium totam quo,
+                            dicta autem exercitationem error!</p>
+                    </div>
+                </div>
+            </div>
+            <div tabindex="0" class="timeline-item" aria-labelledby="time7">
+                <time datetime="2011-12-31">20<br><strong>11</strong></time>
+                <div class="timeline-content">
+                    <div class="img-container"><img src="./img/britney_spears_2011.jpg" alt=""></div>
+                    <div class="timeline-text">
+                        <h3 id="time7">Femme Fatale and The X Factor</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta eos saepe quod voluptate
+                            placeat
+                            debitis expedita dolor itaque obcaecati sed voluptatem quisquam amet praesentium totam quo,
+                            dicta autem exercitationem error!</p>
+                    </div>
+                </div>
+            </div>
+            <div tabindex="0" class="timeline-item" aria-labelledby="time8">
+                <time datetime="2013-12-31">20<br><strong>13</strong></time>
+                <div class="timeline-content">
+                    <div class="img-container"><img src="./img/britney_spears_2013.jpg" alt=""></div>
+                    <div class="timeline-text">
+                        <h3 id="time8">Britney Jean and Britney: Piece of Me</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta eos saepe quod voluptate
+                            placeat
+                            debitis expedita dolor itaque obcaecati sed voluptatem quisquam amet praesentium totam quo,
+                            dicta autem exercitationem error!</p>
+                    </div>
+                </div>
+            </div>
+            <div tabindex="0" class="timeline-item" aria-labelledby="time9">
+                <time datetime="2016-12-31">20<br><strong>16</strong></time>
+                <div class="timeline-content">
+                    <div class="img-container"><img src="./img/britney_spears_2016.jpg" alt=""></div>
+                    <div class="timeline-text">
+                        <h3 id="time9">Glory and continued residency</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta eos saepe quod voluptate
+                            placeat
+                            debitis expedita dolor itaque obcaecati sed voluptatem quisquam amet praesentium totam quo,
+                            dicta autem exercitationem error!</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <p><a href="https://en.wikipedia.org/wiki/Britney_Spears" id="tribute-link" target="_blank">More information
+                about the artist in Wikipedia</a></p>
+
+    </main>
+    <!-- <aside role="complementary"></aside> -->
+    <footer id="footer" class="text-small" role="contentinfo">
+        &copy; Ítalo Polazzi - 2019
+        <br>
+        <br>
+        <a href="#title" id="back-to-the-top">Back to the top</a>
+    </footer>
+    <noscript>Your browser does not have JavaScript support or it is deactivated</noscript>
+    <script src="js/index.js" type="module"></script>
+    <!-- <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script> -->
+</body>
+
 </html>
