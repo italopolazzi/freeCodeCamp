@@ -1,26 +1,37 @@
 
+/*
+  Exercise: Convert HTML Entities
+
+	Convert the characters & , < , > , " (double quote), and ' (apostrophe), in a string to their corresponding HTML entities.
+*/
+
+/**
+ * Returns a escaped equivalent sequence for a HTML entity or by default the character
+ * @param {string} entity the character to be espaped
+ * @return {string} the equivalent sequence by default the character
+ */
 function getEntity(entity) {
   switch (entity) {
     case '<':
       return '&lt;';
-      break;
     case '&':
       return '&amp;';
-      break;
     case '>':
       return '&gt;';
-      break;
     case '"':
       return '&quot;';
-      break;
     case "'":
       return "&apos;";
-      break;
     default:
       return entity;
   }
 }
 
+/**
+ * Convert the characters & , < , > , " (double quote), and ' (apostrophe), in a string to their corresponding HTML entities.
+ * @param {string} str the string which may contain some entities who needs to be escaped
+ * @return {string} the escaped string
+ */
 function convertHTML(str) {
   let arr = str.split('');
   let newStr = "";
