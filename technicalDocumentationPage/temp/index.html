@@ -93,3 +93,50 @@ $column_percentage: 100% / $total_columns
                 </section>
 
             </main>
+
+
+            // @media (min-width: map-get($media_breakpoints_sizes, xs))
+            // body
+            // grid-template-columns: 1fr
+
+            // #navbar
+            // width: 100vw
+            // max-width: 100%
+
+            // #main-doc
+            // width: 100vw
+            // max-width: 100%
+
+            // @media (min-width: map-get($media_breakpoints_sizes, md))
+
+            body
+            margin: 0
+            padding: 0
+            -webkit-box-sizing: border-box
+            box-sizing: border-box
+            display: -ms-grid
+            display: grid
+            height: 100vh
+            width: auto
+            grid-template-ares: "nav" "main"
+
+            ul
+            margin: 0
+            padding: 0
+            li
+            padding: 1em
+            margin: 0.25em
+            border-radius: 0.25em
+            list-style: none
+<!-- ___________________________________________- -->
+            body
+            display: grid
+            grid-template-columns: 1fr 3fr
+            grid-template-rows: auto auto
+            grid-template-areas: "nav main"
+
+            #navbar
+            grid-area: nav
+
+            #main-doc
+            grid-area: main

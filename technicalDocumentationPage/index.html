@@ -7,32 +7,37 @@
     <meta name="author" content="Ítalo Polazzi">
     <meta name="description" content="A Technical Documentation Page for a css's lib">
     <title>CSS lib - Technical Doc Page</title>
+    <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/index.css">
 </head>
 
-<body class="main-yellow color-main-black">
-    <ul class="sr-only">
+<body class="main-yellow color-main-black ">
+    <!-- <ul class="sr-only">
         <li><a tabindex="0" href="#navbar">Skip to Navigation</a></li>
         <li><a tabindex="0" href="#main-doc">Skip to Main Content</a></li>
-    </ul>
-    <nav id="navbar">
+    </ul> -->
+    <nav id="navbar" class="main-blue">
         <header></header>
         <ul>
-            <li><a href="#spacings" class="nav-link">spacings</a></li>
-            <li><a href="#layout" class="nav-link">layout</a></li>
-            <li><a href="#colors" class="nav-link">colors</a></li>
-            <li><a href="#theme" class="nav-link">theme</a></li>
-            <li><a href="#ui_elements" class="nav-link">ui elements</a></li>
+            <li><a href="#spacings" class="nav-link color-main-white">spacings</a></li>
+            <li><a href="#layout" class="nav-link color-main-white">layout</a></li>
+            <li><a href="#colors" class="nav-link color-main-white">colors</a></li>
+            <li><a href="#theme" class="nav-link color-main-white">theme</a></li>
+            <li><a href="#ui_elements" class="nav-link color-main-white">ui elements</a></li>
         </ul>
 
     </nav>
-    <main id="main-doc">
+    <main id="main-doc" class="pa8 container">
         <H1>CSS lib based in Vuetify and Material Design</H1>
         <section class="main-section" id="spacings">
             <header>
                 spacings
             </header>
-            <pre class="main-blue color-main-white">
+            <div class="row">
+
+        
+
+                    <pre class="col-xs6 offset-md2 col-md8 main-blue color-main-white">
 <code>
 $media_breakpoints_sizes: (xs: 0px, sm: 600px, md: 960px, lg: 1280px, xl: 1920px)
 
@@ -41,10 +46,24 @@ $total_columns: 12
 $column_percentage: 100% / $total_columns
 </code>
             </pre>
+            </div>
 
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptate soluta error laudantium itaque repudiandae velit enim cumque sint delectus harum maxime ipsum animi corrupti molestiae atque, provident, libero mollitia incidunt.</p>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptate soluta error laudantium itaque
+                repudiandae velit enim cumque sint delectus harum maxime ipsum animi corrupti molestiae atque,
+                provident, libero mollitia incidunt.</p>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptate soluta error laudantium itaque
+                repudiandae velit enim cumque sint delectus harum maxime ipsum animi corrupti molestiae atque,
+                provident, libero mollitia incidunt.</p>
+            <li>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptate soluta error laudantium itaque
+                repudiandae velit enim cumque sint delectus harum maxime ipsum animi corrupti molestiae atque,
+                provident, libero mollitia incidunt.</li>
+            <li>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptate soluta error laudantium itaque
+                repudiandae velit enim cumque sint delectus harum maxime ipsum animi corrupti molestiae atque,
+                provident, libero mollitia incidunt.</li>
 
-            <pre class="main-blue color-main-white">
+            <div class="row">
+                <div class="offset-md2 col-md8"></div>
+                <pre class="main-blue color-main-white">
 <code>
 @each $breakpoint_key, $size_in_px in $media_breakpoints_sizes
     @media screen and (min-width: $size_in_px)
@@ -58,26 +77,175 @@ $column_percentage: 100% / $total_columns
                 margin-left: $column_percentage * $number_of_columns
 </code>
             </pre>
+            </div>
         </section>
         <section class="main-section" id="layout">
             <header>
                 layout
             </header>
+            <div class="row">
+                <div class="offset-md2 col-md8"></div>
+                <pre class="main-blue color-main-white">
+<code>
+@each $breakpoint_key, $size_in_px in $media_breakpoints_sizes
+    @media screen and (min-width: $size_in_px)
+
+        @for $number_of_columns from 1 through $total_columns
+    
+            .col-#{$breakpoint_key}#{$number_of_columns}
+                flex: 0 1 ($column_percentage * $number_of_columns)
+
+            .offset-#{$breakpoint_key}#{$number_of_columns}
+                margin-left: $column_percentage * $number_of_columns
+</code>
+            </pre>
+            </div>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptate soluta error
+                laudantium itaque
+                repudiandae velit enim cumque sint delectus harum maxime ipsum animi corrupti
+                molestiae atque,
+                provident, libero mollitia incidunt.</p>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptate soluta error
+                laudantium itaque
+                repudiandae velit enim cumque sint delectus harum maxime ipsum animi corrupti
+                molestiae atque,
+                provident, libero mollitia incidunt.</p>
+            <li>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptate soluta error
+                laudantium itaque
+                repudiandae velit enim cumque sint delectus harum maxime ipsum animi corrupti
+                molestiae atque,
+                provident, libero mollitia incidunt.</li>
+            <li>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptate soluta error
+                laudantium itaque
+                repudiandae velit enim cumque sint delectus harum maxime ipsum animi corrupti
+                molestiae atque,
+                provident, libero mollitia incidunt.</li>
         </section>
         <section class="main-section" id="colors">
             <header>
                 colors
             </header>
+            <div class="row">
+                <div class="offset-md2 col-md8"></div>
+                <pre class="main-blue color-main-white">
+<code>
+@each $breakpoint_key, $size_in_px in $media_breakpoints_sizes
+    @media screen and (min-width: $size_in_px)
+
+        @for $number_of_columns from 1 through $total_columns
+    
+            .col-#{$breakpoint_key}#{$number_of_columns}
+                flex: 0 1 ($column_percentage * $number_of_columns)
+
+            .offset-#{$breakpoint_key}#{$number_of_columns}
+                margin-left: $column_percentage * $number_of_columns
+</code>
+            </pre>
+            </div>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptate soluta error
+                laudantium itaque
+                repudiandae velit enim cumque sint delectus harum maxime ipsum animi corrupti
+                molestiae atque,
+                provident, libero mollitia incidunt.</p>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptate soluta error
+                laudantium itaque
+                repudiandae velit enim cumque sint delectus harum maxime ipsum animi corrupti
+                molestiae atque,
+                provident, libero mollitia incidunt.</p>
+            <li>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptate soluta error
+                laudantium itaque
+                repudiandae velit enim cumque sint delectus harum maxime ipsum animi corrupti
+                molestiae atque,
+                provident, libero mollitia incidunt.</li>
+            <li>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptate soluta error
+                laudantium itaque
+                repudiandae velit enim cumque sint delectus harum maxime ipsum animi corrupti
+                molestiae atque,
+                provident, libero mollitia incidunt.</li>
         </section>
         <section class="main-section" id="theme">
             <header>
                 theme
             </header>
+            <div class="row">
+                <div class="offset-md2 col-md8"></div>
+                <pre class="main-blue color-main-white">
+<code>
+@each $breakpoint_key, $size_in_px in $media_breakpoints_sizes
+    @media screen and (min-width: $size_in_px)
+
+        @for $number_of_columns from 1 through $total_columns
+    
+            .col-#{$breakpoint_key}#{$number_of_columns}
+                flex: 0 1 ($column_percentage * $number_of_columns)
+
+            .offset-#{$breakpoint_key}#{$number_of_columns}
+                margin-left: $column_percentage * $number_of_columns
+</code>
+            </pre>
+            </div>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptate soluta error
+                laudantium itaque
+                repudiandae velit enim cumque sint delectus harum maxime ipsum animi corrupti
+                molestiae atque,
+                provident, libero mollitia incidunt.</p>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptate soluta error
+                laudantium itaque
+                repudiandae velit enim cumque sint delectus harum maxime ipsum animi corrupti
+                molestiae atque,
+                provident, libero mollitia incidunt.</p>
+            <li>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptate soluta error
+                laudantium itaque
+                repudiandae velit enim cumque sint delectus harum maxime ipsum animi corrupti
+                molestiae atque,
+                provident, libero mollitia incidunt.</li>
+            <li>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptate soluta error
+                laudantium itaque
+                repudiandae velit enim cumque sint delectus harum maxime ipsum animi corrupti
+                molestiae atque,
+                provident, libero mollitia incidunt.</li>
         </section>
         <section class="main-section" id="ui_elements">
             <header>
                 ui elements
             </header>
+            <div class="row">
+                <div class="offset-md2 col-md8"></div>
+                <pre class="main-blue color-main-white">
+<code>
+@each $breakpoint_key, $size_in_px in $media_breakpoints_sizes
+    @media screen and (min-width: $size_in_px)
+
+        @for $number_of_columns from 1 through $total_columns
+    
+            .col-#{$breakpoint_key}#{$number_of_columns}
+                flex: 0 1 ($column_percentage * $number_of_columns)
+
+            .offset-#{$breakpoint_key}#{$number_of_columns}
+                margin-left: $column_percentage * $number_of_columns
+</code>
+            </pre>
+            </div>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptate soluta error
+                laudantium itaque
+                repudiandae velit enim cumque sint delectus harum maxime ipsum animi corrupti
+                molestiae atque,
+                provident, libero mollitia incidunt.</p>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptate soluta error
+                laudantium itaque
+                repudiandae velit enim cumque sint delectus harum maxime ipsum animi corrupti
+                molestiae atque,
+                provident, libero mollitia incidunt.</p>
+            <li>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptate soluta error
+                laudantium itaque
+                repudiandae velit enim cumque sint delectus harum maxime ipsum animi corrupti
+                molestiae atque,
+                provident, libero mollitia incidunt.</li>
+            <li>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptate soluta error
+                laudantium itaque
+                repudiandae velit enim cumque sint delectus harum maxime ipsum animi corrupti
+                molestiae atque,
+                provident, libero mollitia incidunt.</li>
         </section>
 
     </main>
