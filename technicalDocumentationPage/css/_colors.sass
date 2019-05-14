@@ -1,0 +1,50 @@
+@import 'theme'
+$font-color-body: #333
+$font-color-a: white
+
+$body-background: white
+
+$colors_pallete: (main-red: #F20519, main-black: #0D090A, main-blue: #27238C, main-yellow: #F2BC1B, main-white: #F2F2F2)
+$colors: join($theme, $colors_pallete)
+
+$color_variations: 4
+$percentage-of-color-variation: 5%
+$percentage-of-color-il: 50%
+
+=pure_color($color-key, $color)
+    .color-#{$color-key},
+        color: darken($color, $percentage-of-color-il)!important
+        
+=pure_background($color-key, $color)
+    .#{$color-key},
+        background: lighten($color, $percentage-of-color-il)!important
+
+=pure_dark_color($color-key, $color)
+    .dark.color-#{$color-key},
+    .dark .color-#{$color-key}
+        color: lighten($color, $percentage-of-color-il)!important
+
+=pure_dark_background($color-key, $color)
+    .dark.#{$color-key},
+    .dark .#{$color-key}
+        background: darken($color, $percentage-of-color-il)!important
+
+=darken_background($color-key, $color)
+    @for $i from 1 through $color_variations
+        $color-aux: darken($color, ($percentage-of-color-variation * $i))
+        .#{$color-key}-dark#{$i}
+            background: $color-aux
+
+=lighten_background($color-key, $color)
+    @for $i from 1 through $color_variations
+        $color-aux: lighten($color, ($percentage-of-color-variation * $i))
+        .#{$color-key}-light#{$i}
+            background: $color-aux
+
+@each $color_key, $color in $colors
+    +pure_color($color_key, $color)
+    +pure_background($color_key, $color)
+    +pure_dark_color($color_key, $color)
+    +pure_dark_background($color_key, $color)
+    +darken_background($color_key, $color)
+    +lighten_background($color_key, $color)

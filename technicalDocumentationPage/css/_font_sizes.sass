@@ -1,0 +1,9 @@
+$html-font-size: 1rem
+
+$sizes: (6, 9, 14, 22, 35, 56)
+$i: 6
+
+@each $size in $sizes
+    h#{$i}
+        font-size: calculateRem($size)
+    $i: $i - 1

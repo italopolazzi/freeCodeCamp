@@ -1,0 +1,33 @@
+                <h1>A CSS lib</h1>
+                <h2>Columns Sizes</h2>
+                <div class="row">
+                    <div class="col-xs10 offset-xs1 col-md6">
+                        <pre class="main-blue color-main-white">
+                         <code>
+$media_breakpoints_sizes: (xs: 0px, sm: 600px, md: 960px, lg: 1280px, xl: 1920px)
+
+$total_columns: 12
+
+$column_percentage: 100% / $total_columns
+</code>
+</pre>
+
+                    </div>
+                    <div class="col-xs10 offset-xs1 col-md6">
+                        <pre class="main-blue color-main-white">
+                         <code>
+@each $breakpoint_key, $size_in_px in $media_breakpoints_sizes
+    @media screen and (min-width: $size_in_px)
+
+        @for $number_of_columns from 1 through $total_columns
+    
+            .col-#{$breakpoint_key}#{$number_of_columns}
+                flex: 0 1 ($column_percentage * $number_of_columns)
+
+            .offset-#{$breakpoint_key}#{$number_of_columns}
+                margin-left: $column_percentage * $number_of_columns
+            </code>
+                </pre>
+                    </div>
+                </div>
+                <h2>Colors</h2>

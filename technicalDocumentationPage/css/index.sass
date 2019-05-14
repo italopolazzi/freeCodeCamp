@@ -1,0 +1,93 @@
+@import 'variables'
+@import 'functions'
+@import 'placeholders'
+@import 'responsive12grid'
+@import 'colors'
+@import 'font_sizes'
+@import url('https://fonts.googleapis.com/css?family=Lato:300,400,700');
+@import 'index/first_section'
+
+*
+    box-sizing: border-box
+
+html
+    font-size: $html-font-size
+
+body
+    background: $body-background
+    color: $font-color-body
+    font-family: 'Lato', sans-serif
+    font-weight: normal
+    overflow-x: hidden
+
+img
+    width: 100%
+    position: relative
+
+nav.row
+    background: $body-background
+    height: $nav-bar-height
+    @extend %centralize-all
+
+main > section
+    width: 100%
+    height: 100vh
+
+
+// :focus {
+//   width: min-content;
+// }    
+
+
+pre
+    tab-size: 20
+    // background: #032f62
+    color: white
+    padding: 1rem
+    border-radius: 0.25rem
+    word-wrap: wrap
+
+a
+    text-decoration: none
+    // color: $font-color-a
+
+a.button
+    @extend %centralize-all
+    flex: 0 1 0
+    flex-flow: row nowrap
+    width: auto
+    background: transparent
+    color: $font-color-a !important
+
+    font-weight: bold
+    border-radius: calculateRem(4)
+    position: absolute
+    overflow: hidden
+    z-index: 1
+    // box-shadow: 0 0 20px -7px #000
+    &:active
+        box-shadow: 0 0 0 0 #000
+    &:before
+        content: ''
+        width: 0
+        height: 100%
+        // background: linear-gradient(to left, rgba(0,0,0,0), rgba(255,255,0,0.8))
+        position: absolute
+        top: 0
+        left: 0
+        z-index: -1
+        transition: all .3s ease
+        animation: rainbow 1s 2s 3 alternate backwards
+    &:hover:before
+        width: 100%
+    &:after
+        content: ''
+        width: 100%
+        height: 100%
+        background: blue
+        position: absolute
+        top: 0
+        left: 0
+        z-index: -2
+    .icon
+        margin-left: 1rem
