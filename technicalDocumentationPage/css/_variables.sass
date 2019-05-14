@@ -1,10 +1,13 @@
-$goldens: (6, 9, 14, 22, 35, 56, 90, 145)
+@function create-var-dynamically-using-map($list, $base_name_for_keys)
+    $map: ()
+    @for $i from 1 through length($list)
+        $item: nth($list, $i)
+        $value: calculateRem($item)
+        $key: "#{$base_name_for_keys}#{$item}"
+        $map: map-merge($map, ($key: $value)) 
+    @return $map
 
-$golden22: 0.6875rem 
-$golden35: 1.09375rem 
-$golden56: 1.75rem 
-$golden90: 2.8125rem  
-$golden145: 4.53125rem
+$goldens: (12, 16, 21, 28, 37, 50, 67, 89, 119)
+$goldens-map: create-var-dynamically-using-map($goldens, "golden")
 
-$nav-bar-height: $golden145
-
+$nav-bar-height: map-get($goldens-map, 'golden119')
