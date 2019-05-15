@@ -648,6 +648,14 @@ body {
   font-weight: normal;
 }
 
+body p, body li {
+  line-height: 1.75rem;
+}
+
+body main * > * {
+  margin: 1rem 0;
+}
+
 img {
   width: 100%;
   position: relative;
