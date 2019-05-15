@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">
     <meta name="author" content="Ítalo Polazzi">
     <meta name="description" content="A Technical Documentation Page for a css's lib">
     <title>CSS lib - Technical Doc Page</title>
@@ -16,10 +16,13 @@
         <li><a tabindex="0" href="#navbar">Skip to Navigation</a></li>
         <li><a tabindex="0" href="#main-doc">Skip to Main Content</a></li>
     </ul>
+    <input type="checkbox" name="nav_opener" id="nav_opener" class="main color-inverted" role="checkbox">
     <nav id="navbar" class="primary color-inverted">
         <header>
             <h2>CSS Lib</h2>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vel, sunt saepe! Nam eveniet, id placeat modi numquam vero facere? Sed dolorem optio molestias non ab! Illo quisquam ut aliquam repudiandae?</p></header>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vel, sunt saepe! Nam eveniet, id placeat modi
+                numquam vero facere?</p>
+        </header>
         <ul>
             <li><a href="#spacings" class="nav-link color-inverted">spacings</a></li>
             <li><a href="#layout" class="nav-link color-inverted">layout</a></li>
@@ -32,9 +35,8 @@
             <label for="dark_mode" class="custom_chebox">Dark Mode</label>
             <input type="checkbox" name="dark_mode" id="dark_mode" role="checkbox">
         </div>
-
     </nav>
-    <main id="main-doc" class="pa8 container">
+    <main id="main-doc" class="pa16 container">
         <H1>CSS lib based in Vuetify and Material Design</H1>
         <section class="main-section" id="spacings">
             <header>
@@ -184,6 +186,8 @@ $column_percentage: 100% / $total_columns
         </section>
 
     </main>
+
+    <footer id="footer" class="secondary">&copy; Ítalo Polazzi - 2019</footer>
     <script src="js/index.js" type="module"></script>
     <!-- <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script> -->
 </body>

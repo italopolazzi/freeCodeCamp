@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css?family=Lato:300,400,700");
 .sr-only {
   position: absolute;
@@ -1311,6 +1312,10 @@ body {
   display: grid;
 }
 
+body > * {
+  padding: 1rem;
+}
+
 #navbar {
   grid-area: nav;
 }
@@ -1319,27 +1324,89 @@ body {
   grid-area: main;
 }
 
+#footer {
+  grid-area: footer;
+}
+
 @media (max-width: 960px) {
   body {
     -ms-grid-columns: 100%;
         grid-template-columns: 100%;
     -ms-grid-rows: auto;
         grid-template-rows: auto;
-        grid-template-areas: "nav" "main";
+        grid-template-areas: "nav" "main" "footer";
+  }
+  nav {
+    position: fixed;
+    height: 100%;
+    overflow-y: auto;
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+    -webkit-transition: -webkit-transform .3s ease;
+    transition: -webkit-transform .3s ease;
+    transition: transform .3s ease;
+    transition: transform .3s ease, -webkit-transform .3s ease;
+  }
+  #nav_opener {
+    width: 100%;
+    height: 0;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 1;
+    cursor: pointer;
+    -webkit-transition: -webkit-transform .3s ease;
+    transition: -webkit-transform .3s ease;
+    transition: transform .3s ease;
+    transition: transform .3s ease, -webkit-transform .3s ease;
+  }
+  #nav_opener:before {
+    content: '►';
+    padding: 0.5em;
+    font-size: 1rem;
+    right: 1em;
+    top: 1em;
+    margin: 0;
+    color: inherit;
+    border-radius: 50%;
+    position: absolute;
+    background: inherit;
+    -webkit-transition: -webkit-transform .3s ease;
+    transition: -webkit-transform .3s ease;
+    transition: transform .3s ease;
+    transition: transform .3s ease, -webkit-transform .3s ease;
+  }
+  #nav_opener:checked:before {
+    content: '◄';
+  }
+  #nav_opener:checked ~ nav {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
   }
 }
 
 @media (min-width: 960px) {
   body {
-    -ms-grid-columns: 1fr 3fr;
-        grid-template-columns: 1fr 3fr;
-    -ms-grid-rows: auto auto;
-        grid-template-rows: auto auto;
-        grid-template-areas: "nav main";
+        grid-template-areas: "nav main" "nav main" "footer footer";
   }
-  main, nav {
-    height: 100vh;
+  nav {
+    height: 100%;
+    width: 30%;
     overflow-y: auto;
+    position: fixed;
+  }
+  footer {
+    height: 20vh;
+  }
+  footer, main {
+    margin-left: 30%;
+    width: 70%;
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 1;
+    grid-column: 2/3;
+    -ms-grid-row: 2;
+    -ms-grid-row-span: 1;
+    grid-row: 2/3;
   }
 }
 
