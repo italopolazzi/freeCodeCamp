@@ -1282,6 +1282,46 @@ li a:hover, li a:focus {
   background: rgba(255, 255, 255, 0.4);
 }
 
+#nav_opener {
+  width: 100%;
+  height: 0;
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 1;
+  cursor: pointer;
+  -webkit-transition: -webkit-transform .3s ease;
+  transition: -webkit-transform .3s ease;
+  transition: transform .3s ease;
+  transition: transform .3s ease, -webkit-transform .3s ease;
+}
+
+#nav_opener:before {
+  content: '►';
+  padding: 0.5em;
+  font-size: 1rem;
+  right: 1em;
+  top: 1em;
+  margin: 0;
+  color: inherit;
+  border-radius: 50%;
+  position: absolute;
+  background: inherit;
+  -webkit-transition: -webkit-transform .3s ease;
+  transition: -webkit-transform .3s ease;
+  transition: transform .3s ease;
+  transition: transform .3s ease, -webkit-transform .3s ease;
+}
+
+#nav_opener:checked:before {
+  content: '◄';
+}
+
+#nav_opener:checked ~ nav {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+}
+
 pre {
   padding: 1rem;
   overflow-x: auto;
@@ -1297,7 +1337,7 @@ pre {
 
 .custom_checkbox:after {
   content: '';
-  background: rgba(255, 255, 255, 0.4);
+  background: inherit;
   width: 100%;
   height: 100%;
   position: absolute;
@@ -1347,42 +1387,6 @@ body > * {
     transition: transform .3s ease;
     transition: transform .3s ease, -webkit-transform .3s ease;
   }
-  #nav_opener {
-    width: 100%;
-    height: 0;
-    position: fixed;
-    top: 0;
-    right: 0;
-    z-index: 1;
-    cursor: pointer;
-    -webkit-transition: -webkit-transform .3s ease;
-    transition: -webkit-transform .3s ease;
-    transition: transform .3s ease;
-    transition: transform .3s ease, -webkit-transform .3s ease;
-  }
-  #nav_opener:before {
-    content: '►';
-    padding: 0.5em;
-    font-size: 1rem;
-    right: 1em;
-    top: 1em;
-    margin: 0;
-    color: inherit;
-    border-radius: 50%;
-    position: absolute;
-    background: inherit;
-    -webkit-transition: -webkit-transform .3s ease;
-    transition: -webkit-transform .3s ease;
-    transition: transform .3s ease;
-    transition: transform .3s ease, -webkit-transform .3s ease;
-  }
-  #nav_opener:checked:before {
-    content: '◄';
-  }
-  #nav_opener:checked ~ nav {
-    -webkit-transform: translateX(0);
-            transform: translateX(0);
-  }
 }
 
 @media (min-width: 960px) {
@@ -1407,6 +1411,9 @@ body > * {
     -ms-grid-row: 2;
     -ms-grid-row-span: 1;
     grid-row: 2/3;
+  }
+  #nav_opener {
+    display: none;
   }
 }
 
