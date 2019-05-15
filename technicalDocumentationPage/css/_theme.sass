@@ -1,5 +1,24 @@
-$main-palette-light: (red: #F20519, primary: #F2F2F2, blue: #27238C, yellow: #F2BC1B, inverted: #0D090A)
-$main-palette-dark: (red: darken(#F20519, 50%), primary: #0D090A, blue: darken(#27238C, 50%), yellow: darken(#F2BC1B, 50%), inverted: #F2F2F2)
+/* Color Theme Swatches in Hex */
+$accent: #FFF587
+$primary: #FF8365
+$secondary: #7D6B7D
+
+/* Color Theme Swatches in RGBA */
+// $accent: rgba(77,54,40, 1)
+// $primary: rgba(255,131,100, 1)
+// $secondary: rgba(255,119,87, 1)
+
+// Deline the light and dark colors
+$light: (main: #F2F2F2, inverted: #0D090A)
+$dark: (main: #0D090A, inverted: #F2F2F2)
+
+// Define the other colors
+$main-palette-light: (primary: $primary, accent: $accent, secondary: $secondary)
+$main-palette-dark: (primary: darken($primary, 50%), accent: darken($accent, 50%), secondary: darken($secondary, 50%))
+
+// Merge the other colors with the light and dark colors
+$main-palette-light: join($main-palette-light, $light)
+$main-palette-dark: join($main-palette-dark, $dark)
 
 =theme_light_color($color-key, $color)
     .color-#{$color-key},
