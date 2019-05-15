@@ -1,1 +1,28 @@
-$theme: (primary: #9c27b0,secondary: #e91e63,accent: #03a9f4,error: #607d8b,warning: #795548,info: #cddc39,success: #ffeb3b)
+$main-palette-light: (red: #F20519, primary: #F2F2F2, blue: #27238C, yellow: #F2BC1B, inverted: #0D090A)
+$main-palette-dark: (red: darken(#F20519, 50%), primary: #0D090A, blue: darken(#27238C, 50%), yellow: darken(#F2BC1B, 50%), inverted: #F2F2F2)
+
+=theme_light_color($color-key, $color)
+    .color-#{$color-key},
+        color: $color
+        
+=theme_light_background($color-key, $color)
+    .#{$color-key},
+        background: $color
+
+=theme_dark_color($color-key, $color)
+    .dark.color-#{$color-key},
+    .dark .color-#{$color-key}
+        color: $color
+
+=theme_dark_background($color-key, $color)
+    .dark.#{$color-key},
+    .dark .#{$color-key}
+        background: $color
+
+@each $color_key, $color in $main-palette-light
+    +theme_light_color($color_key, $color)
+    +theme_light_background($color_key, $color)
+
+@each $color_key, $color in $main-palette-dark
+    +theme_dark_color($color_key, $color)
+    +theme_dark_background($color_key, $color)

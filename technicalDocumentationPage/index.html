@@ -11,23 +11,26 @@
     <link rel="stylesheet" href="css/index.css">
 </head>
 
-<body class="main-yellow color-main-black dark">
+<body class="red color-inverted">
     <ul class="sr-only">
         <li><a tabindex="0" href="#navbar">Skip to Navigation</a></li>
         <li><a tabindex="0" href="#main-doc">Skip to Main Content</a></li>
     </ul>
-    <nav id="navbar" class="main-blue">
-        <header></header>
+    <nav id="navbar" class="blue">
+        <header>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vel, sunt saepe! Nam eveniet, id placeat modi numquam vero facere? Sed dolorem optio molestias non ab! Illo quisquam ut aliquam repudiandae?</header>
         <ul>
-            <li><a href="#spacings" class="nav-link color-main-white">spacings</a></li>
-            <li><a href="#layout" class="nav-link color-main-white">layout</a></li>
-            <li><a href="#colors" class="nav-link color-main-white">colors</a></li>
-            <li><a href="#theme" class="nav-link color-main-white">theme</a></li>
-            <li><a href="#ui_elements" class="nav-link color-main-white">ui elements</a></li>
+            <li><a href="#spacings" class="nav-link color-inverted">spacings</a></li>
+            <li><a href="#layout" class="nav-link color-inverted">layout</a></li>
+            <li><a href="#colors" class="nav-link color-inverted">colors</a></li>
+            <li><a href="#theme" class="nav-link color-inverted">theme</a></li>
+            <li><a href="#ui_elements" class="nav-link color-inverted">ui elements</a></li>
         </ul>
 
-        <label for="dark_mode">Dark Mode</label>
-        <input type="checkbox" name="dark_mode" id="dark_mode">
+        <div class="custom_checkbox">
+            <label for="dark_mode" class="custom_chebox">Dark Mode</label>
+            <input type="checkbox" name="dark_mode" id="dark_mode" role="checkbox">
+        </div>
+
     </nav>
     <main id="main-doc" class="pa8 container">
         <H1>CSS lib based in Vuetify and Material Design</H1>
@@ -36,7 +39,7 @@
                 spacings
             </header>
             <div class="row">
-                <pre class="col-md12 main-blue color-main-white">
+                <pre class="col-md12 blue color-inverted">
 <code>
 $media_breakpoints_sizes: (xs: 0px, sm: 600px, md: 960px, lg: 1280px, xl: 1920px)
 
@@ -66,7 +69,7 @@ $column_percentage: 100% / $total_columns
                 layout
             </header>
             <div class="row">
-                <pre class="col-md12 main-blue color-main-white">
+                <pre class="col-md12 blue color-inverted">
 <code>
 $media_breakpoints_sizes: (xs: 0px, sm: 600px, md: 960px, lg: 1280px, xl: 1920px)
 
@@ -95,7 +98,7 @@ $column_percentage: 100% / $total_columns
                 colors
             </header>
             <div class="row">
-                <pre class="col-md12 main-blue color-main-white">
+                <pre class="col-md12 blue color-inverted">
 <code>
 $media_breakpoints_sizes: (xs: 0px, sm: 600px, md: 960px, lg: 1280px, xl: 1920px)
 
@@ -124,7 +127,7 @@ $column_percentage: 100% / $total_columns
                 theme
             </header>
             <div class="row">
-                <pre class="col-md12 main-blue color-main-white">
+                <pre class="col-md12 blue color-inverted">
 <code>
 $media_breakpoints_sizes: (xs: 0px, sm: 600px, md: 960px, lg: 1280px, xl: 1920px)
 
@@ -153,7 +156,7 @@ $column_percentage: 100% / $total_columns
                 ui elements
             </header>
             <div class="row">
-                <pre class="col-md12 main-blue color-main-white">
+                <pre class="col-md12 blue color-inverted">
 <code>
 $media_breakpoints_sizes: (xs: 0px, sm: 600px, md: 960px, lg: 1280px, xl: 1920px)
 
