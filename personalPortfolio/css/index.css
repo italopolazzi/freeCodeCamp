@@ -1352,12 +1352,17 @@ main {
 
 .project-tile {
   width: 100%;
+  height: 20em;
   position: relative;
+  overflow: hidden;
 }
 
 .project-tile iframe {
+  height: 100%;
+}
+
+.project-tile iframe, .project-tile img {
   width: 100%;
-  height: 20em;
 }
 
 .project-tile-footer {
