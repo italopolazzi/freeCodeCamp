@@ -1,13 +1,31 @@
+nav:hover,
+nav:focus-within
+    transform: translateY(0)
+
 nav
+    @extend %main_transition
     @extend %vertical-center
     width: 100%
     height: 10em
     justify-content: space-between
     align-items: center
     z-index: 1
+    transform: translateY(-100%)
 
     ul
         @extend %vertical-center
         flex-direction: row
         li
             margin: 0 1em
+
+    #nav_button
+        @extend %centralize-all
+        position: fixed
+        right: 1em
+        top: 11em
+        width: 4em
+        height: 4em
+        background: white
+        color: black
+        display: none
+        
