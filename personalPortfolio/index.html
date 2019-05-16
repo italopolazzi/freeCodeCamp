@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">
+    <meta name="author" content="Ítalo Polazzi">
+    <meta name="description" content="A Web Developer personal portfolio">
+    <title>Ítalo Polazzi - Web Developer</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/index.css">
+</head>
+
+<body class="main color-inverted">
+    <ul class="sr-only">
+        <li><a tabindex="0" href="#navbar">Skip to Navigation</a></li>
+        <li><a tabindex="0" href="#main-doc">Skip to Main Content</a></li>
+    </ul>
+    <input type="checkbox" name="nav_opener" id="nav_opener" class="main color-inverted" role="checkbox">
+    <nav id="navbar" class="secondary color-inverted dark" role="navigation">
+        <header>
+            <h2>Ítalo</h2>
+        </header>
+        <div class="box">
+            <ul>
+                <li><a tabindex="0" href="#welcome-section" class="nav-link color-inverted">welcome</a></li>
+                <li><a tabindex="0" href="#projects" class="nav-link color-inverted">projects</a></li>
+                <li><a tabindex="0" href="#contacts" class="nav-link color-inverted">contacts</a></li>
+            </ul>
+            <ul>
+                <li><a tabindex="0" href="https://twitter.com/italopolazzi" target="_blank" id="profile-twitter"
+                        class="nav-link color-inverted">twitter</a></li>
+                <li><a tabindex="0" href="https://www.github.com/itpzzi" target="_blank" id="profile-github"
+                        class="nav-link color-inverted">github</a></li>
+                <li><a tabindex="0" href="https://www.freecodecamp.org/italopolazzi" target="_blank" id="profile-link"
+                        class="nav-link color-inverted">fcc</a></li>
+            </ul>
+            <div class="custom_checkbox main">
+                <label for="dark_mode" class="custom_chebox">Dark Mode</label>
+                <input type="checkbox" name="dark_mode" id="dark_mode">
+            </div>
+        </div>
+    </nav>
+    <main id="main-doc" class="pa16 container" role="region">
+        <section class="main-section" id="welcome-section">
+            <header>
+                <H1>Ítalo Polazzi a Web Developer</H1>
+                <span>lover</span>
+                <h2>Welcome</h2>
+            </header>
+        </section>
+        <section class="main-section" id="projects">
+            <header>
+                <h2>Projects</h2>
+            </header>
+            <div class="project-gallery">
+
+                <div class="project-tile">
+                    <a href="../technicalDocumentationPage/index.html">
+                        <iframe src="../technicalDocumentationPage/index.html"></iframe>
+                        <div class="project-tile-footer color-secondary">
+                            <h3 class="project-title color-inverted">Technical Documentation</h3>
+                            <p class="color-inverted">Lorem ipsum dolor sit amet consectetur
+                                adipisicing elit. Placeat
+                                aut facilis quisquam. Nihil optio, ut perspiciatis debitis
+                                architecto asperiores
+                                provident mollitia ratione magnam, ex nostrum incidunt eius
+                                assumenda, placeat
+                                doloribus?</p>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="project-tile">
+                    <a href="../tributePage/index.html">
+                        <iframe src="../tributePage/index.html"></iframe>
+                        <div class="project-tile-footer color-accent">
+                            <h3 class="project-title color-inverted">Tribute Page</h3>
+                            <p class="color-inverted">Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat
+                                aut facilis quisquam. Nihil optio, ut perspiciatis debitis architecto asperiores
+                                provident mollitia ratione magnam, ex nostrum incidunt eius assumenda, placeat
+                                doloribus?</p>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="project-tile">
+                    <a href="./index.html">
+                        <iframe src="./index.html"></iframe>
+                        <div class="project-tile-footer color-primary">
+                            <h3 class="project-title color-inverted">Personal Portfolio</h3>
+                            <p class="color-inverted">Lorem ipsum dolor sit amet consectetur adipisicing
+                                elit. Placeat
+                                aut facilis quisquam. Nihil optio, ut perspiciatis debitis architecto
+                                asperiores
+                                provident mollitia ratione magnam, ex nostrum incidunt eius assumenda,
+                                placeat
+                                doloribus?</p>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="project-tile">
+                    <a href="https://www.google.com">
+                        <iframe src="https://www.google.com"></iframe>
+                        <div class="project-tile-footer color-primary">
+                            <h3 class="project-title color-inverted">Survey Form</h3>
+                            <p class="color-inverted">Lorem ipsum dolor sit amet consectetur adipisicing
+                                elit. Placeat
+                                aut facilis quisquam. Nihil optio, ut perspiciatis debitis architecto
+                                asperiores
+                                provident mollitia ratione magnam, ex nostrum incidunt eius assumenda,
+                                placeat
+                                doloribus?</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+        <section class="main-section" id="contacts">
+            <header>
+                <h2>Contact</h2>
+            </header>
+        </section>
+
+    </main>
+
+    <footer id="footer" class="secondary">&copy; Ítalo Polazzi - 2019</footer>
+    <script src="js/index.js" type="module"></script>
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+</body>
+
+</html>

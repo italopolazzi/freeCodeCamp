@@ -1,0 +1,39 @@
+.project-gallery
+    display: grid
+    grid-template-columns: 1fr 1fr 1fr
+    grid-template-rows: auto auto
+    grid-gap: 1em
+
+.project-tile
+    width: 100%
+    position: relative
+
+.project-tile iframe
+    width: 100%
+    height: 20em
+
+.project-tile-footer
+    @extend %main_transition
+    width: 100%
+    height: 6em
+    padding: 1em
+    position: absolute
+    bottom: 0
+    z-index: 1
+    overflow: hidden
+    &:hover
+        height: 20em
+    &:before
+        content: ''
+        width: 100%
+        height: 100%
+        background: currentColor
+        position: absolute
+        left: 0
+        bottom: 0
+        z-index: -1
+
+
+@media (max-width: map-get($media-breakpoints-sizes, md))
+    .project-gallery
+        grid-template-columns: 1fr

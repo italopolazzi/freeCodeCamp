@@ -1,0 +1,7 @@
+$media_breakpoints_sizes: (xs: 0px, sm: 600px, md: 960px, lg: 1280px, xl: 1920px)
+
+$goldens: (12, 16, 21, 28, 37, 50, 67, 89, 119)
+$goldens-map: create-var-dynamically-using-map($goldens, "golden")
+
+$nav-bar-height: map-get($goldens-map, 'golden119')
+  
