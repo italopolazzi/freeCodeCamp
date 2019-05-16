@@ -171,6 +171,11 @@ a.button {
   text-align: center;
 }
 
+.project-tile-footer {
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
+}
+
 .ma0 {
   margin: 0rem;
 }
@@ -1322,22 +1327,42 @@ footer {
       grid-template-columns: 1fr 1fr 1fr;
   -ms-grid-rows: auto auto;
       grid-template-rows: auto auto;
+  grid-gap: 1em;
+}
+
+.project-tile {
+  width: 100%;
+  position: relative;
 }
 
 .project-tile iframe {
   width: 100%;
-  height: 19.2em;
+  height: 20em;
 }
 
-.project-tile h3 {
-  height: 1px;
-  width: 1px;
-  font-size: 1px;
-}
-
-.project-tile iframe main {
+.project-tile-footer {
   width: 100%;
-  overflow: hidden !important;
+  height: 6em;
+  padding: 1em;
+  position: absolute;
+  bottom: 0;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.project-tile-footer:hover {
+  height: 20em;
+}
+
+.project-tile-footer:before {
+  content: '';
+  width: 100%;
+  height: 100%;
+  background: currentColor;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  z-index: -1;
 }
 
 @media (max-width: 960px) {
