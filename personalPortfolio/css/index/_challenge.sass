@@ -5,12 +5,17 @@
 
 .project-tile iframe
     width: 100%
-    overflow: hidden
+    height: 19.2em
 
 .project-tile h3
     height: 1px
     width: 1px
+    font-size: 1px
 
 .project-tile iframe main
     width: 100%
     overflow: hidden!important
+
+@media (max-width: map-get($media-breakpoints-sizes, md))
+    .project-gallery
+        grid-template-columns: 1fr
