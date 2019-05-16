@@ -1281,12 +1281,11 @@ nav ul li {
 nav #nav_button {
   position: fixed;
   right: 1em;
-  top: 11em;
+  top: 10em;
   width: 4em;
   height: 4em;
-  background: white;
-  color: black;
-  display: none;
+  -webkit-box-sizing: normal;
+          box-sizing: normal;
 }
 
 pre {
