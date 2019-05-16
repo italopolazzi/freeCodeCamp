@@ -3,14 +3,13 @@ nav:focus-within
     transform: translateY(0)
 
 nav
-    @extend %main_transition
     @extend %vertical-center
     width: 100%
     height: 10em
     justify-content: space-between
     align-items: center
     z-index: 1
-    transform: translateY(-100%)
+    // transform: translateY(-100%)
 
     ul
         @extend %vertical-center
@@ -20,10 +19,12 @@ nav
 
     #nav_button
         @extend %centralize-all
+        @extend %cursor-pointer
         position: fixed
         right: 1em
         top: 10em
         width: 4em
         height: 4em
         box-sizing: normal
+        transform: translateY(-14em)
         

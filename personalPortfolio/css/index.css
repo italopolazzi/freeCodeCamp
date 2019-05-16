@@ -171,9 +171,17 @@ a.button, nav #nav_button {
   text-align: center;
 }
 
-nav, .project-tile-footer {
-  -webkit-transition: all .3s ease;
-  transition: all .3s ease;
+* {
+  -webkit-transition: all .1s ease;
+  transition: all .1s ease;
+}
+
+nav #nav_button {
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 
 .ma0 {
@@ -1263,8 +1271,6 @@ nav {
       -ms-flex-align: center;
           align-items: center;
   z-index: 1;
-  -webkit-transform: translateY(-100%);
-          transform: translateY(-100%);
 }
 
 nav ul {
@@ -1286,6 +1292,8 @@ nav #nav_button {
   height: 4em;
   -webkit-box-sizing: normal;
           box-sizing: normal;
+  -webkit-transform: translateY(-14em);
+          transform: translateY(-14em);
 }
 
 pre {
