@@ -10,13 +10,13 @@ $size: 4rem // 4 * 16 = 64px em teoria
                 // REVISAR
                 @if $side == all
                     .#{$spacing_key}#{$side_key}#{$i}
-                        #{$spacing}: (($size / $times) * $i)
+                        #{$spacing}: (($size / $times) * $i)!important
                 @else if $side == horizontal
                     .#{$spacing_key}#{$side_key}#{$i}
-                        #{$spacing}: 0 (($size / $times) * $i)
+                        #{$spacing}: 0 (($size / $times) * $i)!important
                 @else if $side == vertical
                     .#{$spacing_key}#{$side_key}#{$i}
-                        #{$spacing}: (($size / $times) * $i) 0
+                        #{$spacing}: (($size / $times) * $i) 0!important
                 @else
                     .#{$spacing_key}#{$side_key}#{$i}
-                        #{$spacing}-#{$side}: (($size / $times) * $i)
+                        #{$spacing}-#{$side}: (($size / $times) * $i)!important
