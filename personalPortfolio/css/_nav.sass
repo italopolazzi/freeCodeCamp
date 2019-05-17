@@ -1,6 +1,14 @@
-nav:hover,
-nav:focus-within
-    transform: translateY(0)
+#nav-menu-opener
+    @extend %centralize-all
+    @extend %cursor-pointer
+    position: fixed
+    right: 1em
+    top: 10em
+    width: 4em
+    height: 4em
+    box-sizing: normal
+    font-size: map-get($goldens-map, golden16)
+    transform: translateY(-14em)
 
 nav
     @extend %vertical-center
@@ -9,22 +17,23 @@ nav
     justify-content: space-between
     align-items: center
     z-index: 1
-    // transform: translateY(-100%)
 
-    ul
-        @extend %vertical-center
-        flex-direction: row
-        li
-            margin: 0 1em
+    #nav-menu
+        justify-content: flex-end
+        &,
+        & > *:not(#nav-menu-opener)
+            display: flex
+            flex-direction: row
+            align-items: center
+        & > *:not(#nav-menu-opener)
+            height: 3em
 
-    #nav_button
-        @extend %centralize-all
-        @extend %cursor-pointer
-        position: fixed
-        right: 1em
-        top: 10em
-        width: 4em
-        height: 4em
-        box-sizing: normal
-        transform: translateY(-14em)
+@media (max-width: map-get($media-breakpoints-sizes, md))
+    #nav-menu
+        flex-direction: column!important
+        align-items: flex-end!important
+        justify-content: center!important
         
+
+input[type="checkbox"]
+    display: none!important

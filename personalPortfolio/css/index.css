@@ -152,7 +152,25 @@ a {
   text-decoration: none;
 }
 
-a.button, nav #nav_button, nav, nav ul {
+hr {
+  display: block;
+  unicode-bidi: -webkit-isolate;
+  unicode-bidi: isolate;
+  -webkit-margin-before: 0.5em;
+          margin-block-start: 0.5em;
+  -webkit-margin-after: 0.5em;
+          margin-block-end: 0.5em;
+  -webkit-margin-start: auto;
+          margin-inline-start: auto;
+  -webkit-margin-end: auto;
+          margin-inline-end: auto;
+  overflow: hidden;
+  border-style: inset;
+  border-width: 0.25em;
+  border-style: solid;
+}
+
+a.button, a.button:before, #nav-menu-opener, nav {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -161,7 +179,7 @@ a.button, nav #nav_button, nav, nav ul {
           align-items: center;
 }
 
-a.button, nav #nav_button {
+a.button, a.button:before, #nav-menu-opener {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -176,7 +194,7 @@ a.button, nav #nav_button {
   transition: all .1s ease;
 }
 
-nav #nav_button {
+#nav-menu-opener {
   cursor: pointer;
   -webkit-user-select: none;
      -moz-user-select: none;
@@ -1208,11 +1226,11 @@ a.button {
       -ms-flex-flow: row nowrap;
           flex-flow: row nowrap;
   width: auto;
-  background: transparent;
-  color: black !important;
+  width: 2em;
+  height: 2em;
   font-weight: bold;
-  border-radius: 0.25rem;
-  position: absolute;
+  border-radius: 50%;
+  position: relative;
   overflow: hidden;
   z-index: 1;
 }
@@ -1226,14 +1244,13 @@ a.button:before {
   content: '';
   width: 0;
   height: 100%;
+  background: -webkit-gradient(linear, right top, left top, from(rgba(0, 0, 0, 0)), to(currentColor));
+  background: linear-gradient(to left, rgba(0, 0, 0, 0), currentColor);
+  opacity: 0.4;
   position: absolute;
   top: 0;
   left: 0;
   z-index: -1;
-  -webkit-transition: all .3s ease;
-  transition: all .3s ease;
-  -webkit-animation: rainbow 1s 2s 3 alternate backwards;
-          animation: rainbow 1s 2s 3 alternate backwards;
 }
 
 a.button:hover:before {
@@ -1244,21 +1261,31 @@ a.button:after {
   content: '';
   width: 100%;
   height: 100%;
-  background: blue;
-  position: absolute;
   top: 0;
   left: 0;
   z-index: -2;
 }
 
 a.button .icon {
-  margin-left: 1rem;
+  margin-right: 1em;
 }
 
-nav:hover,
-nav:focus-within {
-  -webkit-transform: translateY(0);
-          transform: translateY(0);
+a.button span {
+  width: 0;
+  display: none;
+}
+
+#nav-menu-opener {
+  position: fixed;
+  right: 1em;
+  top: 10em;
+  width: 4em;
+  height: 4em;
+  -webkit-box-sizing: normal;
+          box-sizing: normal;
+  font-size: 1rem;
+  -webkit-transform: translateY(-14em);
+          transform: translateY(-14em);
 }
 
 nav {
@@ -1273,27 +1300,43 @@ nav {
   z-index: 1;
 }
 
-nav ul {
+nav #nav-menu {
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+nav #nav-menu,
+nav #nav-menu > *:not(#nav-menu-opener) {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-nav ul li {
-  margin: 0 1em;
+nav #nav-menu > *:not(#nav-menu-opener) {
+  height: 3em;
 }
 
-nav #nav_button {
-  position: fixed;
-  right: 1em;
-  top: 10em;
-  width: 4em;
-  height: 4em;
-  -webkit-box-sizing: normal;
-          box-sizing: normal;
-  -webkit-transform: translateY(-14em);
-          transform: translateY(-14em);
+@media (max-width: 960px) {
+  #nav-menu {
+    -webkit-box-orient: vertical !important;
+    -webkit-box-direction: normal !important;
+        -ms-flex-direction: column !important;
+            flex-direction: column !important;
+    -webkit-box-align: end !important;
+        -ms-flex-align: end !important;
+            align-items: flex-end !important;
+    -webkit-box-pack: center !important;
+        -ms-flex-pack: center !important;
+            justify-content: center !important;
+  }
 }
 
 pre {
@@ -1343,6 +1386,25 @@ footer {
   -ms-grid-row: 3;
   -ms-grid-column: 1;
   grid-area: footer;
+}
+
+.icon {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: inherit !important;
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-feature-settings: 'liga';
+          font-feature-settings: 'liga';
 }
 
 #navbar {

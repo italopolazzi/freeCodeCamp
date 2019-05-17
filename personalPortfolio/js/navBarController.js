@@ -3,7 +3,7 @@ export default () => {
     const nav = document.getElementById("navbar")
     const nav_height = Number.parseInt(getComputedStyle(nav).height)
 
-    const nav_button = document.getElementById("nav_button")
+    const nav_button = document.getElementById("nav-menu-opener")
     const nav_button_transform = getComputedStyle(nav_button).transform
 
     const switchNavBar = (test) => {

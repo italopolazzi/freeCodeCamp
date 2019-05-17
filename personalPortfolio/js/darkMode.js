@@ -1,5 +1,5 @@
 export default () => {
-    const dark_mode_checkbox = document.getElementById("dark_mode");
+    const dark_mode_checkbox = document.getElementById("dark-mode");
     const body_classes = document.body.classList;
 
     const alternateDarkMode = (event) => {
