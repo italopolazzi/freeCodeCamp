@@ -26,14 +26,14 @@ nav
             flex-direction: row
             align-items: center
         & > *:not(#nav-menu-opener)
-            height: 3em
+            height: 2em
+        #nav-internal, #nav-social, #nav-dark-mode
+            padding: 0 1em
+            & > *
+                margin-left: 1em
 
 @media (max-width: map-get($media-breakpoints-sizes, md))
     #nav-menu
         flex-direction: column!important
         align-items: flex-end!important
         justify-content: center!important
-        
-
-input[type="checkbox"]
-    display: none!important
