@@ -17,20 +17,29 @@ nav
     justify-content: space-between
     align-items: center
     z-index: 1
+        
 
-    #nav-menu
-        justify-content: flex-end
-        &,
-        & > *:not(#nav-menu-opener)
-            display: flex
-            flex-direction: row
-            align-items: center
-        & > *:not(#nav-menu-opener)
-            height: 2em
-        #nav-internal, #nav-social, #nav-dark-mode
-            padding: 0 1em
-            & > *
-                margin-left: 1em
+#nav-menu
+    justify-content: flex-end
+    &,
+    & > *:not(#nav-menu-opener)
+        display: flex
+        flex-direction: row
+        align-items: center
+    & > *:not(#nav-menu-opener)
+        height: 2em
+
+#nav-internal, #nav-social, #nav-dark-mode
+    padding: 0 1em
+    & > *
+        margin-left: 1em
+
+#nav-internal
+    font-size: 1.2em
+
+#nav-social
+    span
+        display: none
 
 @media (max-width: map-get($media-breakpoints-sizes, md))
     #nav-menu

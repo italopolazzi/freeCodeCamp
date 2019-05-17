@@ -19,52 +19,63 @@
         <li><a tabindex="0" href="#navbar">Skip to Navigation</a></li>
         <li><a tabindex="0" href="#main-doc">Skip to Main Content</a></li>
     </ul>
-    <nav id="navbar" class="secondary color-inverted pa8" role="navigation">
+    <nav id="navbar" class="primary color-inverted pa8" role="navigation">
         <header>
             <h2>Ítalo</h2>
         </header>
         <div id="nav-menu">
             <ul id="nav-internal">
-                <li><a tabindex="0" href="#welcome-section" class="secondary color-inverted"
+                <li><a tabindex="0" href="#welcome-section" class="primary color-inverted"
                         title="welcome"><span>welcome</span></a></li>
-                <li><a tabindex="0" href="#projects" class="secondary color-inverted"
+                <li><a tabindex="0" href="#projects" class="primary color-inverted"
                         title="projects"><span>projects</span></a></li>
-                <li><a tabindex="0" href="#contact" class="secondary color-inverted"
+                <li><a tabindex="0" href="#contact" class="primary color-inverted"
                         title="contact"><span>contact</span></a></li>
             </ul>
             <ul id="nav-social">
 
-                <li><a tabindex="0" href="https://www.github.com/itpzzi" class="secondary color-inverted"
-                        title="GitHub profile" target="_blank" id="profile-github"><i
-                            class="mdi mdi-github-circle"></i><span>GitHub</span></a>
+                <li><a tabindex="0" href="https://www.github.com/itpzzi" class="primary color-inverted"
+                        title="GitHub profile" target="_blank" id="profile-github">
+                        <div class="icon"><i class="mdi mdi-github-face"></i></div><span>GitHub</span>
+                    </a>
                 </li>
 
-                <li><a tabindex="0" href="https://twitter.com/italopolazzi" class="secondary color-inverted"
-                        title="Twitter profile" target="_blank" id="profile-twitter"><i
-                            class="mdi mdi-twitter-circle"></i><span>Twitter</span></a></li>
+                <li><a tabindex="0" href="https://twitter.com/italopolazzi" class="primary color-inverted"
+                        title="Twitter profile" target="_blank" id="profile-twitter">
+                        <div class="icon"><i class="mdi mdi-twitter"></i></div><span>Twitter</span>
+                    </a></li>
 
-                <li><a tabindex="0" href="https://www.freecodecamp.org/italopolazzi" class="secondary color-inverted"
-                        title="FreeCodeCamp portfolio" target="_blank" id="profile-link"><span>FreeCodeCamp</span></a>
+                <li><a tabindex="0" href="https://www.freecodecamp.org/italopolazzi" class="primary color-inverted"
+                        title="FreeCodeCamp portfolio" target="_blank" id="profile-link">
+                        <div class="icon"><i class="mdi mdi-alpha-f-circle"></i></div><span>FreeCodeCamp</span>
+                    </a>
+                </li>
+
+                <li><a tabindex="0" href="https://www.behance.com/itpzzi" class="primary color-inverted"
+                        title="Behance portfolio" target="_blank" id="profile-link">
+                        <div class="icon"><i class="mdi mdi-behance"></i></div><span>Behance</span>
+                    </a>
                 </li>
 
             </ul>
             <div id="nav-dark-mode">
                 <label for="dark-mode" class="custom-chebox">
-                    <!-- <i class="icon" aria-hidden="true">brightness_6</i> Dark Mode -->
+                    <i class="mdi mdi-theme-light-dark"></i> Dark Mode
                 </label>
                 <input title="Dark mode" type="checkbox" name="dark-mode" id="dark-mode">
             </div>
             <div id="nav-menu-opener" class="inverted color-main" role="button" title="menu">
-                <!-- <i class="icon" aria-hidden="true">menu</i><span>Menu</span> -->
+                <i class="mdi mdi-menu"></i><span>Menu</span>
             </div>
         </div>
     </nav>
     <main id="main-doc" class="pa0 container" role="main">
         <section class="main-section pa8" id="welcome-section">
             <header>
-                <!-- <H1>Ítalo Polazzi a Web Develover <i class="icon" aria-hidden="true">favorite_border</i> </H1> -->
-                <!-- <h2><i class="icon" aria-hidden="true">home</i>Welcome</h2> -->
+                <H1>Ítalo Polazzi a Web Develover</H1>
+                <h2>Welcome</h2>
             </header>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Deleniti voluptatem culpa possimus ea hic ratione, quaerat optio ab dolore ipsam iste sit fugit fuga ullam nulla facere quis atque amet.</p>
         </section>
         <section class="main-section pa8" id="projects">
             <header>
@@ -144,7 +155,7 @@
                 <hr>
                 <div class="my4 project-gallery">
 
-                    <div class="project-tile">
+                    <div class="project-tile secondary">
                         <a href="./img/projects/gab.png">
                             <img src="./img/projects/gab.png"></img>
                             <div class="project-tile-footer color-secondary">
@@ -160,7 +171,7 @@
                         </a>
                     </div>
 
-                    <div class="project-tile">
+                    <div class="project-tile accent">
                         <a href="./img/projects/office_v2.png">
                             <img src="./img/projects/office_v2.png"></img>
                             <div class="project-tile-footer color-accent">
@@ -176,7 +187,7 @@
                         </a>
                     </div>
 
-                    <div class="project-tile">
+                    <div class="project-tile primary">
                         <a href="./img/projects/office_v3.png">
                             <img src="./img/projects/office_v3.png"></img>
                             <div class="project-tile-footer color-primary">
@@ -223,7 +234,7 @@
 
     </main>
 
-    <footer id="footer" class="secondary">&copy; Ítalo Polazzi - 2019</footer>
+    <footer id="footer" class="accent">&copy; Ítalo Polazzi - 2019</footer>
     <script src="js/index.js" type="module"></script>
     <!-- <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script> -->
 </body>

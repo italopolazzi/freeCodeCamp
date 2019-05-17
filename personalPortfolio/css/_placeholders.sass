@@ -17,3 +17,18 @@
 %cursor-pointer
     cursor: pointer
     user-select: none
+
+%basic-content-null
+    content: ''
+    width: 100%
+    height: 100%
+    position: absolute
+    z-index: -1
+
+%basic-before
+    &:before
+        @extend %basic-content-null
+
+%basic-after
+    &:after
+        @extend %basic-content-null
