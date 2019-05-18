@@ -177,7 +177,7 @@ hr {
   border-style: solid;
 }
 
-a.button, a.button:before, #nav-menu-opener, .icon, .project-tile-actions .tile-action, nav {
+a.button, a.button:before, #nav-menu-opener, .icon, nav {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -186,7 +186,7 @@ a.button, a.button:before, #nav-menu-opener, .icon, .project-tile-actions .tile-
           align-items: center;
 }
 
-a.button, a.button:before, #nav-menu-opener, .icon, .project-tile-actions .tile-action {
+a.button, a.button:before, #nav-menu-opener, .icon {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2085,69 +2085,14 @@ section#welcome-section *:not(.svg-background) {
   }
 }
 
-.project-tile {
+.tile {
   width: 100%;
   height: 30em;
   position: relative;
   overflow: hidden;
 }
 
-.project-tile iframe {
-  height: 100%;
-}
-
-.project-tile iframe, .project-tile img {
-  width: 100%;
-}
-
-.project-tile img {
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-
-.project-tile.rounded {
-  border-radius: 1em;
-}
-
-.project-tile.minimalist {
-  border: 0.25em solid currentColor;
-}
-
-.project-tile.shadow {
-  -webkit-box-shadow: 0 0 0.75em rgba(0, 0, 0, 0.4);
-          box-shadow: 0 0 0.75em rgba(0, 0, 0, 0.4);
-}
-
-.project-tile-footer {
-  width: 100%;
-  height: 9em;
-  padding: 1em;
-  padding-right: 5em;
-  position: absolute;
-  bottom: 0;
-  z-index: 1;
-}
-
-.project-tile-footer:before {
-  content: '';
-  width: 100%;
-  height: 100%;
-  background: currentColor;
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  z-index: -1;
-}
-
-.project-tile-footer.activated {
-  height: 30em;
-}
-
-.project-tile-actions {
-  position: absolute;
-  right: 0;
-  bottom: 0;
+.tile header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2155,94 +2100,44 @@ section#welcome-section *:not(.svg-background) {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  font-size: 1rem;
-  z-index: 4;
 }
 
-.project-tile-actions .tile-action {
-  border-radius: 50%;
-  padding: 1em;
-  margin: 0 1em 1em;
-  cursor: pointer;
+.tile header a {
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1;
 }
 
-.project-tile-actions .tile-action:before {
-  font-weight: 900;
+.tile header a figure {
+  max-height: 19.998em;
+  overflow: hidden;
 }
 
-.tile-action-expand.activated {
-  -webkit-transform: rotate(180deg);
-          transform: rotate(180deg);
+.tile header h4 {
+  -webkit-box-ordinal-group: 3;
+      -ms-flex-order: 2;
+          order: 2;
+  padding: 1rem;
 }
 
-.tile-action-expand:hover:before, .tile-action-expand:focus:before {
-  -webkit-animation: 1s ease-in-out expand infinite;
-          animation: 1s ease-in-out expand infinite;
+.tile .tile-description {
+  height: 100%;
+  margin: 0;
+  overflow: hidden;
+  padding: 1rem;
+  position: absolute;
+  background: inherit;
 }
 
-.tile-action-open:hover:before, .tile-action-open:focus:before {
-  -webkit-animation: 1s ease-in-out open infinite;
-          animation: 1s ease-in-out open infinite;
+.tile.activated .tile-description {
+  top: 0;
+  height: 30em;
 }
 
-@-webkit-keyframes expand {
-  0% {
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
-  }
-  50% {
-    -webkit-transform: translateY(-1em);
-            transform: translateY(-1em);
-  }
-  100% {
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
-  }
-}
-
-@keyframes expand {
-  0% {
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
-  }
-  50% {
-    -webkit-transform: translateY(-1em);
-            transform: translateY(-1em);
-  }
-  100% {
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
-  }
-}
-
-@-webkit-keyframes open {
-  0% {
-    -webkit-transform: scale(1);
-            transform: scale(1);
-  }
-  50% {
-    -webkit-transform: scale(1.5);
-            transform: scale(1.5);
-  }
-  100% {
-    -webkit-transform: scale(1);
-            transform: scale(1);
-  }
-}
-
-@keyframes open {
-  0% {
-    -webkit-transform: scale(1);
-            transform: scale(1);
-  }
-  50% {
-    -webkit-transform: scale(1.5);
-            transform: scale(1.5);
-  }
-  100% {
-    -webkit-transform: scale(1);
-            transform: scale(1);
-  }
+.tile footer {
+  position: absolute;
+  bottom: 0;
+  padding: 1rem;
 }
 
 @media print {
