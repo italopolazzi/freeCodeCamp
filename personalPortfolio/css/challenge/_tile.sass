@@ -1,0 +1,57 @@
+$tile-height: 20em
+$tile-width: 100%
+$tile-footer-height: 6em
+
+$button-font-size: map-get($goldens-map, golden16)
+$button-padding: 1em
+$button-size: 2em
+
+$padding-tile-footer-content: 2 * $button-size
+
+.project-tile
+    width: $tile-width
+    height: $tile-height
+    position: relative
+    overflow: hidden
+    iframe
+        height: 100%
+    iframe, img
+        width: 100%
+
+.project-tile-footer
+    width: 100%
+    height: $tile-footer-height
+    padding: $button-padding
+    padding-right: $padding-tile-footer-content
+    position: absolute
+    bottom: 0
+    z-index: 1
+    &:hover
+        height: $tile-height
+    &:before
+        content: ''
+        width: 100%
+        height: 100%
+        background: currentColor
+        position: absolute
+        left: 0
+        bottom: 0
+        z-index: -1
+
+.project-actions
+    height: $button-size
+    width: $button-size
+    bottom: 1em
+    right: 1em
+    border: none
+    border-radius: 50%
+    z-index: 2
+    position: absolute
+    font-size: $button-font-size
+
+a.project-actions
+    @extend %centralize-all
+    bottom: 4em
+
+.project-tile input:checked  ~ .project-tile-footer
+    height: $tile-height

@@ -54,37 +54,6 @@ section#welcome-section
     grid-template-rows: auto auto
     grid-gap: 1em
 
-.project-tile
-    width: 100%
-    height: 20em
-    position: relative
-    overflow: hidden
-    iframe
-        height: 100%
-    iframe, img
-        width: 100%
-
-.project-tile-footer
-    width: 100%
-    height: 6em
-    padding: 1em
-    position: absolute
-    bottom: 0
-    z-index: 1
-    overflow: hidden
-    &:hover
-        height: 20em
-    &:before
-        content: ''
-        width: 100%
-        height: 100%
-        background: currentColor
-        position: absolute
-        left: 0
-        bottom: 0
-        z-index: -1
-
-
 @media (max-width: map-get($media-breakpoints-sizes, md))
     .project-gallery
         grid-template-columns: 100%
