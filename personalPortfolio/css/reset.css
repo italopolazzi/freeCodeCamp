@@ -133,3 +133,15 @@ table {
     border-collapse: collapse;
     border-spacing: 0;
 }
+
+
+
+*,
+*:before,
+*:after {
+    -webkit-appearance: listitem!important;
+    -moz-appearance: listitem!important;
+    -ms-appearance: listitem!important;
+    -o-appearance: listitem!important;
+    appearance: listitem!important;
+}

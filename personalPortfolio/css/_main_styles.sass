@@ -1,13 +1,15 @@
 *
+    @extend %main_transition
     box-sizing: border-box
 
 html
     font-size: $html-font-size
+    @media (min-width: map-get($media-breakpoints-sizes, xl))
+        font-size: $html-font-size * 2
 
 body
-    font-family: 'Lato', sans-serif
-    font-weight: normal
-    // overflow-x: hidden
+    font-family: $body-font-family
+    font-weight: $body-font-weight
 
 li, p, pre
         line-height: $line-height
@@ -20,3 +22,15 @@ img
 a
     text-decoration: none
     // color: $font-color-a
+
+hr 
+	display: block 
+	unicode-bidi: isolate 
+	margin-block-start: 0.5em 
+	margin-block-end: 0.5em 
+	margin-inline-start: auto 
+	margin-inline-end: auto 
+	overflow: hidden 
+	border-style: inset 
+	border-width: 0.25em 
+	border-style: solid 
