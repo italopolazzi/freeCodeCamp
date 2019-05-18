@@ -7,7 +7,7 @@ export default () => {
     const nav_button_transform = getComputedStyle(nav_button).transform
 
     const switchNavBar = (test) => {
-        const pos = ['translateY(-100%)', 'initial'];
+        const pos = ['translateY(-100%)', 'translate(0)']; // const pos = ['translateY(-100%)', 'initial']
         const neg = ['translate(0)', nav_button_transform];
         [nav.style.transform, nav_button.style.transform] = test && true ? pos : neg
     }

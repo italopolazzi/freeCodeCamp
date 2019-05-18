@@ -55,3 +55,21 @@ a.project-actions
 
 .project-tile input:checked  ~ .project-tile-footer
     height: $tile-height
+
+
+input.project-actions
+   z-index: 2
+   border-radius: 50%!important
+
+input.project-actions:checked:before
+    transform: rotate(45deg)
+
+input.project-actions:before
+    // transform: rotate(45deg)!important
+    position: absolute
+    width: 100%
+    height: 100%
+    z-index: 10
+    // border-radius: 50%
+    // background: red
+    @extend %centralize-all
