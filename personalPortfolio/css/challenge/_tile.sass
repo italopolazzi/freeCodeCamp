@@ -1,8 +1,9 @@
-$tile-height: 30em
+$tile-height: 80vh
+$tile-min-height: 30em
 $tile-width: 100%
 
-$tile-figure-height: $tile-height * 0.6
-$tile-footer-height: $tile-height * 0.2
+$tile-figure-height: $tile-min-height * 0.5
+$tile-footer-height: $tile-min-height * 0.15
 
 $button-font-size: map-get($goldens-map, golden16)
 $button-padding: 1em
@@ -12,11 +13,41 @@ $padding: 1rem
 
 .tile
     width: $tile-width
-    height: $tile-height
+    height: $tile-min-height
+    min-height: $tile-min-height
     position: relative
     overflow: hidden
-    // display: flex
-    // flex-direction: column
+    &.rounded
+        border-radius: 1em
+    &.minimalist
+        border: 0.25em solid currentColor
+    &.figure
+        figure
+            padding: $padding
+    &.image
+        a
+            order: 2
+        header
+            position: relative
+            width: 100%
+            height: 100%
+        img
+            width: 100%
+            height: 100%
+            object-fit: cover
+        &:hover
+            img
+                filter: blur(1em)
+                transform: scale(1.2)
+    &.image.titled
+        h4
+            order: 1
+            left: 0
+            top: 0
+            position: absolute
+            z-index: 1
+            width: 100%
+            padding: 1rem
 
 .tile header
     display: flex
@@ -29,6 +60,7 @@ $padding: 1rem
     h4
         order: 2
         padding: $padding
+        padding-bottom: 0
 
 .tile .tile-description
     height: 100%
@@ -40,7 +72,7 @@ $padding: 1rem
 
 .tile.activated .tile-description
     top: 0
-    height: $tile-height
+    height: $tile-min-height
 
 .tile footer
     position: absolute
@@ -49,11 +81,20 @@ $padding: 1rem
     background: inherit
     bottom: 0
     left: 0
-    color: white
     z-index: 1
     &:before
         @extend %basic-before
-        box-shadow: 0 0 20px black
+        box-shadow: 0 0 2em -0.5em currentColor
+
+.tile.image footer
+    opacity: 0
+    height: 100%
+    background: transparent
+    .tile-actions 
+        @extend %centralize-all
+
+.tile.image:hover footer
+    opacity: 1
 
 .tile-actions 
     @extend %vertical-center

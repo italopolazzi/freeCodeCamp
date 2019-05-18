@@ -4,17 +4,17 @@
 
 html
     font-size: $html-font-size
+    scroll-behavior: $scroll-behavior
     @media (min-width: map-get($media-breakpoints-sizes, xl))
         font-size: $html-font-size * 2
 
 body
     font-family: $body-font-family
     font-weight: $body-font-weight
-    scroll-behavior: $scroll-behavior
 
 li, p, pre
-        line-height: $line-height
-        margin: 1rem 0
+    line-height: $line-height
+    margin: 1rem 0
 
 img
     width: 100%
