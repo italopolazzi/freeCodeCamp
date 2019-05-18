@@ -136,7 +136,7 @@ table {
 
 
 
-*,
+/* *,
 *:before,
 *:after {
     -webkit-appearance: listitem!important;
@@ -144,4 +144,4 @@ table {
     -ms-appearance: listitem!important;
     -o-appearance: listitem!important;
     appearance: listitem!important;
-}
+} */

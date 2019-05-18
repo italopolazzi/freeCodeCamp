@@ -6,7 +6,7 @@ $button-font-size: map-get($goldens-map, golden16)
 $button-padding: 1em
 $button-size: 2em
 
-$padding-tile-footer-content: 2 * $button-size
+$padding-tile-footer-content: 2 * $button-size + 1
 
 .project-tile
     width: $tile-width
@@ -17,6 +17,12 @@ $padding-tile-footer-content: 2 * $button-size
         height: 100%
     iframe, img
         width: 100%
+    &.rounded
+        border-radius: 1em
+    &.minimalist
+        border: 0.25em solid currentColor
+    &.shadow
+        box-shadow: 0 0 0.75em rgba(0,0,0,0.4)
 
 .project-tile-footer
     width: 100%
@@ -26,6 +32,7 @@ $padding-tile-footer-content: 2 * $button-size
     position: absolute
     bottom: 0
     z-index: 1
+    color: inherit
     &:hover
         height: $tile-height
     &:before
@@ -47,7 +54,6 @@ $padding-tile-footer-content: 2 * $button-size
     bottom: 0
     display: flex
     flex-direction: column
-    background: trasparent
     font-size: 1rem
     z-index: 4
     .tile-action
@@ -56,9 +62,12 @@ $padding-tile-footer-content: 2 * $button-size
         margin: 0 1em 1em
         cursor: pointer
         @extend %centralize-all
+        &:before
+            font-weight: 900
 
 .tile-action-expand.activated
     transform: rotate(180deg)
+
 .tile-action-expand:hover:before, .tile-action-expand:focus:before
     animation: 1s ease-in-out expand infinite
 

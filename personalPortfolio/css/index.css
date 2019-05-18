@@ -2078,14 +2078,28 @@ section#welcome-section *:not(.svg-background) {
   width: 100%;
 }
 
+.project-tile.rounded {
+  border-radius: 1em;
+}
+
+.project-tile.minimalist {
+  border: 0.25em solid currentColor;
+}
+
+.project-tile.shadow {
+  -webkit-box-shadow: 0 0 0.75em rgba(0, 0, 0, 0.4);
+          box-shadow: 0 0 0.75em rgba(0, 0, 0, 0.4);
+}
+
 .project-tile-footer {
   width: 100%;
   height: 6em;
   padding: 1em;
-  padding-right: 4em;
+  padding-right: 5em;
   position: absolute;
   bottom: 0;
   z-index: 1;
+  color: inherit;
 }
 
 .project-tile-footer:hover {
@@ -2118,7 +2132,6 @@ section#welcome-section *:not(.svg-background) {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  background: trasparent;
   font-size: 1rem;
   z-index: 4;
 }
@@ -2128,6 +2141,10 @@ section#welcome-section *:not(.svg-background) {
   padding: 1em;
   margin: 0 1em 1em;
   cursor: pointer;
+}
+
+.project-tile-actions .tile-action:before {
+  font-weight: 900;
 }
 
 .tile-action-expand.activated {
