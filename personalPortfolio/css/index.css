@@ -142,6 +142,7 @@ html {
 body {
   font-family: "Quicksand", sans-serif;
   font-weight: normal;
+  scroll-behavior: smooth;
 }
 
 li, p, pre {
@@ -2049,23 +2050,44 @@ section#welcome-section *:not(.svg-background) {
 .project-gallery {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr 1fr 1fr;
-      grid-template-columns: 1fr 1fr 1fr;
-  -ms-grid-rows: auto auto;
-      grid-template-rows: auto auto;
+  -ms-grid-columns: 100%;
+      grid-template-columns: 100%;
+  -ms-grid-rows: auto;
+      grid-template-rows: auto;
   grid-gap: 1em;
 }
 
-@media (max-width: 960px) {
+@media (min-width: 600px) {
   .project-gallery {
-    -ms-grid-columns: 100%;
-        grid-template-columns: 100%;
+    -ms-grid-columns: (1fr)[1];
+        grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+@media (min-width: 960px) {
+  .project-gallery {
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1280px) {
+  .project-gallery {
+    -ms-grid-columns: (1fr)[3];
+        grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 1920px) {
+  .project-gallery {
+    -ms-grid-columns: (1fr)[4];
+        grid-template-columns: repeat(4, 1fr);
   }
 }
 
 .project-tile {
   width: 100%;
-  height: 20em;
+  height: 30em;
   position: relative;
   overflow: hidden;
 }
@@ -2076,6 +2098,12 @@ section#welcome-section *:not(.svg-background) {
 
 .project-tile iframe, .project-tile img {
   width: 100%;
+}
+
+.project-tile img {
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .project-tile.rounded {
@@ -2093,17 +2121,12 @@ section#welcome-section *:not(.svg-background) {
 
 .project-tile-footer {
   width: 100%;
-  height: 6em;
+  height: 9em;
   padding: 1em;
   padding-right: 5em;
   position: absolute;
   bottom: 0;
   z-index: 1;
-  color: inherit;
-}
-
-.project-tile-footer:hover {
-  height: 20em;
 }
 
 .project-tile-footer:before {
@@ -2118,7 +2141,7 @@ section#welcome-section *:not(.svg-background) {
 }
 
 .project-tile-footer.activated {
-  height: 20em;
+  height: 30em;
 }
 
 .project-tile-actions {

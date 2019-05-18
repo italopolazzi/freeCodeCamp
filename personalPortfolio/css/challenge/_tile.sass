@@ -1,6 +1,6 @@
-$tile-height: 20em
+$tile-height: 30em
 $tile-width: 100%
-$tile-footer-height: 6em
+$tile-footer-height: $tile-height * 0.3
 
 $button-font-size: map-get($goldens-map, golden16)
 $button-padding: 1em
@@ -17,6 +17,9 @@ $padding-tile-footer-content: 2 * $button-size + 1
         height: 100%
     iframe, img
         width: 100%
+    img
+        height: 100%
+        object-fit: cover
     &.rounded
         border-radius: 1em
     &.minimalist
@@ -32,9 +35,8 @@ $padding-tile-footer-content: 2 * $button-size + 1
     position: absolute
     bottom: 0
     z-index: 1
-    color: inherit
-    &:hover
-        height: $tile-height
+    // &:hover
+    //     height: $tile-height
     &:before
         content: ''
         width: 100%
@@ -47,6 +49,9 @@ $padding-tile-footer-content: 2 * $button-size + 1
 
 .project-tile-footer.activated
     height: $tile-height
+
+// .activated.project-tile-footer
+//     overflow-y: auto!important
 
 .project-tile-actions
     position: absolute
