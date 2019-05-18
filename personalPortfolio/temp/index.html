@@ -1,142 +1,119 @@
-                <h1>A CSS lib</h1>
-                <h2>Columns Sizes</h2>
-                <div class="row">
-                    <div class="col-xs10 offset-xs1 col-md6">
-                        <pre class="main-blue color-main-white">
-                         <code>
-$media_breakpoints_sizes: (xs: 0px, sm: 600px, md: 960px, lg: 1280px, xl: 1920px)
+<!-- <section class="my8 project-types" id="project-web">
+                <h3>Web</h3>
+                <hr>
+                <section class="my4 project-gallery">
+                   
+                    <article class="project-tile">
+                        <a href="../technicalDocumentationPage/index.html">
+                            <iframe src="../technicalDocumentationPage/index.html"></iframe>
+                            <div class="project-tile-footer color-secondary">
+                                <h4 class="project-title color-inverted">Technical Documentation</h4>
+                                <p class="color-inverted">Lorem ipsum dolor sit amet consectetur
+                                    adipisicing elit. Placeat
+                                    aut facilis quisquam. Nihil optio, ut perspiciatis debitis
+                                    architecto asperiores
+                                    provident mollitia ratione magnam, ex nostrum incidunt eius
+                                    assumenda, placeat
+                                    doloribus?</p>
+                            </div>
+                        </a>
+                    </article>
 
-$total_columns: 12
+                    <article class="project-tile">
+                        <a href="../tributePage/index.html">
+                            <iframe tabindex="-1" src="../tributePage/index.html"></iframe>
+                            <div class="project-tile-footer color-accent">
+                                <h4 class="project-title color-inverted">Tribute Page</h4>
+                                <p class="color-inverted">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                    Placeat
+                                    aut facilis quisquam. Nihil optio, ut perspiciatis debitis architecto asperiores
+                                    provident mollitia ratione magnam, ex nostrum incidunt eius assumenda, placeat
+                                    doloribus?</p>
+                            </div>
+                        </a>
+                    </article>
 
-$column_percentage: 100% / $total_columns
-</code>
-</pre>
-
-                    </div>
-                    <div class="col-xs10 offset-xs1 col-md6">
-                        <pre class="main-blue color-main-white">
-                         <code>
-@each $breakpoint_key, $size_in_px in $media_breakpoints_sizes
-    @media screen and (min-width: $size_in_px)
-
-        @for $number_of_columns from 1 through $total_columns
-    
-            .col-#{$breakpoint_key}#{$number_of_columns}
-                flex: 0 1 ($column_percentage * $number_of_columns)
-
-            .offset-#{$breakpoint_key}#{$number_of_columns}
-                margin-left: $column_percentage * $number_of_columns
-            </code>
-                </pre>
-                    </div>
-                </div>
-                <h2>Colors</h2>
-
-<!-- _____________________________________________________________________________________________ -->
-
-            <main id="main-doc">
-                <h1>CSS lib based in Vuetify and Material Design</h1>
-                <section class="main-section" id="spacings">
-                    <header>
-                        <h2>spacings</h2>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem assumenda officiis
-                            fuga id
-                            repudiandae quod accusamus, ut blanditiis itaque quidem culpa recusandae, accusantium
-                            quibusdam
-                            eveniet
-                            sit. Doloribus minus ipsa dolore?</p>
-                    </header>
+                    <article class="project-tile">
+                        <a href="./index.html">
+                            <iframe src="./index.html"></iframe>
+                            <div class="project-tile-footer color-primary">
+                                <h3 class="project-title color-inverted">Personal Portfolio</h3>
+                                <p class="color-inverted">Lorem ipsum dolor sit amet consectetur adipisicing
+                                    elit. Placeat
+                                    aut facilis quisquam. Nihil optio, ut perspiciatis debitis architecto
+                                    asperiores
+                                    provident mollitia ratione magnam, ex nostrum incidunt eius assumenda,
+                                    placeat
+                                    doloribus?</p>
+                            </div>
+                        </a>
+                    </article>
                 </section>
-                <section class="main-section" id="layout">
-                    <header>
-                        <h2>layout</h2>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem assumenda officiis
-                            fuga id
-                            repudiandae quod accusamus, ut blanditiis itaque quidem culpa recusandae, accusantium
-                            quibusdam
-                            eveniet
-                            sit. Doloribus minus ipsa dolore?</p>
-                    </header>
-                </section>
-                <section class="main-section" id="colors">
-                    <header>
-                        <h2>colors</h2>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem assumenda officiis
-                            fuga id
-                            repudiandae quod accusamus, ut blanditiis itaque quidem culpa recusandae, accusantium
-                            quibusdam
-                            eveniet
-                            sit. Doloribus minus ipsa dolore?</p>
-                    </header>
-                </section>
-                <section class="main-section" id="theme">
-                    <header>
-                        <h2>theme</h2>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem assumenda officiis
-                            fuga id
-                            repudiandae quod accusamus, ut blanditiis itaque quidem culpa recusandae, accusantium
-                            quibusdam
-                            eveniet
-                            sit. Doloribus minus ipsa dolore?</p>
-                    </header>
-                </section>
-                <section class="main-section" id="ui_elements">
-                    <header>
-                        <h2>ui elements</h2>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem assumenda officiis
-                            fuga id
-                            repudiandae quod accusamus, ut blanditiis itaque quidem culpa recusandae, accusantium
-                            quibusdam
-                            eveniet
-                            sit. Doloribus minus ipsa dolore?</p>
-                    </header>
-                </section>
-
-            </main>
+            </section> -->
 
 
-            // @media (min-width: map-get($media_breakpoints_sizes, xs))
-            // body
-            // grid-template-columns: 1fr
 
-            // #navbar
-            // width: 100vw
-            // max-width: 100%
 
-            // #main-doc
-            // width: 100vw
-            // max-width: 100%
 
-            // @media (min-width: map-get($media_breakpoints_sizes, md))
 
-            body
-            margin: 0
-            padding: 0
-            -webkit-box-sizing: border-box
-            box-sizing: border-box
-            display: -ms-grid
-            display: grid
-            height: 100vh
-            width: auto
-            grid-template-ares: "nav" "main"
 
-            ul
-            margin: 0
-            padding: 0
-            li
-            padding: 1em
-            margin: 0.25em
-            border-radius: 0.25em
-            list-style: none
-<!-- ___________________________________________- -->
-            body
-            display: grid
-            grid-template-columns: 1fr 3fr
-            grid-template-rows: auto auto
-            grid-template-areas: "nav main"
 
-            #navbar
-            grid-area: nav
 
-            #main-doc
-            grid-area: main
+
+
+
+
+
+
+
+
+
+            
+
+<article class="project-tile secondary">
+    <a href="./img/projects/gab.png">
+        <img src="./img/projects/gab.png"></img>
+    </a>
+    <div class="project-tile-actions">
+        <a data-activator="1" class="mdi mdi-chevron-up"></a>
+        <a class="mdi mdi-plus" href="img/projects/gab.png"></a>
+    </div>
+
+    <div data-object="1" class="project-tile-footer color-secondary">
+        <header class="project-title">
+            <h4 class="project-title color-inverted">Technical Documentation
+            </h4>
+        </header>
+        <p class="color-inverted">Lorem ipsum dolor sit amet consectetur
+            adipisicing elit. Placeat
+            aut facilis quisquam. Nihil optio, ut perspiciatis debitis
+            architecto asperiores
+            provident mollitia ratione magnam, ex nostrum incidunt eius
+            assumenda, placeat
+            doloribus?</p>
+    </div>
+</article>
+
+<article class="project-tile secondary">
+    <a href="./img/projects/gab.png">
+        <img src="./img/projects/gab.png"></img>
+    </a>
+    <div class="project-tile-actions">
+        <a data-activator="2" class="mdi mdi-chevron-up"></a>
+        <a class="mdi mdi-plus" href="img/projects/gab.png"></a>
+    </div>
+
+    <div data-object="2" class="project-tile-footer color-secondary">
+        <header class="project-title">
+            <h4 class="project-title color-inverted">Technical Documentation
+            </h4>
+        </header>
+        <p class="color-inverted">Lorem ipsum dolor sit amet consectetur
+            adipisicing elit. Placeat
+            aut facilis quisquam. Nihil optio, ut perspiciatis debitis
+            architecto asperiores
+            provident mollitia ratione magnam, ex nostrum incidunt eius
+            assumenda, placeat
+            doloribus?</p>
+    </div>
+</article>

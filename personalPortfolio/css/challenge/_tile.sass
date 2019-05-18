@@ -38,38 +38,23 @@ $padding-tile-footer-content: 2 * $button-size
         bottom: 0
         z-index: -1
 
-.project-actions
-    height: $button-size
-    width: $button-size
-    bottom: 1em
-    right: 1em
-    border: none
-    border-radius: 50%
-    z-index: 2
-    position: absolute
-    font-size: $button-font-size
-
-a.project-actions
-    @extend %centralize-all
-    bottom: 4em
-
-.project-tile input:checked  ~ .project-tile-footer
+.project-tile-footer.activated
     height: $tile-height
 
-
-input.project-actions
-   z-index: 2
-   border-radius: 50%!important
-
-input.project-actions:checked:before
-    transform: rotate(45deg)
-
-input.project-actions:before
-    // transform: rotate(45deg)!important
+.project-tile-actions
     position: absolute
-    width: 100%
-    height: 100%
-    z-index: 10
-    // border-radius: 50%
-    // background: red
-    @extend %centralize-all
+    right: 0
+    bottom: 0
+    display: flex
+    flex-direction: column
+    background: trasparent
+    font-size: 1rem
+    z-index: 4
+    & > a
+        background: white
+        border-radius: 50%
+        padding: 1em
+        margin: 0 1em 1em
+        cursor: pointer
+        color: black
+        @extend %centralize-all

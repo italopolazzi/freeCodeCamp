@@ -140,7 +140,7 @@ html {
 }
 
 body {
-  font-family: 'Quicksand', sans-serif;
+  font-family: "Quicksand", sans-serif;
   font-weight: normal;
 }
 
@@ -176,7 +176,7 @@ hr {
   border-style: solid;
 }
 
-a.button, a.button:before, #nav-menu-opener, .icon, a.project-actions, input.project-actions:before, nav {
+a.button, a.button:before, #nav-menu-opener, .icon, .project-tile-actions > a, nav {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -185,7 +185,7 @@ a.button, a.button:before, #nav-menu-opener, .icon, a.project-actions, input.pro
           align-items: center;
 }
 
-a.button, a.button:before, #nav-menu-opener, .icon, a.project-actions, input.project-actions:before {
+a.button, a.button:before, #nav-menu-opener, .icon, .project-tile-actions > a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1853,7 +1853,7 @@ nav {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  z-index: 1;
+  z-index: 10;
 }
 
 #nav-menu {
@@ -2103,40 +2103,50 @@ section#welcome-section *:not(.svg-background) {
   z-index: -1;
 }
 
-.project-actions {
-  height: 2em;
-  width: 2em;
-  bottom: 1em;
-  right: 1em;
-  border: none;
-  border-radius: 50%;
-  z-index: 2;
-  position: absolute;
-  font-size: 1rem;
-}
-
-a.project-actions {
-  bottom: 4em;
-}
-
-.project-tile input:checked ~ .project-tile-footer {
+.project-tile-footer.activated {
   height: 20em;
 }
 
-input.project-actions {
-  z-index: 2;
-  border-radius: 50% !important;
-}
-
-input.project-actions:checked:before {
-  -webkit-transform: rotate(45deg);
-          transform: rotate(45deg);
-}
-
-input.project-actions:before {
+.project-tile-actions {
   position: absolute;
-  width: 100%;
-  height: 100%;
-  z-index: 10;
+  right: 0;
+  bottom: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background: trasparent;
+  font-size: 1rem;
+  z-index: 4;
+}
+
+.project-tile-actions > a {
+  background: white;
+  border-radius: 50%;
+  padding: 1em;
+  margin: 0 1em 1em;
+  cursor: pointer;
+  color: black;
+}
+
+@media print {
+  * {
+    background: transparent !important;
+    color: #000 !important;
+    text-shadow: none !important;
+    -webkit-filter: none !important;
+            filter: none !important;
+    -ms-filter: none !important;
+  }
+  body {
+    margin: 0;
+    padding: 0;
+  }
+  nav {
+    display: none;
+  }
 }
 /*# sourceMappingURL=index.css.map */
