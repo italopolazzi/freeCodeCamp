@@ -217,6 +217,22 @@ form#contact:before, .tile footer:before {
   z-index: -1;
 }
 
+.custom_checkbox input, .custom_checkbox .switch, .custom_checkbox .pin, .custom_checkbox .background, .custom_checkbox label i {
+  width: 100%;
+  height: 100%;
+}
+
+.custom_checkbox label span {
+  width: 1px;
+  height: 1px;
+}
+
+.custom_checkbox input, .custom_checkbox .switch, .custom_checkbox .pin, .custom_checkbox .background {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
 @media screen and (min-width: 0px) {
   .xs-align-items-baseline {
     -webkit-box-align: baseline !important;
@@ -2182,6 +2198,7 @@ pre {
   background: currentColor;
   width: 20%;
   left: 0;
+  display: none;
 }
 
 .custom_checkbox {
@@ -2189,10 +2206,13 @@ pre {
   width: 4em;
   height: 2em;
   position: relative;
+  font-size: 1.2em;
 }
 
 .custom_checkbox * {
   cursor: pointer;
+  -webkit-transition: background 0.5s linear, color 0.5s linear !important;
+  transition: background 0.5s linear, color 0.5s linear !important;
 }
 
 .custom_checkbox label span, .custom_checkbox input {
@@ -2427,6 +2447,16 @@ section#welcome-section *:not(.svg-background) {
   -ms-grid-rows: auto;
       grid-template-rows: auto;
   grid-gap: 1em;
+}
+
+#contact-art {
+  background-image: url("../img/grito.svg");
+  background-repeat: no-repeat;
+  background-position: top center;
+}
+
+footer#footer {
+  min-height: 20vh;
 }
 
 @media (min-width: 600px) {
