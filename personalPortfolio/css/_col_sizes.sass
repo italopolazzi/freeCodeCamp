@@ -2,9 +2,23 @@ $total_columns: 12
 $column_percentage: 100% / $total_columns // 8.3333% for a 12 grid (100/12)
 
 @each $breakpoint_key, $size_in_px in $media_breakpoints_sizes
+
+    // less than
+    @media screen and (max-width: $size_in_px)
+        .lt-#{$breakpoint_key}-none
+            display: none
+
     @media screen and (min-width: $size_in_px)
-        @for $number_of_columns from 1 through $total_columns
+        .gt-#{$breakpoint_key}-none
+            display: none
+
+    // col sizes based on min-width
+    @for $number_of_columns from 1 through $total_columns
+
+        @media screen and (min-width: $size_in_px)
+
             .col-#{$breakpoint_key}#{$number_of_columns}
                 flex: 0 1 ($column_percentage * $number_of_columns)
+
             .offset-#{$breakpoint_key}#{$number_of_columns}
                 margin-left: $column_percentage * $number_of_columns
