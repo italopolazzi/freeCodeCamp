@@ -177,7 +177,7 @@ hr {
   border-style: solid;
 }
 
-a.button, a.button:before, #nav-menu-opener, .icon, .tile.image footer .tile-actions, nav, form#contact fieldset, .tile-actions {
+a.button, a.button:before, #nav-menu-opener, .icon, .switch, .custom_checkbox label i, .tile.image footer .tile-actions, nav, form#contact fieldset, .tile-actions {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -186,7 +186,7 @@ a.button, a.button:before, #nav-menu-opener, .icon, .tile.image footer .tile-act
           align-items: center;
 }
 
-a.button, a.button:before, #nav-menu-opener, .icon, .tile.image footer .tile-actions, .input {
+a.button, a.button:before, #nav-menu-opener, .icon, .switch, .custom_checkbox label i, .tile.image footer .tile-actions, .input {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1271,6 +1271,12 @@ form#contact:before, .tile footer:before {
   padding-left: 4rem !important;
 }
 
+.stretch {
+  -ms-flex-item-align: stretch;
+      -ms-grid-row-align: stretch;
+      align-self: stretch;
+}
+
 @media screen and (max-width: 0px) {
   .lt-xs-none {
     display: none;
@@ -2156,24 +2162,51 @@ pre {
   overflow-x: auto;
 }
 
-.custom_checkbox {
-  width: auto;
-  height: auto;
-  position: relative;
-  z-index: 0;
-  padding: 1em;
-}
-
-.custom_checkbox:after {
-  content: '';
-  background: inherit;
+.custom_checkbox input, .custom_checkbox .switch, .custom_checkbox .pin, .custom_checkbox .background, .custom_checkbox label i {
   width: 100%;
   height: 100%;
+}
+
+.custom_checkbox label span {
+  width: 1px;
+  height: 1px;
+}
+
+.custom_checkbox input, .custom_checkbox .switch, .custom_checkbox .pin, .custom_checkbox .background {
   position: absolute;
-  left: 0;
   top: 0;
-  z-index: -1;
-  border-radius: 0.25em;
+  left: 0;
+}
+
+.switch .pin {
+  background: currentColor;
+  width: 20%;
+  left: 0;
+}
+
+.custom_checkbox {
+  border-radius: 1em;
+  width: 4em;
+  height: 2em;
+  position: relative;
+}
+
+.custom_checkbox * {
+  cursor: pointer;
+}
+
+.custom_checkbox label span, .custom_checkbox input {
+  opacity: 0;
+}
+
+.custom_checkbox input {
+  z-index: 1;
+  margin: 0;
+}
+
+.custom_checkbox input:checked + .switch .pin {
+  right: 0;
+  left: auto;
 }
 
 @-webkit-keyframes round-and-round {
@@ -2200,10 +2233,6 @@ pre {
   }
 }
 
-form#contact {
-  background-image: url("../img/projects/gab.png");
-}
-
 form#contact * {
   outline: none;
 }
@@ -2212,8 +2241,6 @@ form#contact:before {
   left: 0;
   top: 0;
   z-index: 1;
-  background-image: -webkit-gradient(linear, left bottom, left top, from(transparent), color-stop(black), to(transparent));
-  background-image: linear-gradient(to top, transparent, black, transparent);
   background-size: 200%;
 }
 
@@ -2259,9 +2286,9 @@ form#contact fieldset textarea {
 }
 
 .input {
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;

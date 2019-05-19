@@ -58,63 +58,25 @@
                 </li>
 
             </ul>
+
             <div id="nav-dark-mode">
-                <label for="dark-mode" class="custom-chebox">
-                    <i class="mdi mdi-theme-light-dark"></i> Dark Mode
-                </label>
-                <input title="Dark mode" type="checkbox" name="dark-mode" id="dark-mode">
+                <div class="custom_checkbox main color-inverted">
+                    <label for="dark-mode" class="custom-chebox">
+                        <i class="mdi mdi-theme-light-dark"></i><span>Dark Mode</span>
+                    </label>
+                    <input title="Dark mode" type="checkbox" name="dark-mode" id="dark-mode">
+                    <div class="switch">
+                        <div class="background"></div>
+                        <div class="pin"></div>
+                    </div>
+                </div>
             </div>
+
             <div id="nav-menu-opener" class="inverted color-main" role="button" title="menu">
                 <i class="mdi mdi-menu"></i><span>Menu</span>
             </div>
         </div>
     </nav>
-    <main id="main-doc" class="pa0" role="main">
-
-
-        <section class="main-section pa8" id="contact">
-            <header>
-                <h2>Contact</h2>
-
-            </header>
-
-            <section class="row">
-                
-                <div id="contact-art" class="lt-md-none col-md6 accent">
-
-                </div>
-                
-                <div class="col-xs12 col-md6">
-
-                    <form class="dark color-inverted main pa8" id="contact" name="contact" action="">
-
-                        <fieldset class="main pa8 mb8">
-                            <legend class="mb16"> Contact form</legend>
-
-                            <div class="input mb8">
-                                <label for="subject">Subject</label>
-                                <input class="main color-inverted" type="text" id="subject" name="subject"
-                                    maxlength="65" required aria-required="true">
-                            </div>
-                            <div class="input mb8">
-                                <label for="email">E-mail</label>
-                                <input class="main color-inverted" type="email" id="email" name="email"
-                                    maxlength="65" required aria-required="true">
-                            </div>
-                            <div class="input mb8">
-                                <label for="content">Content</label>
-                                <textarea class="main color-inverted" role="text" id="content" name="content"
-                                    maxlength="500" required aria-required="true"></textarea>
-                            </div>
-                        </fieldset>
-
-
-                    </form>
-                </div>
-            </section>
-        </section>
-
-    </main>
 
     <footer id="footer" class="accent">&copy; Ítalo Polazzi - 2019</footer>
     <script src="js/index.js" type="module"></script>

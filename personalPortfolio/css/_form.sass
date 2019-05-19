@@ -9,7 +9,7 @@
 $input-height: 4em
 
 form#contact
-    background-image: url('../img/projects/gab.png')
+    // background-image: url('../img/projects/gab.png')
     & *
         outline: none
     &:before
@@ -17,7 +17,7 @@ form#contact
         left: 0
         top: 0
         z-index: 1
-        background-image: linear-gradient(to top, transparent, black, transparent)
+        // background-image: linear-gradient(to top, transparent, black, transparent)
         background-size: 200%
         // animation: 1s ease round-and-round infinite both
     &,
@@ -48,12 +48,15 @@ form#contact
 
 .input
     @extend %horizontal-center
-    justify-content: space-evenly
+    justify-content: space-between
     align-items: center
+    // label
+        // flex: 1 0 30%
+        // text-align: left
     input, textarea
         flex: 0 1 70%
 
-@media (max-width: map-get($media-breakpoints-sizes, sm))
+@media (max-width: map-get($breakpoints-sizes, sm))
     .input
         flex-direction: column
         align-items: flex-start

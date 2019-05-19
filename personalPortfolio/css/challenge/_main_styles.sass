@@ -36,7 +36,7 @@ section#welcome-section
 	*:not(.svg-background) 
 		z-index: 1 
 
-@media (max-width: map-get($media-breakpoints-sizes, md))
+@media (max-width: map-get($breakpoints-sizes, md))
     #welcome-section 
         & > div
             margin-top: 14em!important
@@ -54,18 +54,18 @@ section#welcome-section
     grid-template-rows: auto
     grid-gap: 1em
 
-@media (min-width: map-get($media-breakpoints-sizes, sm))
+@media (min-width: map-get($breakpoints-sizes, sm))
     .project-gallery
         grid-template-columns: repeat(1, 1fr)
 
-@media (min-width: map-get($media-breakpoints-sizes, md))
+@media (min-width: map-get($breakpoints-sizes, md))
     .project-gallery
         grid-template-columns: repeat(2, 1fr)
 
-@media (min-width: map-get($media-breakpoints-sizes, lg))
+@media (min-width: map-get($breakpoints-sizes, lg))
     .project-gallery
         grid-template-columns: repeat(3, 1fr)
 
-@media (min-width: map-get($media-breakpoints-sizes, xl))
+@media (min-width: map-get($breakpoints-sizes, xl))
     .project-gallery
         grid-template-columns: repeat(4, 1fr)

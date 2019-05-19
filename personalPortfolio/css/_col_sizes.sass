@@ -1,7 +1,10 @@
 $total_columns: 12
 $column_percentage: 100% / $total_columns // 8.3333% for a 12 grid (100/12)
 
-@each $breakpoint_key, $size_in_px in $media_breakpoints_sizes
+.stretch
+    align-self: stretch
+
+@each $breakpoint_key, $size_in_px in $breakpoints-sizes
 
     // less than
     @media screen and (max-width: $size_in_px)
