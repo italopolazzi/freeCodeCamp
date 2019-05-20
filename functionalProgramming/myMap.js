@@ -1,4 +1,4 @@
-Array.prototype.myMap = function(callback) {
+Array.prototype.myMap = function (callback) {
 	let temp = []
 	this.forEach(item => {
 		temp.push(callback(item))

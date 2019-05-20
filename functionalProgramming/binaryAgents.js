@@ -9,7 +9,6 @@ function binaryAgent(str) {
   let bytes = str.split(' ')
   let newStr = ""; 
   bytes.forEach(byte => newStr += byteToChar(byte))
-  console.log(newStr)
   return newStr;
 }
 

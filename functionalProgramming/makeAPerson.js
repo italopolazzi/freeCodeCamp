@@ -1,5 +1,5 @@
-var Person = function(firstAndLast) {
-	
+let Person = function (firstAndLast) {
+
 	const divideFirstAndLast = (firstAndLast) => firstAndLast.split(' ')
 
 	const updateFullName = (arr) => this.fullName = arr
@@ -11,15 +11,15 @@ var Person = function(firstAndLast) {
 			throw new Error('The argument is not a string')
 		}
 	}
-	
+
 	let fullName = [firstName, lastName] = divideFirstAndLast(firstAndLast)
 
 	this.getFullName = () => this.fullName.join(' ')
 
 	this.getFirstName = () => this.firstName
-	
+
 	this.getLastName = () => this.lastName
-	
+
 	this.setFirstName = (first) => {
 		testIfIsString(first);
 		this.firstName = first
@@ -35,10 +35,8 @@ var Person = function(firstAndLast) {
 		updateFullName(divideFirstAndLast(firstAndLast))
 	}
 
-
-	
 	return firstAndLast;
 };
 
-var bob = new Person('Bob Ross');
+let bob = new Person('Bob Ross');
 console.log(bob.getFullName());

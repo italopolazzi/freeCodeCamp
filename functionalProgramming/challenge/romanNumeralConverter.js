@@ -1,3 +1,10 @@
+/*
+	Exercise: Roman Numeral Converter
+	Convert the given number into a roman numeral.
+
+	All roman numerals answers should be provided in uppercase.
+*/
+
 function getOrdinalNumerals(number) {
 	return number.toString().split('').reverse()
 }

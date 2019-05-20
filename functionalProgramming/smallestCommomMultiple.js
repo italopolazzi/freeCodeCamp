@@ -1,6 +1,7 @@
 function smallestCommons(arr) {
   return searchForCommonMultiple(generateRange(arr));
 }
+
 function searchForCommonMultiple(arr) {
   let current = arr[0] * arr[arr.length - 1];
   do {
@@ -8,9 +9,11 @@ function searchForCommonMultiple(arr) {
   } while (!testArrayWithCurrent(arr, current));
   return current;
 }
+
 function isMutiple(current, num) {
   return current % num == 0;
 }
+
 function testArrayWithCurrent(arr, current) {
   for (let i = 0; i < arr.length; i++) {
     if (isMutiple(current, arr[i])) {
@@ -21,6 +24,7 @@ function testArrayWithCurrent(arr, current) {
   }
   return true;
 }
+
 function generateRange(arr) {
   const max = Math.max(arr[0], arr[1]);
   const min = Math.min(arr[0], arr[1]);
