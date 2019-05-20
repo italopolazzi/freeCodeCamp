@@ -17,6 +17,8 @@ nav
     justify-content: space-between
     align-items: center
     z-index: 10
+    header
+        width: 100%
         
 
 #nav-menu
@@ -41,7 +43,7 @@ nav
     span
         display: none
 
-@media (max-width: map-get($media-breakpoints-sizes, md))
+@media (max-width: map-get($breakpoints-sizes, md))
     #nav-menu
         flex-direction: column!important
         align-items: flex-end!important

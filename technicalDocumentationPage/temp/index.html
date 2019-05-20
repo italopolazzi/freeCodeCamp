@@ -4,7 +4,7 @@
                     <div class="col-xs10 offset-xs1 col-md6">
                         <pre class="main-blue color-main-white">
                          <code>
-$media_breakpoints_sizes: (xs: 0px, sm: 600px, md: 960px, lg: 1280px, xl: 1920px)
+$breakpoints-sizes: (xs: 0px, sm: 600px, md: 960px, lg: 1280px, xl: 1920px)
 
 $total_columns: 12
 
@@ -16,7 +16,7 @@ $column_percentage: 100% / $total_columns
                     <div class="col-xs10 offset-xs1 col-md6">
                         <pre class="main-blue color-main-white">
                          <code>
-@each $breakpoint_key, $size_in_px in $media_breakpoints_sizes
+@each $breakpoint_key, $size_in_px in $breakpoints-sizes
     @media screen and (min-width: $size_in_px)
 
         @for $number_of_columns from 1 through $total_columns
@@ -95,7 +95,7 @@ $column_percentage: 100% / $total_columns
             </main>
 
 
-            // @media (min-width: map-get($media_breakpoints_sizes, xs))
+            // @media (min-width: map-get($breakpoints-sizes, xs))
             // body
             // grid-template-columns: 1fr
 
@@ -107,7 +107,7 @@ $column_percentage: 100% / $total_columns
             // width: 100vw
             // max-width: 100%
 
-            // @media (min-width: map-get($media_breakpoints_sizes, md))
+            // @media (min-width: map-get($breakpoints-sizes, md))
 
             body
             margin: 0

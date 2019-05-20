@@ -1,0 +1,65 @@
+@keyframes round-and-round
+    0%
+        background-position-y: -200px
+    50%
+        background-position-y: 200px
+    100%
+        background-position-y: -200px
+
+$input-height: 4em
+
+form#contact
+    // background-image: url('../img/projects/gab.png')
+    & *
+        outline: none
+    &:before
+        @extend %basic-before
+        left: 0
+        top: 0
+        z-index: 1
+        // background-image: linear-gradient(to top, transparent, black, transparent)
+        background-size: 200%
+        // animation: 1s ease round-and-round infinite both
+    &,
+    & fieldset
+        width: 100%
+        height: 100%
+        position: relative
+    fieldset
+        z-index: 1
+        flex-direction: column-reverse
+        @extend %vertical-center
+        legend
+            position: relative
+            top: 2em
+            font-size: 1.6em
+            line-height: 0
+        input, textarea
+            width: 100%
+            padding: $input-height / 4
+            border-radius: $input-height / 2
+            border: 0.25em solid transparent
+            box-shadow: 0 0 0.25em currentColor
+            &:focus
+                box-shadow: 0 0 0 transparent
+                border: 0.25em solid currentColor
+        textarea
+            resize: none
+
+.input
+    @extend %horizontal-center
+    justify-content: space-between
+    align-items: center
+    // label
+        // flex: 1 0 30%
+        // text-align: left
+    input, textarea
+        flex: 0 1 70%
+
+@media (max-width: map-get($breakpoints-sizes, sm))
+    .input
+        flex-direction: column
+        align-items: flex-start
+        label
+            margin-bottom: inherit
+            

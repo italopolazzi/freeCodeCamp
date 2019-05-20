@@ -1,69 +1,128 @@
-$tile-height: 20em
+$tile-height: 80vh
+$tile-min-height: 30em
 $tile-width: 100%
-$tile-footer-height: 6em
+
+$tile-figure-height: $tile-min-height * 0.5
+$tile-footer-height: $tile-min-height * 0.15
 
 $button-font-size: map-get($goldens-map, golden16)
 $button-padding: 1em
 $button-size: 2em
 
-$padding-tile-footer-content: 2 * $button-size
+$padding: 1rem
 
-.project-tile
+.tile
     width: $tile-width
-    height: $tile-height
+    height: $tile-min-height
+    min-height: $tile-min-height
     position: relative
     overflow: hidden
-    iframe
-        height: 100%
-    iframe, img
-        width: 100%
+    &.rounded
+        border-radius: 1em
+    &.minimalist
+        border: 0.25em solid currentColor
+    &.figure
+        figure
+            padding: $padding
+    &.image
+        a
+            order: 2
+        header
+            position: relative
+            width: 100%
+            height: 100%
+        img
+            width: 100%
+            height: 100%
+            object-fit: cover
+        &:hover
+            img
+                filter: blur(1em)
+                transform: scale(1.2)
+    &.image.titled
+        h4
+            order: 1
+            left: 0
+            top: 0
+            position: absolute
+            z-index: 1
+            width: 100%
+            padding: 1rem
 
-.project-tile-footer
-    width: 100%
-    height: $tile-footer-height
-    padding: $button-padding
-    padding-right: $padding-tile-footer-content
-    position: absolute
-    bottom: 0
-    z-index: 1
-    &:hover
-        height: $tile-height
-    &:before
-        content: ''
-        width: 100%
-        height: 100%
-        background: currentColor
-        position: absolute
-        left: 0
-        bottom: 0
-        z-index: -1
-
-.project-tile-footer.activated
-    height: $tile-height
-
-.project-tile-actions
-    position: absolute
-    right: 0
-    bottom: 0
+.tile header
     display: flex
     flex-direction: column
-    background: trasparent
-    font-size: 1rem
-    z-index: 4
-    .tile-action
-        border-radius: 50%
-        padding: 1em
-        margin: 0 1em 1em
-        cursor: pointer
+    a
+        order: 1
+        figure
+            max-height: $tile-figure-height
+            overflow: hidden
+        iframe
+            height: $tile-figure-height
+            width: 100%
+    h4
+        order: 2
+        padding: $padding
+        padding-bottom: 0
+
+.tile .tile-description
+    height: 100%
+    margin: 0
+    overflow: hidden
+    padding: $padding
+    position: absolute
+    background: inherit
+
+.tile.activated .tile-description
+    top: 0
+    height: $tile-min-height
+
+.tile footer
+    position: absolute
+    width: 100%
+    height: $tile-footer-height
+    background: inherit
+    bottom: 0
+    left: 0
+    z-index: 1
+    // &:before
+    //     @extend %basic-before
+    //     box-shadow: 0 0 2em -0.5em currentColor
+
+.tile.image footer
+    opacity: 0
+    height: 100%
+    background: transparent
+    .tile-actions 
         @extend %centralize-all
+
+.tile.image:hover footer
+    opacity: 1
+
+.tile-actions 
+    @extend %vertical-center
+    width: 100%
+    height: 100%
+    & *
+        outline: none
+    .tile-action
+        padding: $padding
+        border-radius: 50%
+        margin-left: $padding
+        cursor: pointer
+        &:before
+            font-weight: bolder
+
+.tile-action-expand:hover:before,
+.tile-action-expand:focus:before
+    animation: 1s ease expand infinite
+
+.tile-action-open:hover:before,
+.tile-action-open:focus:before
+    animation: 1s ease open infinite
 
 .tile-action-expand.activated
     transform: rotate(180deg)
-.tile-action-expand:hover:before, .tile-action-expand:focus:before
-    animation: 1s ease-in-out expand infinite
-
-.tile-action-open:hover:before, .tile-action-open:focus:before
-    animation: 1s ease-in-out open infinite
 
 @keyframes expand
     0%
@@ -77,6 +136,6 @@ $padding-tile-footer-content: 2 * $button-size
     0%
         transform: scale(1.0)
     50%
-        transform: scale(1.5)
+        transform: scale(1.2)
     100%
         transform: scale(1.0)
