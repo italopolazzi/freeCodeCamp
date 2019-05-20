@@ -134,6 +134,12 @@ html {
   scroll-behavior: smooth;
 }
 
+@media (max-width: 600px) {
+  html {
+    font-size: 0.8rem;
+  }
+}
+
 @media (min-width: 1920px) {
   html {
     font-size: 2rem;
@@ -209,7 +215,7 @@ a.button, a.button:before, #nav-menu-opener, .icon, .switch, .custom_checkbox la
           user-select: none;
 }
 
-form#contact:before, .tile footer:before {
+form#contact:before {
   content: '';
   width: 100%;
   height: 100%;
@@ -2013,7 +2019,21 @@ form#contact:before, .tile footer:before {
   }
 }
 
+.container {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
 .row {
+  width: 100%;
+  height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2110,6 +2130,10 @@ nav {
       -ms-flex-align: center;
           align-items: center;
   z-index: 10;
+}
+
+nav header {
+  width: 100%;
 }
 
 #nav-menu {
@@ -2391,13 +2415,12 @@ main {
 }
 
 .main-section {
-  min-height: 100vh;
+  height: auto;
   width: 100%;
-  overflow: hidden;
 }
 
 #welcome-section {
-  height: 100;
+  min-height: 100vh;
   background: url("../img/projects/office_v3.png");
   background-size: 140%;
   background-position: left top;
@@ -2409,7 +2432,7 @@ main {
   left: 0;
   top: 0;
   width: 100%;
-  height: 100%;
+  height: 200%;
   z-index: 0;
 }
 
@@ -2457,6 +2480,15 @@ section#welcome-section *:not(.svg-background) {
 
 footer#footer {
   min-height: 20vh;
+}
+
+span.logo {
+  font-weight: 900;
+  font-size: 1.4em;
+}
+
+object.logo {
+  max-width: 8em;
 }
 
 @media (min-width: 600px) {
@@ -2566,6 +2598,11 @@ footer#footer {
   overflow: hidden;
 }
 
+.tile header a iframe {
+  height: 15em;
+  width: 100%;
+}
+
 .tile header h4 {
   -webkit-box-ordinal-group: 3;
       -ms-flex-order: 2;
@@ -2598,11 +2635,6 @@ footer#footer {
   z-index: 1;
 }
 
-.tile footer:before {
-  -webkit-box-shadow: 0 0 2em -0.5em currentColor;
-          box-shadow: 0 0 2em -0.5em currentColor;
-}
-
 .tile.image footer {
   opacity: 0;
   height: 100%;
@@ -2616,6 +2648,10 @@ footer#footer {
 .tile-actions {
   width: 100%;
   height: 100%;
+}
+
+.tile-actions * {
+  outline: none;
 }
 
 .tile-actions .tile-action {

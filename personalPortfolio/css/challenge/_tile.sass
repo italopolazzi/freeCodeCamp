@@ -57,6 +57,9 @@ $padding: 1rem
         figure
             max-height: $tile-figure-height
             overflow: hidden
+        iframe
+            height: $tile-figure-height
+            width: 100%
     h4
         order: 2
         padding: $padding
@@ -82,9 +85,9 @@ $padding: 1rem
     bottom: 0
     left: 0
     z-index: 1
-    &:before
-        @extend %basic-before
-        box-shadow: 0 0 2em -0.5em currentColor
+    // &:before
+    //     @extend %basic-before
+    //     box-shadow: 0 0 2em -0.5em currentColor
 
 .tile.image footer
     opacity: 0
@@ -100,6 +103,8 @@ $padding: 1rem
     @extend %vertical-center
     width: 100%
     height: 100%
+    & *
+        outline: none
     .tile-action
         padding: $padding
         border-radius: 50%

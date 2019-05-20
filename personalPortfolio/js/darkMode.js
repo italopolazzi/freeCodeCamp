@@ -12,7 +12,7 @@ export default () => {
         try {
             storage.setItem(dark_flag, test)
         } catch (error) {
-            
+
         }
         test ? addDarkFlag() : removeDarkFlag()
     }
@@ -29,7 +29,7 @@ export default () => {
             saved_as_dark = storage.getItem(dark_flag)
             saved_as_dark_parsed = JSON.parse(saved_as_dark)
         } catch (error) {
-            
+
         }
         dark_mode_checkbox.checked = saved_as_dark ? saved_as_dark_parsed : saved_as_dark_parsed || document.body.classList.contains(dark_flag)
         alternate(dark_mode_checkbox.checked)

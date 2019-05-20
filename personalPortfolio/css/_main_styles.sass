@@ -5,6 +5,8 @@
 html
     font-size: $html-font-size
     scroll-behavior: $scroll-behavior
+    @media (max-width: map-get($breakpoints-sizes, sm))
+        font-size:  $html-font-size * 0.8
     @media (min-width: map-get($breakpoints-sizes, xl))
         font-size: $html-font-size * 2
 
