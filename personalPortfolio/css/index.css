@@ -2298,9 +2298,9 @@ form#contact fieldset {
 form#contact fieldset {
   z-index: 1;
   -webkit-box-orient: vertical;
-  -webkit-box-direction: reverse;
-      -ms-flex-direction: column-reverse;
-          flex-direction: column-reverse;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 form#contact fieldset legend {
@@ -2336,6 +2336,7 @@ form#contact fieldset textarea {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  width: 100%;
 }
 
 .input input, .input textarea {
