@@ -1,0 +1,21 @@
+$colors-palette: (primary: #9c27b0,secondary: #e91e63,accent: #03a9f4,error: #607d8b,warning: #795548,info: #cddc39,success: #ffeb3b)
+$color_variations: 4
+$percentage-of-color-variation: 5%
+
+=darken_background($color-key, $color)
+    @for $i from 1 through $color_variations
+        $color-aux: darken($color, ($percentage-of-color-variation * $i))
+        .#{$color-key}-dark#{$i}
+            background: $color-aux
+
+=lighten_background($color-key, $color)
+    @for $i from 1 through $color_variations
+        $color-aux: lighten($color, ($percentage-of-color-variation * $i))
+        .#{$color-key}-light#{$i}
+            background: $color-aux
+
+@each $color_key, $color in $colors-light
+    +lighten_background($color_key, $color)
+
+@each $color_key, $color in $colors-light
+    +darken_background($color_key, $color)

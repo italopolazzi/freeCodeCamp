@@ -1,0 +1,53 @@
+%max_it
+    width: 100%
+    height: 100%
+
+%min_it
+    width: 1px
+    height: 1px  
+
+%super_absolute
+    position: absolute
+    top: 0
+    left: 0
+
+.switch
+    @extend %centralize-all
+    .pin
+        background: currentColor
+        width: 20%
+        left: 0
+        display: none
+
+.custom_checkbox
+    border-radius: 1em
+    width: 4em
+    height: 2em
+    position: relative
+    font-size: 1.2em
+    & *
+        cursor: pointer
+        transition: background 0.5s linear, color 0.5s linear!important
+    label span, input
+        opacity: 0
+    & > input
+        @extend %max_it
+    input
+        z-index: 1
+        margin: 0
+    input, .switch, .pin, .background
+        @extend %max_it
+        @extend %super_absolute
+    input:checked + .switch .pin
+        right: 0
+        left: auto
+
+.custom_checkbox
+    label span
+        @extend %min_it
+    label i
+        @extend %centralize-all
+        @extend %max_it
+        
+
+
