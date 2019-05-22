@@ -1,0 +1,40 @@
+$image-size: 8em
+$half-image-size: $image-size / 2
+
+$num-of-little-boxes: 4
+
+$little-box-min-height: $image-size + 2
+
+.little-box
+    @extend %vertical-center
+    position: relative
+    margin-right: $half-image-size + 1!important
+    min-height: $little-box-min-height
+    h3
+        font-size: 2em
+    p
+        font-size: 1em
+    .little-box-content
+        margin-right: $half-image-size
+    .little-box-image
+        @extend %round
+        box-shadow: $box-shadow
+        height: $image-size
+        width: $image-size
+        position: absolute
+        right: 0
+        margin-right: -$half-image-size
+        flex: 1 0 auto
+        img
+            @extend %max_it
+            object-fit: cover
+
+#main-features.animation-activated
+    .little-box
+        transform: translateX(0)!important
+
+@for $i from 1 through $num-of-little-boxes
+    #main-features .little-box:nth-of-type(#{$i})
+        $num: $i * -150%
+        transform: translateX($num)
+

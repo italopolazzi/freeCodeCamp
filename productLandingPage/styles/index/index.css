@@ -171,7 +171,11 @@ hr {
   border-style: solid;
 }
 
-a.button, a.button:before, #nav-menu-opener, .icon, .switch, .custom_checkbox label i, nav, form#contact fieldset {
+button {
+  cursor: pointer;
+}
+
+a.button, a.button:before, #nav-menu-opener, .icon, .switch, .custom_checkbox label i, nav, form#contact fieldset, .box .box-actions, .little-box {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -211,7 +215,7 @@ form#contact:before {
   z-index: -1;
 }
 
-.custom_checkbox input, .custom_checkbox .switch, .custom_checkbox .pin, .custom_checkbox .background, .custom_checkbox label i {
+.custom_checkbox input, .custom_checkbox .switch, .custom_checkbox .pin, .custom_checkbox .background, .custom_checkbox label i, .little-box .little-box-image img {
   width: 100%;
   height: 100%;
 }
@@ -225,6 +229,11 @@ form#contact:before {
   position: absolute;
   top: 0;
   left: 0;
+}
+
+.little-box .little-box-image {
+  border-radius: 100%;
+  overflow: hidden;
 }
 
 @media screen and (min-width: 0px) {
@@ -2021,7 +2030,7 @@ form#contact:before {
 
 .row {
   width: 100%;
-  height: 100%;
+  height: auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2190,7 +2199,7 @@ pre {
   overflow-x: auto;
 }
 
-.custom_checkbox input, .custom_checkbox .switch, .custom_checkbox .pin, .custom_checkbox .background, .custom_checkbox label i {
+.custom_checkbox input, .custom_checkbox .switch, .custom_checkbox .pin, .custom_checkbox .background, .custom_checkbox label i, .little-box .little-box-image img {
   width: 100%;
   height: 100%;
 }
@@ -2402,7 +2411,141 @@ body {
 
 #header {
   height: 4em;
-  background: blue;
+}
+
+section[id^=main-] {
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+section[id^=main-] h2 {
+  text-transform: uppercase;
+}
+
+.box *, .register * {
+  border: none;
+}
+
+.button {
+  font-weight: bolder;
+  height: auto;
+  border-radius: 1em;
+  padding: 1em 3em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border: 0.125em solid currentColor;
+  background: inherit;
+}
+
+.box {
+  -webkit-box-shadow: 0 0 3em -1em rgba(0, 0, 0, 0.4);
+          box-shadow: 0 0 3em -1em rgba(0, 0, 0, 0.4);
+  position: relative;
+}
+
+.box > * {
+  width: 100%;
+}
+
+.box, .box figure {
+  border-radius: 1em;
+}
+
+.box figure {
+  margin-top: -2em;
+  overflow: hidden;
+  -webkit-box-shadow: 0 0 3em -1em rgba(0, 0, 0, 0.4);
+          box-shadow: 0 0 3em -1em rgba(0, 0, 0, 0.4);
+}
+
+.box p {
+  font-size: 2em;
+}
+
+.box .box-actions {
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.register input:not(.button) {
+  width: 100%;
+  margin-top: 2em;
+  padding: 1em 3em;
+  border-radius: 1em;
+  border: 0.125em solid currentColor;
+}
+
+.little-box {
+  position: relative;
+  margin-right: 5em !important;
+  min-height: 10em;
+}
+
+.little-box h3 {
+  font-size: 2em;
+}
+
+.little-box p {
+  font-size: 1em;
+}
+
+.little-box .little-box-content {
+  margin-right: 4em;
+}
+
+.little-box .little-box-image {
+  -webkit-box-shadow: 0 0 3em -1em rgba(0, 0, 0, 0.4);
+          box-shadow: 0 0 3em -1em rgba(0, 0, 0, 0.4);
+  height: 8em;
+  width: 8em;
+  position: absolute;
+  right: 0;
+  margin-right: -4em;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 auto;
+          flex: 1 0 auto;
+}
+
+.little-box .little-box-image img {
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+#main-features.animation-activated .little-box {
+  -webkit-transform: translateX(0) !important;
+          transform: translateX(0) !important;
+}
+
+#main-features .little-box:nth-of-type(1) {
+  -webkit-transform: translateX(-150%);
+          transform: translateX(-150%);
+}
+
+#main-features .little-box:nth-of-type(2) {
+  -webkit-transform: translateX(-300%);
+          transform: translateX(-300%);
+}
+
+#main-features .little-box:nth-of-type(3) {
+  -webkit-transform: translateX(-450%);
+          transform: translateX(-450%);
+}
+
+#main-features .little-box:nth-of-type(4) {
+  -webkit-transform: translateX(-600%);
+          transform: translateX(-600%);
 }
 
 @media print {

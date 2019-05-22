@@ -1,13 +1,6 @@
-import darkMode from './darkMode.js'
-import navBarController from './navBarController.js'
-import activator from './activator.js'
-
-import CustomElements from './CustomElements/CustomElements.js'
-
-(() => {
-    darkMode()
-    navBarController()
-    activator()
-
-    CustomElements()
-})()
+// import activator from './activator.js'
+import animationActivator from './animationActivator.js'
+window.addEventListener('load', () => {
+    // activator()
+    animationActivator()
+})
