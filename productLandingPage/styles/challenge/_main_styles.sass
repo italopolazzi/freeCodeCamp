@@ -17,7 +17,7 @@ section[id^=main-]
     *
         border: none
 
-    
+
 .button
     font-weight: bolder
     height: auto
@@ -29,6 +29,22 @@ section[id^=main-]
     justify-content: center
     border: $border-0125
     background: inherit
+    position: relative
+    z-index: 1
+    overflow: hidden
+    &:before
+        @extend %basic-before
+        transition: all .3s ease-in
+        background: map-get($light, main)!important
+        transform: translateX(-100%)
+        z-index: -1
+    &:hover:before, &:focus:before
+        transform: translateX(100%)
+    &:active:before, &:focus-within:before
+        transform: translateX(0)
+        background: map-get($light, inverted)!important
+    &:active, &:focus-within
+        color: map-get($light, main)!important
 
 .animation-activated
     transition: all 1s linear!important
@@ -42,3 +58,8 @@ section[id^=main-]
 // #main-pricing.animation-activated,
 // #main-contact.animation-activated
 //     opacity: 1
+
+*[class*=box]:focus,
+*[class*=box]:focus-within
+    background: map-get($light, main)!important
+    outline: none

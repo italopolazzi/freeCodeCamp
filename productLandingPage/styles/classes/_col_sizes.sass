@@ -4,6 +4,11 @@ $column_percentage: 100% / $total_columns // 8.3333% for a 12 grid (100/12)
 .stretch
     align-self: stretch
 
+.fluid
+    & > div, & > section, & > article, & > aside, & > main
+        min-height: 100%
+        align-self: stretch
+        
 @each $breakpoint_key, $size_in_px in $breakpoints-sizes
 
     // less than
@@ -24,4 +29,4 @@ $column_percentage: 100% / $total_columns // 8.3333% for a 12 grid (100/12)
                 flex: 0 1 ($column_percentage * $number_of_columns)
 
             .offset-#{$breakpoint_key}#{$number_of_columns}
-                margin-left: $column_percentage * $number_of_columns
+                margin-left: $column_percentage * $number_of_columns!important

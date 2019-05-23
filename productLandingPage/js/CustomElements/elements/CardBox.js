@@ -23,7 +23,7 @@ export default class CardBox extends HTMLElement {
                 .box p {
                     font-size: 2em
                 }
-                .box-actions{
+                .x-actions{
                     display: flex;
                     flex-direction: row;
                     align-items: center;

@@ -1,7 +1,7 @@
 /* Color Theme Swatches in Hex */
-$accent: #ECEC00
-$primary: #FF2121
-$secondary: #0046AA
+$accent: #FFC107
+$primary: #E91E63
+$secondary: #009688
 
 /* Color Theme Swatches in RGBA */
 // $accent: rgba(77,54,40, 1)
@@ -22,21 +22,25 @@ $main-palette-dark: join($main-palette-dark, $dark)
 
 =theme_light_color($color-key, $color)
     .color-#{$color-key},
-        color: $color
+    .before-color-#{$color-key}:before,
+    .after-color-#{$color-key}:after,
+        color: $color!important
         
 =theme_light_background($color-key, $color)
     .#{$color-key},
-        background: $color
+    .before-#{$color-key}:before,
+    .after-#{$color-key}:after,
+        background: $color!important
 
 =theme_dark_color($color-key, $color)
     .dark.color-#{$color-key},
     .dark .color-#{$color-key}
-        color: $color
+        color: $color!important
 
 =theme_dark_background($color-key, $color)
     .dark.#{$color-key},
     .dark .#{$color-key}
-        background: $color
+        background: $color!important
 
 @each $color_key, $color in $main-palette-light
     +theme_light_color($color_key, $color)
