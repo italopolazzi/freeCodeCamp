@@ -1,33 +1,53 @@
+$header-height: 4em
+
 #header
-    height: 4em
+    width: 100%
+    height: $header-height
     z-index: 10
-    position: fixed
+    position: relative
     display: flex
     align-items: center
     justify-content: space-between
     padding: 0 1em
+    flex-wrap: wrap
     & > *
         z-index: 11
+
+#close-controller
+    order: 4
+    position: relative
+    flex: 0 1 100%
+    margin-top: -$header-height
+    z-index: 9
+
+#nav-controller,
+#logo,
+#options-controller
+    z-index: 10
+    flex: 0 1 auto
+
+#nav-controller
+    order: 1
+
+#logo
+    order: 2
+
+#options-controller
+    order: 3
 
 #nav-controller
     position: relative
 
-input#nav-controller:checked + #nav
-    transform: translateY(0)
-
-input#nav-controller:checked ~ .logo
-    transform: translateY(-100%)
-
-input#nav-controller:checked ~ .logo
-    transform: translateY(-100%)
-
+input#nav-controller:checked + #nav,
 input#options-controller:checked + #options
     transform: translateY(0)
 
-input#options-controller:checked ~ .logo
+input#nav-controller:checked ~ #logo,
+input#options-controller:checked ~ #logo
     transform: translateY(-100%)
 
-input#options-controller:checked ~ .logo
+input#nav-controller:checked ~ #logo,
+input#options-controller:checked ~ #logo
     transform: translateY(-100%)
 
 #nav, #options
@@ -47,10 +67,10 @@ input#options-controller:checked ~ .logo
         flex-direction: column
         flex-wrap: wrap
     li
-        padding: 1em 3em
+        padding: $padding-1-3
 
-.logo
-    max-width: 4em
+#logo
+    max-width: $header-height
 
 
 @media screen and (orientation: landscape)

@@ -2360,9 +2360,10 @@ section[id^=main-] h2 {
 }
 
 #header {
+  width: 100%;
   height: 4em;
   z-index: 10;
-  position: fixed;
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2373,42 +2374,71 @@ section[id^=main-] h2 {
       -ms-flex-pack: justify;
           justify-content: space-between;
   padding: 0 1em;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 #header > * {
   z-index: 11;
 }
 
+#close-controller {
+  -webkit-box-ordinal-group: 5;
+      -ms-flex-order: 4;
+          order: 4;
+  position: relative;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 100%;
+          flex: 0 1 100%;
+  margin-top: -4em;
+  z-index: 9;
+}
+
+#nav-controller,
+#logo,
+#options-controller {
+  z-index: 10;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 auto;
+          flex: 0 1 auto;
+}
+
+#nav-controller {
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1;
+}
+
+#logo {
+  -webkit-box-ordinal-group: 3;
+      -ms-flex-order: 2;
+          order: 2;
+}
+
+#options-controller {
+  -webkit-box-ordinal-group: 4;
+      -ms-flex-order: 3;
+          order: 3;
+}
+
 #nav-controller {
   position: relative;
 }
 
-input#nav-controller:checked + #nav {
-  -webkit-transform: translateY(0);
-          transform: translateY(0);
-}
-
-input#nav-controller:checked ~ .logo {
-  -webkit-transform: translateY(-100%);
-          transform: translateY(-100%);
-}
-
-input#nav-controller:checked ~ .logo {
-  -webkit-transform: translateY(-100%);
-          transform: translateY(-100%);
-}
-
+input#nav-controller:checked + #nav,
 input#options-controller:checked + #options {
   -webkit-transform: translateY(0);
           transform: translateY(0);
 }
 
-input#options-controller:checked ~ .logo {
+input#nav-controller:checked ~ #logo,
+input#options-controller:checked ~ #logo {
   -webkit-transform: translateY(-100%);
           transform: translateY(-100%);
 }
 
-input#options-controller:checked ~ .logo {
+input#nav-controller:checked ~ #logo,
+input#options-controller:checked ~ #logo {
   -webkit-transform: translateY(-100%);
           transform: translateY(-100%);
 }
@@ -2442,7 +2472,7 @@ input#options-controller:checked ~ .logo {
   padding: 1em 3em;
 }
 
-.logo {
+#logo {
   max-width: 4em;
 }
 
