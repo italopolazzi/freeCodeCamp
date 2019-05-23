@@ -195,7 +195,7 @@ button {
   cursor: pointer;
 }
 
-.icon, .switch, .custom_checkbox label i, #nav, #nav ul, #options, #options ul, form#contact fieldset, .box .x-actions, .little-box {
+.icon, .switch, .custom-checkbox label i, .custom-radio, form#contact fieldset, .box .x-actions, .little-box {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -204,7 +204,7 @@ button {
           align-items: center;
 }
 
-.icon, .switch, .custom_checkbox label i, #nav, #nav ul, #options, #options ul, .input {
+.icon, .switch, .custom-checkbox label i, .custom-radio, .input {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -227,17 +227,17 @@ form#contact:before, .button:before {
   z-index: -1;
 }
 
-.custom_checkbox input, .custom_checkbox .switch, .custom_checkbox .pin, .custom_checkbox .background, .custom_checkbox label i, .little-box .little-box-image img, .box.icon-box figure img {
+.custom-checkbox input, .custom-checkbox .switch, .custom-checkbox .pin, .custom-checkbox .background, .custom-checkbox label i, .little-box .little-box-image img, .box.icon-box figure img, .custom-radio input, .custom-radio .switch {
   width: 100%;
   height: 100%;
 }
 
-.custom_checkbox label span {
+.custom-checkbox label span {
   width: 1px;
   height: 1px;
 }
 
-.custom_checkbox input, .custom_checkbox .switch, .custom_checkbox .pin, .custom_checkbox .background {
+.custom-checkbox input, .custom-checkbox .switch, .custom-checkbox .pin, .custom-checkbox .background, .custom-radio .switch {
   position: absolute;
   top: 0;
   left: 0;
@@ -2088,17 +2088,17 @@ pre {
   overflow-x: auto;
 }
 
-.custom_checkbox input, .custom_checkbox .switch, .custom_checkbox .pin, .custom_checkbox .background, .custom_checkbox label i, .little-box .little-box-image img, .box.icon-box figure img {
+.custom-checkbox input, .custom-checkbox .switch, .custom-checkbox .pin, .custom-checkbox .background, .custom-checkbox label i, .little-box .little-box-image img, .box.icon-box figure img, .custom-radio input, .custom-radio .switch {
   width: 100%;
   height: 100%;
 }
 
-.custom_checkbox label span {
+.custom-checkbox label span {
   width: 1px;
   height: 1px;
 }
 
-.custom_checkbox input, .custom_checkbox .switch, .custom_checkbox .pin, .custom_checkbox .background {
+.custom-checkbox input, .custom-checkbox .switch, .custom-checkbox .pin, .custom-checkbox .background, .custom-radio .switch {
   position: absolute;
   top: 0;
   left: 0;
@@ -2111,7 +2111,7 @@ pre {
   display: none;
 }
 
-.custom_checkbox {
+.custom-checkbox {
   border-radius: 1em;
   width: 4em;
   height: 2em;
@@ -2119,22 +2119,22 @@ pre {
   font-size: 1.2em;
 }
 
-.custom_checkbox * {
+.custom-checkbox * {
   cursor: pointer;
   -webkit-transition: background 0.5s linear, color 0.5s linear !important;
   transition: background 0.5s linear, color 0.5s linear !important;
 }
 
-.custom_checkbox label span, .custom_checkbox input {
+.custom-checkbox label span, .custom-checkbox input {
   opacity: 0;
 }
 
-.custom_checkbox input {
+.custom-checkbox input {
   z-index: 1;
   margin: 0;
 }
 
-.custom_checkbox input:checked + .switch .pin {
+.custom-checkbox input:checked + .switch .pin {
   right: 0;
   left: auto;
 }
@@ -2359,132 +2359,6 @@ section[id^=main-] h2 {
   outline: none;
 }
 
-#header {
-  width: 100%;
-  height: 4em;
-  z-index: 10;
-  position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  padding: 0 1em;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-}
-
-#header > * {
-  z-index: 11;
-}
-
-#close-controller {
-  -webkit-box-ordinal-group: 5;
-      -ms-flex-order: 4;
-          order: 4;
-  position: relative;
-  -webkit-box-flex: 0;
-      -ms-flex: 0 1 100%;
-          flex: 0 1 100%;
-  margin-top: -4em;
-  z-index: 9;
-}
-
-#nav-controller,
-#logo,
-#options-controller {
-  z-index: 10;
-  -webkit-box-flex: 0;
-      -ms-flex: 0 1 auto;
-          flex: 0 1 auto;
-}
-
-#nav-controller {
-  -webkit-box-ordinal-group: 2;
-      -ms-flex-order: 1;
-          order: 1;
-}
-
-#logo {
-  -webkit-box-ordinal-group: 3;
-      -ms-flex-order: 2;
-          order: 2;
-}
-
-#options-controller {
-  -webkit-box-ordinal-group: 4;
-      -ms-flex-order: 3;
-          order: 3;
-}
-
-#nav-controller {
-  position: relative;
-}
-
-input#nav-controller:checked + #nav,
-input#options-controller:checked + #options {
-  -webkit-transform: translateY(0);
-          transform: translateY(0);
-}
-
-input#nav-controller:checked ~ #logo,
-input#options-controller:checked ~ #logo {
-  -webkit-transform: translateY(-100%);
-          transform: translateY(-100%);
-}
-
-input#nav-controller:checked ~ #logo,
-input#options-controller:checked ~ #logo {
-  -webkit-transform: translateY(-100%);
-          transform: translateY(-100%);
-}
-
-#nav, #options {
-  z-index: 9;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  -webkit-transform: translateY(-100%);
-          transform: translateY(-100%);
-  height: 100vh;
-  background: inherit;
-}
-
-#nav *, #options * {
-  color: white;
-}
-
-#nav ul, #options ul {
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-}
-
-#nav li, #options li {
-  padding: 1em 3em;
-}
-
-#logo {
-  max-width: 4em;
-}
-
-@media screen and (orientation: landscape) {
-  #nav ul, #options ul {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-  }
-}
-
 .box {
   -webkit-box-shadow: 0 0 3em -1em rgba(0, 0, 0, 0.4);
           box-shadow: 0 0 3em -1em rgba(0, 0, 0, 0.4);
@@ -2697,6 +2571,53 @@ video {
 
 .x-content .mdi {
   margin-right: 1em !important;
+}
+
+.custom-checkbox input, .custom-checkbox .switch, .custom-checkbox .pin, .custom-checkbox .background, .custom-checkbox label i, .little-box .little-box-image img, .box.icon-box figure img, .custom-radio input, .custom-radio .switch {
+  width: 100%;
+  height: 100%;
+}
+
+.custom-checkbox label span {
+  width: 1px;
+  height: 1px;
+}
+
+.custom-checkbox input, .custom-checkbox .switch, .custom-checkbox .pin, .custom-checkbox .background, .custom-radio .switch {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.custom-radio {
+  position: relative;
+  width: 4em;
+  height: 2em;
+  border-radius: 1em;
+  overflow: hidden;
+}
+
+.custom-radio * {
+  cursor: pointer;
+}
+
+.custom-radio input {
+  opacity: 0;
+  background: red !important;
+  position: absolute;
+  z-index: 2;
+}
+
+.custom-radio label {
+  z-index: 1;
+}
+
+.custom-radio .switch {
+  z-index: 0;
+}
+
+.custom-radio input:checked + .switch {
+  background: red !important;
 }
 
 @media print {
