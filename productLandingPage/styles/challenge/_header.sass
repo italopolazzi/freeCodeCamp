@@ -1,0 +1,58 @@
+#header
+    height: 4em
+    z-index: 10
+    position: fixed
+    display: flex
+    align-items: center
+    justify-content: space-between
+    padding: 0 1em
+    & > *
+        z-index: 11
+
+#nav-controller
+    position: relative
+
+input#nav-controller:checked + #nav
+    transform: translateY(0)
+
+input#nav-controller:checked ~ .logo
+    transform: translateY(-100%)
+
+input#nav-controller:checked ~ .logo
+    transform: translateY(-100%)
+
+input#options-controller:checked + #options
+    transform: translateY(0)
+
+input#options-controller:checked ~ .logo
+    transform: translateY(-100%)
+
+input#options-controller:checked ~ .logo
+    transform: translateY(-100%)
+
+#nav, #options
+    z-index: 9
+    position: fixed
+    top: 0
+    left: 0
+    width: 100%
+    transform: translateY(-100%)
+    height: 100vh
+    background: inherit
+    *
+        color: white
+    &, ul
+        @extend %centralize-all
+    ul
+        flex-direction: column
+        flex-wrap: wrap
+    li
+        padding: 1em 3em
+
+.logo
+    max-width: 4em
+
+
+@media screen and (orientation: landscape)
+    #nav ul, #options ul
+        flex-direction: row
