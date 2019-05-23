@@ -26,15 +26,15 @@ $little-box-min-height: $image-size + 2
         margin-right: -$half-image-size
         flex: 1 0 auto
         img
-            @extend %max_it
+            @extend %max-it
             object-fit: cover
 
 #main-features.animation-activated
     .little-box
         transform: translateX(0)!important
 
-@for $i from 1 through $num-of-little-boxes
+@for $i from $num-of-little-boxes through 1
     #main-features .little-box:nth-of-type(#{$i})
-        $num: $i * -150%
+        $num: $i * -130%
         transform: translateX($num)
 

@@ -1,0 +1,52 @@
+$figure-box-size: 8em
+$half-figure-box-size: $figure-box-size / 2
+
+#main-pricing > section
+    display: grid
+    grid-template-columns: 100%
+    grid-template-rows: auto
+    grid-column-gap: 1em
+    grid-row-gap: $half-figure-box-size
+    margin-top: 1em
+    justify-content: space-around
+
+.box.icon-box
+    max-width: 100%
+    figure
+        height: $figure-box-size
+        width: $figure-box-size
+        margin: -($half-figure-box-size + 1) auto 0
+        img
+            @extend %max-it
+            object-fit: cover
+
+@media (min-width: map-get($breakpoints-sizes, sm))
+    .box.icon-box
+        display: flex
+        flex-direction: column
+        justify-content: flex-start
+        align-items: flex-start
+        header
+            display: flex
+            align-items: flex-end
+            justify-content: flex-start
+            flex-direction: row
+            figure
+                margin: -2em 1em 0 0
+        .box-content
+            margin: 0 $figure-box-size + 1
+            padding-right: $figure-box-size + 1
+
+@media (max-width: map-get($breakpoints-sizes, sm))
+    .box.icon-box
+        header
+            display: flex
+            align-items: center
+            flex-direction: column 
+
+@each $breakpoint-key, $breakpoint-value in $breakpoints-sizes
+    @if $breakpoint-key != xs and $breakpoint-key != sm
+        @media (min-width: $breakpoint-value)
+            #main-pricing > section
+                grid-template-columns: 100% * 0.5
+            
