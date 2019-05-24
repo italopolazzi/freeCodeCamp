@@ -1,8 +1,9 @@
-// import activator from './activator.js'
 import headerController from './headerController.js'
 import animationActivator from './animationActivator.js'
+import focusController from './focusController.js'
+
 window.addEventListener('load', () => {
-    // activator()
     animationActivator()
     headerController()
+    focusController()
 })
