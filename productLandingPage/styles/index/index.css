@@ -191,11 +191,7 @@ hr {
   border-style: solid;
 }
 
-button {
-  cursor: pointer;
-}
-
-.icon, .switch, .custom-checkbox label i, .custom-radio, form#contact fieldset, .box .x-actions, .little-box {
+.icon, .switch, .custom-checkbox label i, #nav, #options, .custom-radio, form#contact fieldset, .box .x-actions, .little-box {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -204,7 +200,7 @@ button {
           align-items: center;
 }
 
-.icon, .switch, .custom-checkbox label i, .custom-radio, .input {
+.icon, .switch, .custom-checkbox label i, #nav, #options, .custom-radio, .input {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -217,6 +213,14 @@ button {
 * {
   -webkit-transition: all .1s ease;
   transition: all .1s ease;
+}
+
+button, .custom-checkbox *, .custom-radio * {
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 
 form#contact:before, .button:before {
@@ -238,9 +242,12 @@ form#contact:before, .button:before {
 }
 
 .custom-checkbox input, .custom-checkbox .switch, .custom-checkbox .pin, .custom-checkbox .background, .custom-radio .switch {
-  position: absolute;
   top: 0;
   left: 0;
+}
+
+.custom-checkbox input, .custom-checkbox .switch, .custom-checkbox .pin, .custom-checkbox .background, .custom-radio .switch {
+  position: absolute;
 }
 
 .little-box .little-box-image {
@@ -2120,7 +2127,6 @@ pre {
 }
 
 .custom-checkbox * {
-  cursor: pointer;
   -webkit-transition: background 0.5s linear, color 0.5s linear !important;
   transition: background 0.5s linear, color 0.5s linear !important;
 }
@@ -2359,6 +2365,134 @@ section[id^=main-] h2 {
   outline: none;
 }
 
+#header {
+  position: relative;
+  height: 4em;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  padding: 0 1em;
+}
+
+#header > * {
+  position: relative;
+  z-index: 11;
+}
+
+#header * {
+  outline: none;
+}
+
+*[class^=header-item] {
+  height: inherit;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 33.33333%;
+          flex: 0 1 33.33333%;
+}
+
+.header-item-nav {
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.header-item-options {
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+#header.activated .header-item-logo {
+  -webkit-transform: translateY(-100%);
+          transform: translateY(-100%);
+}
+
+#header.activated .header-item-close {
+  -webkit-transform: translateY(-100%);
+          transform: translateY(-100%);
+}
+
+#nav.activated, #options.activated {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+}
+
+.header-item-logo {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+}
+
+.header-item-close {
+  -webkit-transform: translateY(-200%);
+          transform: translateY(-200%);
+}
+
+#logo {
+  max-width: 4em;
+}
+
+#nav {
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+}
+
+#options {
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
+}
+
+#nav, #options {
+  min-height: 100vh;
+  width: 100%;
+  z-index: 10;
+  background: inherit;
+  top: 0;
+  left: 0;
+  position: fixed;
+}
+
+#nav *, #options * {
+  color: currentColor;
+}
+
+#nav li, #options li {
+  margin-top: 2em;
+  font-size: 2em;
+}
+
+#nav li a, #options li a {
+  opacity: 0.5;
+}
+
+#nav li a:hover, #nav li a:focus, #options li a:hover, #options li a:focus {
+  opacity: 1;
+  padding-left: 1em;
+}
+
 .box {
   -webkit-box-shadow: 0 0 3em -1em rgba(0, 0, 0, 0.4);
           box-shadow: 0 0 3em -1em rgba(0, 0, 0, 0.4);
@@ -2573,22 +2707,6 @@ video {
   margin-right: 1em !important;
 }
 
-.custom-checkbox input, .custom-checkbox .switch, .custom-checkbox .pin, .custom-checkbox .background, .custom-checkbox label i, .little-box .little-box-image img, .box.icon-box figure img, .custom-radio input, .custom-radio .switch {
-  width: 100%;
-  height: 100%;
-}
-
-.custom-checkbox label span {
-  width: 1px;
-  height: 1px;
-}
-
-.custom-checkbox input, .custom-checkbox .switch, .custom-checkbox .pin, .custom-checkbox .background, .custom-radio .switch {
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-
 .custom-radio {
   position: relative;
   width: 4em;
@@ -2598,26 +2716,36 @@ video {
 }
 
 .custom-radio * {
-  cursor: pointer;
+  -webkit-transition: all 0.5s ease !important;
+  transition: all 0.5s ease !important;
+}
+
+.custom-radio:hover .switch, .custom-radio:focus .switch {
+  -webkit-transform: translateY(100%);
+          transform: translateY(100%);
+  background: red;
 }
 
 .custom-radio input {
   opacity: 0;
-  background: red !important;
   position: absolute;
   z-index: 2;
 }
 
 .custom-radio label {
   z-index: 1;
+  font-size: 1.2em;
 }
 
 .custom-radio .switch {
   z-index: 0;
+  -webkit-transform: translateY(-100%);
+          transform: translateY(-100%);
 }
 
 .custom-radio input:checked + .switch {
-  background: red !important;
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
 }
 
 @media print {

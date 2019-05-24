@@ -41,11 +41,18 @@
     width: 1px
     height: 1px  
 
-%super-absolute
-    position: absolute
+%top-left-0
     top: 0
     left: 0
 
+%super-absolute
+    position: absolute
+    @extend %top-left-0
+
+%super-fixed
+    position: fixed
+    @extend %top-left-0
+    
 %round
     border-radius: 100%
     overflow: hidden
