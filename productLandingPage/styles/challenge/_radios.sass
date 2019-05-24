@@ -10,7 +10,7 @@
         @extend %cursor-pointer
     &:hover, &:focus
         .switch
-            transform: translateY(100%)
+            transform: translateX(100%)
             background: red
     input
         @extend %max-it
@@ -24,6 +24,7 @@
         @extend %max-it
         @extend %super-absolute
         z-index: 0
-        transform: translateY(-100%)
+        transform: translateX(-100%)
     input:checked + .switch
-        transform: translateY(0)
+        transform: translateX(0)
+        background: red

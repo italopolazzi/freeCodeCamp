@@ -2376,12 +2376,12 @@ section[id^=main-] h2 {
   -webkit-box-direction: normal;
       -ms-flex-flow: row wrap;
           flex-flow: row wrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   padding: 0 1em;
 }
 
@@ -2394,61 +2394,14 @@ section[id^=main-] h2 {
   outline: none;
 }
 
-*[class^=header-item] {
-  height: inherit;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: row wrap;
-          flex-flow: row wrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-flex: 0;
-      -ms-flex: 0 1 33.33333%;
-          flex: 0 1 33.33333%;
-}
-
-.header-item-nav {
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-}
-
-.header-item-options {
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-}
-
-#header.activated .header-item-logo {
-  -webkit-transform: translateY(-100%);
-          transform: translateY(-100%);
-}
-
-#header.activated .header-item-close {
-  -webkit-transform: translateY(-100%);
-          transform: translateY(-100%);
-}
-
 #nav.activated, #options.activated {
   -webkit-transform: translateX(0);
           transform: translateX(0);
 }
 
-.header-item-logo {
-  -webkit-transform: translateY(0);
-          transform: translateY(0);
-}
-
-.header-item-close {
-  -webkit-transform: translateY(-200%);
-          transform: translateY(-200%);
+#options.activated {
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
 }
 
 #logo {
@@ -2461,13 +2414,13 @@ section[id^=main-] h2 {
 }
 
 #options {
-  -webkit-transform: translateX(100%);
-          transform: translateX(100%);
+  -webkit-transform: translateX(200%);
+          transform: translateX(200%);
 }
 
 #nav, #options {
   min-height: 100vh;
-  width: 100%;
+  width: 50%;
   z-index: 10;
   background: inherit;
   top: 0;
@@ -2721,8 +2674,8 @@ video {
 }
 
 .custom-radio:hover .switch, .custom-radio:focus .switch {
-  -webkit-transform: translateY(100%);
-          transform: translateY(100%);
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
   background: red;
 }
 
@@ -2739,13 +2692,14 @@ video {
 
 .custom-radio .switch {
   z-index: 0;
-  -webkit-transform: translateY(-100%);
-          transform: translateY(-100%);
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
 }
 
 .custom-radio input:checked + .switch {
-  -webkit-transform: translateY(0);
-          transform: translateY(0);
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+  background: red;
 }
 
 @media print {
