@@ -11,6 +11,8 @@
     <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/MaterialDesign-Webfont/3.6.95/css/materialdesignicons.min.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/custom-elements/1.2.4/custom-elements.min.js.map"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/custom-elements/1.2.4/custom-elements.min.js"></script>
 </head>
 
 <body class="main color-inverted">
@@ -20,7 +22,7 @@
     </ul>
     <nav id="navbar" class="primary color-inverted pa8" role="navigation">
         <header>
-            <object class="logo color-inverted" data="./img/logo.svg" type="image/svg+xml"></object>
+            <custom-svg svg="logo" class="color-inverted"></custom-svg>
         </header>
         <div id="nav-menu">
             <ul id="nav-internal">
@@ -65,7 +67,6 @@
                     </label>
                     <input title="Dark mode" type="checkbox" name="dark-mode" id="dark-mode" title="Switch Dark Mode">
                     <div class="switch">
-                        <div class="background"></div>
                         <div class="pin"></div>
                     </div>
                 </div>
@@ -91,7 +92,7 @@
                     <g>
                         <path class="st0" d="M-113,1080C-367.4,807.1-380,250.9-113,0c99.3-93.3,232-139.5,828-123c341.4,9.5,756.8,37.3,1229,105
 		c11.5,44.7,19.1,106.5-11,159c-120.9,210.6-647.5-81.1-949,152c-240.8,186.2-66.5,495.9-387,787c-58.4,53.1-208.6,185.6-402,168
-		C29.6,1233-79.3,1116.2-113,1080z" />
+		C29.6,1233-79.3,1116.2-113,1080z"></path>
                     </g>
                 </svg></div>
             <div class="row color-inverted">
@@ -310,7 +311,7 @@
 
                 <div class="col-xs12 col-md6">
 
-                    <form class="dark color-inverted main pa8" id="contact" name="contact" action="">
+                    <form class="color-inverted main pa8" id="contact" name="contact" action="">
 
                         <fieldset class="main pa8 mb8">
                             <legend class="mb16"> Contact form</legend>
@@ -340,11 +341,11 @@
 
     </main>
 
-    
+
     <footer id="footer" class="accent container">
         <div class="row">
             <div class="xs-text-align-center col-xs12 col-sm12 col-md2 pa8">
-                <object class="logo color-inverted" data="./img/logo.svg" type="image/svg+xml"></object>
+                <custom-svg svg="logo"></custom-svg>
                 <br>
                 <span class="logo">Polazzi</span>
             </div>
@@ -354,16 +355,22 @@
                     amet aut velit.</p>
             </div>
             <div class="xs-text-align-justify col-xs12 col-sm6 col-md5 pa8">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi saepe esse temporibus, a, impedit ex
-                    nulla soluta similique quo praesentium doloribus illum voluptatibus quisquam provident sunt ratione
-                    amet aut velit.</p>
+                <!-- <div class="LI-profile-badge" data-version="v1" data-size="medium" data-locale="en_US"
+                    data-type="horizontal" data-theme="dark" data-vanity="itpzzi"><a class="LI-simple-link"
+                        href='https://br.linkedin.com/in/itpzzi?trk=profile-badge'>Ítalo Polazzi Ferreira</a></div>
+                        <div class="LI-profile-badge" data-version="v1" data-size="medium" data-locale="en_US"
+                            data-type="vertical" data-theme="dark" data-vanity="itpzzi"><a class="LI-simple-link"
+                                href='https://br.linkedin.com/in/itpzzi?trk=profile-badge'>Ítalo Polazzi Ferreira</a>
+                        </div> -->
             </div>
         </div>
         <div class="row">
             <div class="col-xs12 xs-text-align-center pa8">&copy; Ítalo Polazzi - 2019</div>
         </div>
     </footer>
+    <script type="text/javascript" src="https://platform.linkedin.com/badges/js/profile.js" async defer></script>
     <script src="js/index.js" type="module"></script>
+    
     <!-- <script src="https://cdn.freecodecamp.org/<i class="mdi mdi-read">able-projects-fcc/v1/bundle.js"></script> --></i>
 </body>
 

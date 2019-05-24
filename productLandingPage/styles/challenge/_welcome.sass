@@ -1,0 +1,24 @@
+.box 
+    box-shadow: $box-shadow
+    position: relative
+    & > *
+        width: 100%
+    &, figure
+        border-radius: $border-radius
+    figure
+        margin-top: -2em
+        overflow: hidden
+        box-shadow: $box-shadow
+    p 
+        font-size: 2em
+    .x-actions
+        @extend %vertical-center
+
+.register
+    // @extend %centralize-all
+    input:not(.button)
+        width: 100%
+        margin-top: 2em
+        padding: $padding-1-3
+        border-radius: $border-radius
+        border: $border-0125

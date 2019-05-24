@@ -1,0 +1,75 @@
+$header-height: 4em
+
+#header
+    position: relative
+    height: $header-height
+    width: 100%
+    display: flex
+    flex-flow: row wrap
+    justify-content: center
+    align-items: flex-start
+    padding: 0 1em
+    & > *
+        position: relative
+        z-index: 11
+    *
+        outline: none
+
+*[class^=header-item]
+    height: inherit
+    display: flex
+    flex-flow: row wrap
+    justify-content: center
+    align-items: center
+    flex: 0 1 (100% / 3)
+
+.header-item-nav
+    justify-content: flex-start
+
+.header-item-options
+    justify-content: flex-end
+
+#header
+    &.activated .header-item-logo
+        transform: translateY(-100%)
+
+    &.activated .header-item-close
+        transform: translateY(-100%)
+
+#nav, #options
+    &.activated
+        transform: translateX(0)
+
+.header-item-logo
+    transform: translateY(0)
+
+.header-item-close
+    transform: translateY(-200%)
+
+
+#logo
+    max-width: $header-height
+
+#nav
+    transform: translateX(-100%)
+#options
+    transform: translateX(100%)
+#nav, #options
+    @extend %centralize-all
+    min-height: 100vh
+    width: 100%
+    z-index: 10
+    background: inherit
+    top: 0
+    left: 0
+    position: fixed
+    & *
+        color: currentColor
+    li
+        margin-top: 2em
+        font-size: 2em
+        a
+            opacity: 0.5
+        a:hover, a:focus
+            opacity: 1
+            padding-left: 1em
