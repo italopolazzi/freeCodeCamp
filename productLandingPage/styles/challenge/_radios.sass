@@ -1,4 +1,9 @@
-.custom-radio
+#nav-controller ~ .switch
+    transform: translateX(-100%)
+#options-controller ~ .switch
+    transform: translateX(100%)
+
+.custom-checkbox
     @extend %centralize-all
     position: relative
     width: 4em
@@ -10,7 +15,7 @@
         @extend %cursor-pointer
     &:hover, &:focus
         .switch
-            transform: translateX(100%)
+            transform: translateX(0)!important
             background: red
     input
         @extend %max-it
@@ -24,7 +29,6 @@
         @extend %max-it
         @extend %super-absolute
         z-index: 0
-        transform: translateX(-100%)
     input:checked + .switch
-        transform: translateX(0)
+        transform: translateX(0)!important
         background: red
