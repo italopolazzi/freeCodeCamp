@@ -62,3 +62,9 @@ section[id^=main-]
 *[class*=box]:focus-within
     background: map-get($light, main)!important
     outline: none
+
+
+@media (max-width: map-get($breakpoints-sizes, md))
+    .box
+        margin-left: 1em!important
+        margin-right: 1em!important
