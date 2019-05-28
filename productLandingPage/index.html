@@ -20,8 +20,8 @@
         <li><a href="#main">Skip to main content</a></li>
     </ul>
 
-    <header id="header" class="primary color-inverted">
-        <nav id="nav-bar" grand_parent>
+    <header id="header" class="color-main">
+        <nav id="nav-bar" class="main color-inverted" grand_parent>
             <ul>
                 <li><a class="nav-link" href="#main-welcome">Link 1</a></li>
                 <li><a class="nav-link" href="#main-features">Link 2</a></li>
@@ -30,7 +30,7 @@
                 <li><a class="nav-link" href="#main-contact">Link 5</a></li>
             </ul>
         </nav>
-        <div id="options" grand_parent>
+        <div id="options" class="main color-inverted" grand_parent>
             <ul>
                 <li><a href="#main-welcome">Option 1</a></li>
                 <li><a href="#main-features">Option 2</a></li>
@@ -41,12 +41,11 @@
         </div>
 
 
-        <div class="custom-checkbox main color-inverted">
+        <div class="custom-menu-button primary color-main">
             <label for="nav-controller">
                 <i class="mdi mdi-menu"></i><span class="sr-only">Nav</span>
             </label>
-            <input tabindex="0" type="checkbox" name="header-controllers" id="nav-controller"
-                title="Open navigation bar">
+            <button tabindex="-1" type="button" id="nav-bar-controller" title="Open navigation drawer"></button>
             <div class="switch">
                 <div class="background"></div>
             </div>
@@ -55,12 +54,12 @@
         <div id="logo" class="logo"><img id="header-img" src="./img/logo.svg" alt=""></div>
 
 
-        <div class="custom-checkbox main color-inverted">
+        <div class="custom-menu-button primary color-main">
             <label for="options-controller">
-                <i class="mdi mdi-menu"></i><span class="sr-only">Options</span>
+                <i class="mdi mdi-dots-vertical"></i><span class="sr-only">Options</span>
             </label>
-            <input tabindex="0" type="checkbox" name="header-controllers" id="options-controller"
-                title="Open site options">
+
+            <button tabindex="-1" type="button" id="options-controller" title="Open options drawer"></button>
             <div class="switch">
                 <div class="background"></div>
             </div>
@@ -72,61 +71,6 @@
         <section id="main-welcome" class="row fluid">
             <section id="circles-container">
                 <div id="title-img-container">Rosalía</div>
-                <div id="links-container">Home</div>
-                <div class="images-container">
-                    <div class="img-container">
-                        <a title="DE AQUÍ NO SALES" href="#./img/rosa (1).jpg">
-                            <img src="./img/rosa (1).jpg" alt="">
-                        </a>
-                    </div>
-                    <div class="img-container">
-                        <a title="MALAMENTE" href="#./img/rosa (2).jpg">
-                            <img src="./img/rosa (2).jpg" alt="">
-                        </a>
-                    </div>
-                    <div class="img-container">
-                        <a title="BAGDAD" href="#./img/rosa (3).jpg">
-                            <img src="./img/rosa (3).jpg" alt="">
-                        </a>
-                    </div>
-                    <div class="img-container">
-                        <a title="DI MI NOMBRE" href="#./img/rosa (4).jpg">
-                            <img src="./img/rosa (4).jpg" alt="">
-                        </a>
-                    </div>
-                    <div class="img-container">
-                        <a title="NANA" href="#./img/rosa (5).jpg">
-                            <img src="./img/rosa (5).jpg" alt="">
-                        </a>
-                    </div>
-                    <div class="img-container">
-                        <a title="PRESO" href="#./img/rosa (6).jpg">
-                            <img src="./img/rosa (6).jpg" alt="">
-                        </a>
-                    </div>
-                    <div class="img-container">
-                        <a title="EL MAL QUERER" href="#./img/rosa (7).jpg">
-                            <img src="./img/rosa (7).jpg" alt="">
-                        </a>
-                    </div>
-                    <div class="img-container">
-                        <a title="QUE NO SALGA LA LUNA" href="#./img/rosa (8).jpg">
-                            <img src="./img/rosa (8).jpg" alt="">
-                        </a>
-                    </div>
-                    <div class="img-container">
-                        <a title="PIENSO EN TU MIRÁ" href="#./img/rosa (9).jpg"><img src="./img/rosa (9).jpg" alt="">
-                        </a>
-                    </div>
-                    <div class="img-container">
-                        <a title="RENIEGO" href="#./img/rosa (10).jpg"><img src="./img/rosa (10).jpg" alt="">
-                        </a>
-                    </div>
-                    <div class="img-container">
-                        <a title="MALDICIÓN" href="#./img/rosa (11).jpg"><img src="./img/rosa (11).jpg" alt="">
-                        </a>
-                    </div>
-                </div>
             </section>
             <section class="row primary color-inverted col-xs12 xs-align-center xs-justify-center pa4">
 
@@ -218,7 +162,7 @@
             <h2 class="col-xs12 xs-text-center pa4">Title 4</h2>
             <section class="row pt8 color-inverted py4">
 
-                <div tabindex="0" class="box icon-box secondary pa4">
+                <div tabindex="0" class="box icon-box pa4">
                     <header>
                         <figure><img src="./img/rosa (3).jpg" alt=""></figure>
                         <h2 class="mt4">Reniego</h2>
@@ -237,7 +181,7 @@
                         </div>
                     </footer>
                 </div>
-                <div tabindex="0" class="box icon-box secondary pa4">
+                <div tabindex="0" class="box icon-box pa4">
                     <header>
                         <figure><img src="./img/rosa (4).jpg" alt=""></figure>
                         <h2 class="mt4">Malamente</h2>
@@ -256,7 +200,7 @@
                         </div>
                     </footer>
                 </div>
-                <div tabindex="0" class="box icon-box secondary pa4">
+                <div tabindex="0" class="box icon-box pa4">
                     <header>
                         <figure><img src="./img/rosa (5).jpg" alt=""></figure>
                         <h2 class="mt4">De aquí no sales</h2>
@@ -275,7 +219,7 @@
                         </div>
                     </footer>
                 </div>
-                <div tabindex="0" class="box icon-box secondary pa4">
+                <div tabindex="0" class="box icon-box pa4">
                     <header>
                         <figure><img src="./img/rosa (6).jpg" alt=""></figure>
                         <h2 class="mt4">Que no salga la luna</h2>

@@ -8,7 +8,6 @@ import focusController from './focusController.js'
     shapeContainers()
     getElementsTitle()
     window.addEventListener('load', () => {
-
         animationActivator()
         headerController()
         focusController()

@@ -14,22 +14,28 @@ const options_controller = document.querySelector("#options-controller")
 
 export default () => {
     window.addEventListener('scroll', (e) => {
+        console.log(scroll)
+        if(scrollY > 5){
+            header.classList.add('scroll-activated')
+        } else {
+            header.classList.remove('scroll-activated')
+        }
         functions.removeTheClassForAll(header, nav, options)
     })
     
     window.addEventListener('click', (e) => {
-        // console.log(elementHasGrandParent(e.target))
+        console.log(elementHasGrandParent(e.target))
 
 
 
         if (e.target === nav_controller) {
             functions.switchClassActivated(header, nav)
             options.classList.remove(flags.activated_class_flag)
-            options_controller.checked = false
+
         } else if (e.target === options_controller) {
             functions.switchClassActivated(header, options)
             nav.classList.remove(flags.activated_class_flag)
-            nav_controller.checked = false
+
         }
     })
 }

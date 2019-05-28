@@ -13,9 +13,9 @@
     font-family: 'Megrim', cursive
     background: transparent
     position: absolute
-    font-size: 50vmin
+    font-size: 40vmin
     color: #FFA000
-    text-shadow: 1rem 1rem #C62828
+    text-shadow: 1rem 1rem #F03418
 
 #title-img-container
     z-index: 1
@@ -73,15 +73,8 @@
         transform: scale(1)
         opacity: 1
 
-@media (max-width: 600px)
+@media (max-width: map-get($breakpoints-sizes, md))
     #title-img-container,
     #links-container
-        margin-top: -20rem
-        font-size: 5em
+        font-size: 20vmin
         word-break: break-all
-    .images-container
-        height: 6em
-        width: 6em
-    .img-container
-        height: 6em
-        width: 6em

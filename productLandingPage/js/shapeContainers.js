@@ -7,7 +7,7 @@ const DEFAULT_SHAPE_ROTATION = 15
 const DEFAULT_CIRCLE_MAX_DEGREE = 360
 let DEFAULT_SHAPE_DEGREE;
 
-const DEFAULT_MARGIN = 0;
+const DEFAULT_MARGIN = 16;
 
 Math.degrees = radians => radians * 180 / Math.PI
 Math.radians = degrees => degrees * Math.PI / 180

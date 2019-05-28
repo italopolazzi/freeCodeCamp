@@ -3,12 +3,12 @@
 #options-controller ~ .switch
     transform: translateX(100%)
 
-.custom-checkbox
+.custom-menu-button
     @extend %centralize-all
     position: relative
-    width: 4em
-    height: 2em
-    border-radius: 1em
+    width: 3em
+    height: 3em
+    border-radius: 50%
     overflow: hidden
     *
         transition: all .5s ease!important
@@ -16,8 +16,12 @@
     &:hover, &:focus
         .switch
             transform: translateX(0)!important
-            background: red
-    input
+            background: $accent
+    &:active, &:focus-within
+        .switch
+            transform: translateX(0)!important
+            background: $accent
+    button
         @extend %max-it
         opacity: 0
         position: absolute
@@ -29,6 +33,6 @@
         @extend %max-it
         @extend %super-absolute
         z-index: 0
-    // input:checked + .switch
+    // button:checked + .switch
     //     transform: translateX(0)!important
     //     background: red
