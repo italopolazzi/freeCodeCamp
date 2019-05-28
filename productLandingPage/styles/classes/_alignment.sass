@@ -1,0 +1,19 @@
+$display-flex: (align-items: (baseline, center, flex-start, flex-end, stretch), align-self: (center, start, end, stretch), justify-content: (flex-start, flex-end, space-between, space-around, space-evenly, center, stretch), flex-direction: (row, column, row-reverse, column-reverse), flex-wrap: (nowrap, wrap, wrap-reverse), text-align: (center, left, right, justify))
+
+$short-name: (align-items: align, align-self: self, justify-content: justify, flex-direction: direction, flex-wrap: wrap, text-align: text, flex-start: start, flex-end: end, space-between: between, space-around: around, space-evenly: evenly, row-reverse: rerow, column-reverse: recol, wrap-reverse: rewrap)
+
+@each $breakpoint-key, $size-in-px in $breakpoints-sizes
+    @media screen and (min-width: $size-in-px)
+        @each $original-property, $original-property-values in $display-flex
+            @each $original-value in $original-property-values
+                
+                // trying short the property's name
+                $temp: map-get($short-name, $original-property)
+                $property: if($temp, $temp, $original-property)
+
+                // trying short the value's name
+                $temp: map-get($short-name, $original-value)
+                $value: if($temp, $temp, $original-value)
+
+                .#{$breakpoint-key}-#{$property}-#{$value}
+                    #{$original-property}: $original-value!important

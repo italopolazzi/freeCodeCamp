@@ -59,3 +59,12 @@ $grid-column-gap: 1em
     font-weight: bold
     .mdi
         margin-right: 1em!important
+
+#main-pricing.animation-activated
+    .icon-box
+        transform: translateX(0)!important
+
+#main-pricing .icon-box:nth-child(2n)
+    transform: translateX(100%)
+#main-pricing .icon-box:nth-child(2n+1)
+    transform: translateX(-100%)

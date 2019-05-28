@@ -21,13 +21,13 @@ $header-height: 4em
     margin-top: -$header-height
     z-index: 9
 
-#nav-controller,
+#nav-bar-controller,
 #logo,
 #options-controller
     z-index: 10
     flex: 0 1 auto
 
-#nav-controller
+#nav-bar-controller
     order: 1
 
 #logo
@@ -36,22 +36,22 @@ $header-height: 4em
 #options-controller
     order: 3
 
-#nav-controller
+#nav-bar-controller
     position: relative
 
-input#nav-controller:checked + #nav,
+input#nav-bar-controller:checked + #nav-bar,
 input#options-controller:checked + #options
     transform: translateY(0)
 
-input#nav-controller:checked ~ #logo,
+input#nav-bar-controller:checked ~ #logo,
 input#options-controller:checked ~ #logo
     transform: translateY(-100%)
 
-input#nav-controller:checked ~ #logo,
+input#nav-bar-controller:checked ~ #logo,
 input#options-controller:checked ~ #logo
     transform: translateY(-100%)
 
-#nav-controller,
+#nav-bar-controller,
 #options-controller
     height: 2em
     width: 2em
@@ -76,7 +76,7 @@ input#options-controller:checked ~ #logo
         width: 2em
         box-shadow: inset 0 0 0 0.25em #000
 
-#nav, #options
+#nav-bar, #options
     z-index: 9
     position: fixed
     top: 0
@@ -101,5 +101,5 @@ input#options-controller:checked ~ #logo
 
 
 @media screen and (orientation: landscape)
-    #nav ul, #options ul
+    #nav-bar ul, #options ul
         flex-direction: row

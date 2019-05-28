@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css?family=Megrim&display=swap')
+
+#circles-container
+    width: 100%
+    display: flex
+    align-items: center
+    justify-content: center
+    min-height: 100vh
+    background: linear-gradient(to right, #200122, #6f0000)
+
+#title-img-container,
+#links-container
+    font-family: 'Megrim', cursive
+    background: transparent
+    position: absolute
+    font-size: 50vmin
+    color: #FFA000
+    text-shadow: 1rem 1rem #C62828
+
+#title-img-container
+    z-index: 1
+#links-container
+    z-index: 0
+    opacity: 0
+
+#circles-container.activated
+    #title-img-container
+        opacity: 0
+    #links-container
+        opacity: 1
+    .images-container,
+    .img-container
+        animation-play-state: paused
+
+.images-container
+    z-index: 2
+    animation: enter 2s 1 normal linear forwards, rotate 360s infinite linear 2s
+    position: absolute
+    height: 8em
+    width: 8em
+    // background: red
+    padding: 0
+    margin: 0
+
+.img-container
+    width: 8em
+    height: 8em
+    border-radius: 50%
+    overflow: hidden
+    position: relative
+    animation: enter 2s 1 normal linear forwards, rotate 360s infinite reverse linear  2s
+    a
+        position: absolute
+        z-index: 1000
+    img
+        width: 100%
+        height: 100%
+        object-fit: cover
+
+@keyframes rotate
+    0%
+        transform: rotate(0)
+    50%
+        transform: rotate(180deg)
+    100%
+        transform: rotate(360deg)
+
+@keyframes enter
+    0%
+        transform: scale(0)
+        opacity: 0
+    100%
+        transform: scale(1)
+        opacity: 1
+
+@media (max-width: 600px)
+    #title-img-container,
+    #links-container
+        margin-top: -20rem
+        font-size: 5em
+        word-break: break-all
+    .images-container
+        height: 6em
+        width: 6em
+    .img-container
+        height: 6em
+        width: 6em

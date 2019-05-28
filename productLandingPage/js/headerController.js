@@ -6,10 +6,10 @@ import {
 
 const header = document.querySelector("#header")
 
-const nav = document.querySelector("#nav")
+const nav = document.querySelector("#nav-bar")
 const options = document.querySelector("#options")
 
-const nav_controller = document.querySelector("#nav-controller")
+const nav_controller = document.querySelector("#nav-bar-controller")
 const options_controller = document.querySelector("#options-controller")
 
 export default () => {
