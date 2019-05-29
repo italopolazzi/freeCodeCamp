@@ -1431,7 +1431,7 @@ hr {
   border-style: solid;
 }
 
-.icon {
+.icon, .form-div {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1440,7 +1440,7 @@ hr {
           align-items: center;
 }
 
-.icon {
+.icon, .form-div {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -3447,42 +3447,42 @@ pre {
   height: 40em;
   background: rebeccapurple;
   position: relative;
+  overflow: hidden;
 }
 
-.custom-form form, .custom-form .form-div, .custom-form .controls {
-  padding: 2em;
+.custom-form form,
+.custom-form form > fieldset,
+.custom-form .controls,
+.custom-form .form-div {
   position: relative;
   width: 100%;
+  height: 100%;
 }
 
 .custom-form form {
   background: red;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-align: stretch;
-      -ms-flex-align: stretch;
-          align-items: stretch;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  height: 100%;
-}
-
-.custom-form .form-div {
-  position: absolute;
-  background: green;
-  border-radius: 1em;
-  width: calc(100% - 4em);
-  height: calc(100% - 4em - 1em);
+  padding: 1em;
 }
 
 .custom-form .controls {
+  height: auto;
   background: orange;
+  padding: 2em;
+}
+
+.form-div {
+  background: yellow;
+  position: absolute !important;
+  top: 0;
+  left: 0;
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
+}
+
+.form-div .content {
+  position: relative;
+  background: green;
+  border-radius: 1em;
 }
 
 @media print {
