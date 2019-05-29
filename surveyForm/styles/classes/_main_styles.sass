@@ -1,0 +1,36 @@
+*
+    @extend %main-transition
+    box-sizing: border-box
+
+html
+    font-size: $html-font-size
+    scroll-behavior: $scroll-behavior
+body
+    font-family: $body-font-family
+    font-weight: $body-font-weight
+
+li, p, pre
+    line-height: $line-height
+    margin: 1rem 0
+
+img
+    width: 100%
+    position: relative
+
+a
+    text-decoration: none
+
+hr 
+	display: block 
+	unicode-bidi: isolate 
+	margin-block-start: 0.5em 
+	margin-block-end: 0.5em 
+	margin-inline-start: auto 
+	margin-inline-end: auto 
+	overflow: hidden 
+	border-style: inset 
+	border-width: 0.25em 
+	border-style: solid 
+
+button
+    @extend %cursor-pointer
