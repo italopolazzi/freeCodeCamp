@@ -1,6 +1,6 @@
-#nav-bar-controller ~ .switch
+#nav-bar-controller ~ .background
     transform: translateX(-100%)
-#options-controller ~ .switch
+#options-controller ~ .background
     transform: translateX(100%)
 
 .custom-menu-button
@@ -14,25 +14,27 @@
         transition: all .5s ease!important
         @extend %cursor-pointer
     &:hover, &:focus
-        .switch
+        .background
             transform: translateX(0)!important
             background: $accent
     &:active, &:focus-within
-        .switch
+        .background
             transform: translateX(0)!important
             background: $accent
-    button
+    button, a
         @extend %max-it
-        opacity: 0
+        // opacity: 0
         position: absolute
         z-index: 2
-    label
-        z-index: 1
         font-size: 1.2em
-    .switch
+        background: transparent
+        border: none
+        color: inherit
+        @extend %centralize-all
+    .background
         @extend %max-it
         @extend %super-absolute
         z-index: 0
-    // button:checked + .switch
+    // button:checked + .background
     //     transform: translateX(0)!important
     //     background: red

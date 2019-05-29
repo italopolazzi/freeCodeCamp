@@ -15,7 +15,8 @@ $grid-column-gap: 1em
     max-width: 100%
     figure
         height: $figure-box-size
-        width: $figure-box-size
+        min-width: $figure-box-size!important
+        max-width: $figure-box-size!important
         margin: -($half-figure-box-size + 1) auto 0
         img
             @extend %max-it
