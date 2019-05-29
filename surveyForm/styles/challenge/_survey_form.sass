@@ -7,7 +7,7 @@ $half-padding: (2em / 2)
     height: 40em
     background: rebeccapurple
     position: relative
-    overflow: hidden
+    // overflow: hidden
     form,
     form > fieldset,
     .controls,
@@ -18,6 +18,7 @@ $half-padding: (2em / 2)
     form
         background: red
         padding: 1em
+        overflow: hidden
     .controls
         height: auto
         background: orange
@@ -30,6 +31,11 @@ $half-padding: (2em / 2)
     left: 0
     @extend %centralize-all
     transform: translateX(100%)
+    opacity: 0
+    transition: transform .3s linear, opacity .1s linear
+    &.activated
+        transform: translateX(0)
+        opacity: 1
     .content
         position: relative
         background: green

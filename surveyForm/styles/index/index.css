@@ -3447,7 +3447,6 @@ pre {
   height: 40em;
   background: rebeccapurple;
   position: relative;
-  overflow: hidden;
 }
 
 .custom-form form,
@@ -3462,6 +3461,7 @@ pre {
 .custom-form form {
   background: red;
   padding: 1em;
+  overflow: hidden;
 }
 
 .custom-form .controls {
@@ -3477,6 +3477,17 @@ pre {
   left: 0;
   -webkit-transform: translateX(100%);
           transform: translateX(100%);
+  opacity: 0;
+  -webkit-transition: opacity .1s linear, -webkit-transform .3s linear;
+  transition: opacity .1s linear, -webkit-transform .3s linear;
+  transition: transform .3s linear, opacity .1s linear;
+  transition: transform .3s linear, opacity .1s linear, -webkit-transform .3s linear;
+}
+
+.form-div.activated {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+  opacity: 1;
 }
 
 .form-div .content {
