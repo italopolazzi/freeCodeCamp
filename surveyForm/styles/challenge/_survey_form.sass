@@ -1,0 +1,30 @@
+$padding: 2em
+$double-padding: (2em * 2)
+$half-padding: (2em / 2)
+
+.custom-form
+    width: 100%
+    height: 40em
+    background: rebeccapurple
+    position: relative
+    form, .form-div, .controls
+        padding: $padding
+        position: relative
+        width: 100%
+    form
+        background: red
+        display: flex
+        flex-direction: row
+        align-items: stretch
+        justify-content: flex-start
+        height: 100%
+    .form-div
+        position: absolute
+        background: green
+        border-radius: $half-padding
+        width: calc(100% - #{$double-padding})
+        height: calc(100% - #{$double-padding} - 1em)
+    .controls
+        background: orange
+
+

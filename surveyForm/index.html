@@ -31,78 +31,132 @@
             cupiditate cumque odio nesciunt quidem! Perferendis quasi architecto maiores saepe molestiae aperiam cum.
             Quia quod quas accusamus?</p>
 
-        <form action="" id="survey-form">
-            <fieldset>
-                <legend>The survey form's title</legend>
-                <div class="input">
-                    <label id="name-label" for="name">Name</label>
-                    <input type="text" id="name" name="survey-name" placeholder="Name" required>
+        <section class="row">
+            <div class="col-xs12 offset-md6 col-md6 pa4">
+                <div class="custom-form">
+                    <form action="" id="survey-form">
+                        <fieldset>
+                            <legend>The survey form's title</legend>
+
+                            <!-- INPUTS -->
+                            <div class="form-div" id="form-div-1">
+
+                                <div class="input">
+                                    <label id="name-label" for="name">Name</label>
+                                    <input type="text" id="name" name="survey-name" placeholder="Name" required>
+                                </div>
+                                <div class="input">
+                                    <label id="email-label" for="email">E-mail</label>
+                                    <input type="email" id="email" name="survey-email" placeholder="E-mail" required>
+                                </div>
+                                <div class="input">
+                                    <label id="number-label" for="number">Number</label>
+                                    <input type="number" id="number" name="survey-number" min="10" max="100"
+                                        placeholder="Number" required>
+                                </div>
+                            </div>
+
+                            <!-- SELECT -->
+                            <div class="form-div" id="form-div-2">
+                                <fieldset>
+                                    <legend>Some request here?</legend>
+                                    <select name="survey-dropdown" id="dropdown" required>
+                                        <option value="" disabled selected hidden>Choose here</option>
+                                        <optgroup label="Group 1">
+                                            <option value="1">Test 1</option>
+                                            <option value="2">Test 2</option>
+                                            <option value="3">Test 3</option>
+                                            <option value="4">Test 4</option>
+                                            <option value="5">Test 5</option>
+                                        </optgroup>
+                                        <optgroup label="Group 2" disabled>
+                                            <option value="1">Test 1</option>
+                                            <option value="2">Test 2</option>
+                                            <option value="3">Test 3</option>
+                                            <option value="4">Test 4</option>
+                                            <option value="5">Test 5</option>
+                                        </optgroup>
+                                    </select>
+                                </fieldset>
+                            </div>
+
+                            <!-- RADIOS -->
+                            <div class="form-div" id="form-div-3">
+
+                                <fieldset>
+                                    <legend>Some question here? </legend>
+                                    <label for="radio-1">Radio 1</label>
+                                    <input type="radio" value="radio-1" name="survey-radios" id="radio-1" required>
+                                    <label for="radio-2">Radio 2</label>
+                                    <input type="radio" value="radio-2" name="survey-radios" id="radio-2">
+                                    <label for="radio-3">Radio 3</label>
+                                    <input type="radio" value="radio-3" name="survey-radios" id="radio-3">
+                                    <label for="radio-4">Radio 4</label>
+                                    <input type="radio" value="radio-4" name="survey-radios" id="radio-4">
+                                    <label for="radio-5">Radio 5</label>
+                                    <input type="radio" value="radio-5" name="survey-radios" id="radio-5">
+                                </fieldset>
+                            </div>
+
+                            <!-- CHECKBOXES -->
+                            <div class="form-div" id="form-div-4">
+
+                                <fieldset>
+                                    <legend>Some other question here?</legend>
+
+                                    <label for="checkbox-1">Checkbox 1</label>
+                                    <input type="checkbox" value="checkbox-1" name="survey-checkboxes" id="checkbox-1">
+                                    <label for="checkbox-2">Checkbox 2</label>
+                                    <input type="checkbox" value="checkbox-2" name="survey-checkboxes" id="checkbox-2">
+                                    <label for="checkbox-3">Checkbox 3</label>
+                                    <input type="checkbox" value="checkbox-3" name="survey-checkboxes" id="checkbox-3">
+                                    <label for="checkbox-4">Checkbox 4</label>
+                                    <input type="checkbox" value="checkbox-4" name="survey-checkboxes" id="checkbox-4">
+                                    <label for="checkbox-5">Checkbox 5</label>
+                                    <input type="checkbox" value="checkbox-5" name="survey-checkboxes" id="checkbox-5">
+
+                                </fieldset>
+                            </div>
+
+                            <!-- TEXTAREA -->
+                            <div class="form-div" id="form-div-5">
+
+                                <textarea name="survey-comments" id="comments" cols="30" rows="10"></textarea>
+
+                                <div class="input form-actions">
+                                    <input type="submit" value="Send" name="survey-submit" id="submit">
+                                </div>
+                            </div>
+                        </fieldset>
+
+                    </form>
+
+                    <div class="controls">
+                        <fieldset>
+                            <legend class="sr-only">Choose the forms </legend>
+                            <label class="sr-only" for="control-1">Form div 1</label>
+                            <input type="radio" value="control-1" name="survey-controls" id="control-1" checked>
+                            <label class="sr-only" for="control-2">Form div 2</label>
+                            <input type="radio" value="control-2" name="survey-controls" id="control-2">
+                            <label class="sr-only" for="control-3">Form div 3</label>
+                            <input type="radio" value="control-3" name="survey-controls" id="control-3">
+                            <label class="sr-only" for="control-4">Form div 4</label>
+                            <input type="radio" value="control-4" name="survey-controls" id="control-4">
+                            <label class="sr-only" for="control-5">Form div 5</label>
+                            <input type="radio" value="control-5" name="survey-controls" id="control-5">
+                        </fieldset>
+                    </div>
                 </div>
-                <div class="input">
-                    <label id="email-label" for="email">E-mail</label>
-                    <input type="email" id="email" name="survey-email" placeholder="E-mail" required>
-                </div>
-                <div class="input">
-                    <label id="number-label" for="number">Number</label>
-                    <input type="number" id="number" name="survey-number" min="10" max="100" placeholder="Number" required>
-                </div>
-                <fieldset>
-                    <legend>Some request here?</legend>
-                    <select name="survey-dropdown" id="dropdown">
-                        <option value="1">Test 1</option>
-                        <option value="2">Test 2</option>
-                        <option value="3">Test 3</option>
-                        <option value="4">Test 4</option>
-                        <option value="5">Test 5</option>
-                    </select>
-                </fieldset>
-
-                <fieldset>
-                    <legend>Some question here? </legend>
-                    <label for="radio-1">Radio 1</label>
-                    <input type="radio" value="radio-1" name="survey-radios" id="radio-1">
-                    <label for="radio-2">Radio 2</label>
-                    <input type="radio" value="radio-2" name="survey-radios" id="radio-2">
-                    <label for="radio-3">Radio 3</label>
-                    <input type="radio" value="radio-3" name="survey-radios" id="radio-3">
-                    <label for="radio-4">Radio 4</label>
-                    <input type="radio" value="radio-4" name="survey-radios" id="radio-4">
-                    <label for="radio-5">Radio 5</label>
-                    <input type="radio" value="radio-5" name="survey-radios" id="radio-5">
-                </fieldset>
-
-                <fieldset>
-                    <legend>Some other question here?</legend>
-
-                    <label for="checkbox-1">Checkbox 1</label>
-                    <input type="checkbox" value="checkbox-1" name="survey-checkboxes" id="checkbox-1">
-                    <label for="checkbox-2">Checkbox 2</label>
-                    <input type="checkbox" value="checkbox-2" name="survey-checkboxes" id="checkbox-2">
-                    <label for="checkbox-3">Checkbox 3</label>
-                    <input type="checkbox" value="checkbox-3" name="survey-checkboxes" id="checkbox-3">
-                    <label for="checkbox-4">Checkbox 4</label>
-                    <input type="checkbox" value="checkbox-4" name="survey-checkboxes" id="checkbox-4">
-                    <label for="checkbox-5">Checkbox 5</label>
-                    <input type="checkbox" value="checkbox-5" name="survey-checkboxes" id="checkbox-5">
-
-                </fieldset>
-
-                <textarea name="survey-comments" id="comments" cols="30" rows="10"></textarea>
-
-                <div class="input form-actions">
-                    <input type="submit" value="Send" name="survey-submit" id="submit">
-                </div>
-            </fieldset>
-
-        </form>
+            </div>
+        </section>
 
     </main>
-
+    <!-- 
     <footer id="footer" class="row main color-inverted">
         <div class="col-xs12 xs-text-center pa4">&copy; Ítalo Polazzi - 2019</div>
-    </footer>
+    </footer> -->
 
-    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+    <!-- <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script> -->
 </body>
 
 </html>
