@@ -3475,8 +3475,8 @@ pre {
   position: absolute !important;
   top: 0;
   left: 0;
-  -webkit-transform: translateX(100%);
-          transform: translateX(100%);
+  -webkit-transform: translateY(-100%);
+          transform: translateY(-100%);
   opacity: 0;
   -webkit-transition: opacity .1s linear, -webkit-transform .3s linear;
   transition: opacity .1s linear, -webkit-transform .3s linear;
@@ -3485,8 +3485,8 @@ pre {
 }
 
 .form-div.activated {
-  -webkit-transform: translateX(0);
-          transform: translateX(0);
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
   opacity: 1;
 }
 

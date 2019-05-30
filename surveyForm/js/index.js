@@ -1,3 +1,5 @@
+import focusController from './focusController.js'
+
 const removeFormDivActivatedClass = () => {
     const form_div_activated = document.querySelector('.form-div.activated')
     if (form_div_activated) {
@@ -29,5 +31,6 @@ const custorFormController = () => {
     window.addEventListener('load', () => {
         activateTheFormCorrespondingToTheChecked(document.querySelector('input[name="form-controls"]:checked'))
         custorFormController()
+        focusController()
     })
 })()
