@@ -1,4 +1,5 @@
 import * as functions from './functions.js'
+import * as variables from './variables.js'
 
 let activated_element;
 
@@ -8,25 +9,23 @@ const handleFocusWhenKeyDown = e => {
         e.target.click()
     }
 }
+const checkTheRadioCorrespondingToTheForm = () =>{
+    const parent_element_id = document.querySelector(variables.parent_element_activated).id
+    const parent_element_id_number = parent_element_id.match(/\d+/g)
+    
+    const query = `input[id="control-${parent_element_id_number}"]`
+    document.querySelector(query).checked = true
+}
 
 const handleFocusWhenKeyUp = e => {
-    console.log(e.target)
-    const current_element = functions.elementHasXParent('.form-div', e.target)
-    console.log({
-        current_element
-    })
-    console.log(
-        getComputedStyle(current_element).transform
-    )
+    const current_element = functions.elementHasXParent(variables.parent_element, e.target)
+
     if (current_element) {
         if (activated_element && activated_element != current_element) {
             functions.removeTheClassForAll(activated_element)
-            // const ct_name = `${activated_element.id}-controller`
-            // document.querySelector(`#${ct_name}`).checked = false
-
-            // remover checked aqui
         }
         functions.addTheClassForAll(current_element)
+        checkTheRadioCorrespondingToTheForm()
         activated_element = current_element;
     }
 }
