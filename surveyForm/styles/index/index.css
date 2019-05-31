@@ -1431,7 +1431,7 @@ hr {
   border-style: solid;
 }
 
-.icon, .form-div {
+.icon {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1440,7 +1440,7 @@ hr {
           align-items: center;
 }
 
-.icon, .form-div {
+.icon {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -3444,8 +3444,7 @@ pre {
 
 .custom-form {
   width: 100%;
-  height: 40em;
-  background: rebeccapurple;
+  height: 40rem;
   position: relative;
 }
 
@@ -3459,24 +3458,35 @@ pre {
 }
 
 .custom-form form {
-  background: red;
-  padding: 1em;
+  padding: 1rem;
   overflow: hidden;
+  font-size: 1.2em;
 }
 
 .custom-form .controls {
   height: auto;
-  background: orange;
-  padding: 2em;
+  padding: 2rem;
 }
 
 .form-div {
-  background: yellow;
   position: absolute !important;
   top: 0;
   left: 0;
-  -webkit-transform: translateY(-100%);
-          transform: translateY(-100%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
   opacity: 0;
   -webkit-transition: opacity .1s linear, -webkit-transform .3s linear;
   transition: opacity .1s linear, -webkit-transform .3s linear;
@@ -3485,15 +3495,154 @@ pre {
 }
 
 .form-div.activated {
-  -webkit-transform: translateY(0);
-          transform: translateY(0);
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
   opacity: 1;
 }
 
 .form-div .content {
   position: relative;
-  background: green;
-  border-radius: 1em;
+}
+
+textarea {
+  resize: vertical;
+}
+
+select {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+
+.input, .form-box {
+  width: 100%;
+  background: transparent;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  padding: 2rem;
+}
+
+.input label, .form-box label {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 30%;
+          flex: 1 0 30%;
+}
+
+.input input:not([type=submit]), .input textarea, .form-box input:not([type=submit]), .form-box textarea {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 70%;
+          flex: 0 1 70%;
+}
+
+.input input, .input textarea, .form-box input, .form-box textarea {
+  padding: 1rem 2rem;
+}
+
+.controls {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.controls fieldset {
+  background: white;
+  padding: 0.5em;
+  border-radius: 999999px;
+}
+
+.radio-label {
+  width: 2em;
+  height: 2em;
+  position: relative;
+  display: inline-block;
+  margin-right: 1em;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.radio-label:last-of-type {
+  margin-right: 0;
+}
+
+.radio-label input {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.radio-label input:checked ~ .symbol {
+  background: blue;
+  border: 0.25em solid white;
+}
+
+.symbol {
+  width: 100%;
+  height: 100%;
+  background: gray;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+}
+
+.symbol.error {
+  background: red !important;
+}
+
+@media (max-width: 960px) {
+  .input, .form-box {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: stretch;
+        -ms-flex-align: stretch;
+            align-items: stretch;
+  }
+  .input label, .form-box label {
+    -webkit-box-flex: 100%;
+        -ms-flex-positive: 100%;
+            flex-grow: 100%;
+  }
+  .input input, .input textarea, .form-box input, .form-box textarea {
+    -webkit-box-flex: 100%;
+        -ms-flex-positive: 100%;
+            flex-grow: 100%;
+  }
+  .input input[type=submit], .form-box input[type=submit] {
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+  }
+  .input label {
+    margin-bottom: 1rem;
+  }
 }
 
 @media print {
