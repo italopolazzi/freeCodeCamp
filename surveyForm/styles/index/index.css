@@ -3634,6 +3634,7 @@ select {
       -ms-flex-pack: start;
           justify-content: flex-start;
   background: transparent;
+  border-radius: 999999px;
   margin-bottom: 1em;
   position: relative;
   cursor: pointer;
@@ -3663,6 +3664,12 @@ select {
           order: 2;
 }
 
+.radio-container input:hover ~ .checkmark:before,
+.radio-container input:focus ~ .checkmark:before, .checkbox-container input:hover ~ .checkmark:before,
+.checkbox-container input:focus ~ .checkmark:before {
+  background: red;
+}
+
 .radio-container input:checked ~ .checkmark:after, .checkbox-container input:checked ~ .checkmark:after {
   opacity: 1;
 }
@@ -3680,10 +3687,8 @@ select {
 }
 
 .radio-container .checkmark:before, .checkbox-container .checkmark:before {
-  z-index: 1;
+  z-index: -1;
   border-radius: 999999px;
-  -webkit-box-shadow: 0 0 0 0.25em black;
-          box-shadow: 0 0 0 0.25em black;
 }
 
 .radio-container .checkmark:after, .checkbox-container .checkmark:after {
