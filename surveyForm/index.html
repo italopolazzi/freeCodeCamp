@@ -7,9 +7,9 @@
     <meta name="author" content="Ítalo Polazzi">
     <meta name="description" content="A Survey Form project as part of the challenges os FreeCodeCamp">
     <title>Survey Form</title>
+    <link rel="stylesheet" href="./styles/index/materialdesignicons.min.css">
     <link rel="stylesheet" href="./styles/index/reset.css">
     <link rel="stylesheet" href="./styles/index/index.css">
-    <link rel="stylesheet" href="./styles/index/materialdesignicons.min.css">
 
     <script src="./js/index.js" type="module"></script>
 </head>
@@ -43,21 +43,60 @@
                             <div class="form-div secondary color-inverted" id="form-div-1">
                                 <div class="content">
 
-                                    <div class="input">
-                                        <label id="name-label" for="name">Name</label>
-                                        <input type="text" id="name" name="form-name" placeholder="Seu nome aqui"
-                                            required>
+                                    <div class="input-container">
+                                        <label class="input-label" id="name-label" for="name">Name</label>
+                                        <div class="row">
+                                            <input class="input-item" type="text" id="name" name="form-name"
+                                                placeholder="Seu nome aqui" required>
+                                            <div class="input-options">
+                                                <div class="button clear"><i class="mdi mdi-close"></i></div>
+                                            </div>
+                                        </div>
+                                        <div class="input-message">Lorem ipsum dolor sit, amet consectetur adipisicing
+                                            elit.</div>
                                     </div>
-                                    <div class="input">
-                                        <label id="email-label" for="email">E-mail</label>
-                                        <input type="email" id="email" name="form-email" placeholder="E-mail" required>
+                                    <div class="input-container">
+                                        <label class="input-label" id="email-label" for="email">E-mail</label>
+                                        <div class="row">
+                                            <input class="input-item" type="email" id="email" name="form-email"
+                                                placeholder="E-mail" required>
+                                            <div class="input-options">
+                                                <div class="button clear"><i class="mdi mdi-close"></i></div>
+                                            </div>
+                                        </div>
+                                        <div class="input-message">Lorem ipsum dolor sit, amet consectetur adipisicing
+                                            elit.</div>
                                     </div>
-                                    <div class="input">
-                                        <label id="number-label" for="number">Number</label>
-                                        <input type="number" id="number" name="form-number" min="10" max="100"
-                                            placeholder="Number" required>
-                                        <div class="button min">-</div>
-                                        <div class="button max">+</div>
+                                    <div class="input-container">
+                                        <label class="input-label" id="number-label" for="number">Number</label>
+                                        <div class="row">
+                                            <input class="input-item" type="number" id="number" name="form-number"
+                                                min="10" max="100" placeholder="Number" required>
+                                            <div class="input-options">
+                                                <div class="button min"><i class="mdi mdi-minus"></i></div>
+                                                <div class="button max"><i class="mdi mdi-plus"></i></div>
+                                                <div class="button clear"><i class="mdi mdi-close"></i></div>
+                                            </div>
+                                        </div>
+                                        <div class="input-message">Lorem ipsum dolor sit, amet consectetur adipisicing
+                                            elit.</div>
+                                    </div>
+                                    <div class="input-container">
+                                        <label class="input-label" id="number-label" for="number">Number</label>
+                                        <div class="row">
+                                            <input class="input-item" type="number" id="number" name="form-number"
+                                                min="10" max="100" placeholder="Number" required>
+                                            <div class="input-menu">
+                                                <div class="button menu"><i class="mdi mdi-dots-vertical"></i></div>
+                                            </div>
+                                            <div class="input-options">
+                                                <div class="button min"><i class="mdi mdi-minus"></i></div>
+                                                <div class="button max"><i class="mdi mdi-plus"></i></div>
+                                                <div class="button clear"><i class="mdi mdi-close"></i></div>
+                                            </div>
+                                        </div>
+                                        <div class="input-message">Lorem ipsum dolor sit, amet consectetur adipisicing
+                                            elit.</div>
                                     </div>
                                 </div>
                             </div>
@@ -172,7 +211,7 @@
                                 <div class="symbol error"></div>
                             </label>
                             <label class="radio-label" for="control-3"><span class="sr-only">Form div 3</span>
-                                <input type="radio" tabindex="0" value="3" name="form-controls" id="control-3" >
+                                <input type="radio" tabindex="0" value="3" name="form-controls" id="control-3">
                                 <div class="symbol"></div>
                             </label>
                             <label class="radio-label" for="control-4"><span class="sr-only">Form div 4</span>
