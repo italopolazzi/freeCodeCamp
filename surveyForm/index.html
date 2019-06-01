@@ -95,21 +95,22 @@
                                     <fieldset class="form-box">
                                         <legend>Some question here? </legend>
 
-                                        <label for="radio-1">Radio 1</label>
-                                        <input type="radio" tabindex="0" value="radio-1" name="form-radios" id="radio-1"
-                                            required>
-                                        <label for="radio-2">Radio 2</label>
-                                        <input type="radio" tabindex="0" value="radio-2" name="form-radios"
-                                            id="radio-2">
-                                        <label for="radio-3">Radio 3</label>
-                                        <input type="radio" tabindex="0" value="radio-3" name="form-radios"
-                                            id="radio-3">
-                                        <label for="radio-4">Radio 4</label>
-                                        <input type="radio" tabindex="0" value="radio-4" name="form-radios"
-                                            id="radio-4">
-                                        <label for="radio-5">Radio 5</label>
-                                        <input type="radio" tabindex="0" value="radio-5" name="form-radios"
-                                            id="radio-5">
+                                        <label class="radio-container" for="radio-1"><span>Form div 1</span>
+                                            <input type="radio" tabindex="0" value="1" name="form-radios" id="radio-1"
+                                                checked>
+                                            <div class="checkmark"></div>
+                                        </label>
+                                        <label class="radio-container" for="radio-2"><span>Form div 2</span>
+                                            <input type="radio" tabindex="0" value="2" name="form-radios" id="radio-2"
+                                                checked>
+                                            <div class="checkmark"></div>
+                                        </label>
+                                        <label class="radio-container" for="radio-3"><span>Form div 3</span>
+                                            <input type="radio" tabindex="0" value="3" name="form-radios" id="radio-3"
+                                                checked>
+                                            <div class="checkmark"></div>
+                                        </label>
+
                                     </fieldset>
                                 </div>
                             </div>
@@ -121,21 +122,21 @@
                                     <fieldset class="form-box">
                                         <legend>Some other question here?</legend>
 
-                                        <label for="checkbox-1">Checkbox 1</label>
-                                        <input type="checkbox" value="checkbox-1" name="form-checkboxes"
-                                            id="checkbox-1">
-                                        <label for="checkbox-2">Checkbox 2</label>
-                                        <input type="checkbox" value="checkbox-2" name="form-checkboxes"
-                                            id="checkbox-2">
-                                        <label for="checkbox-3">Checkbox 3</label>
-                                        <input type="checkbox" value="checkbox-3" name="form-checkboxes"
-                                            id="checkbox-3">
-                                        <label for="checkbox-4">Checkbox 4</label>
-                                        <input type="checkbox" value="checkbox-4" name="form-checkboxes"
-                                            id="checkbox-4">
-                                        <label for="checkbox-5">Checkbox 5</label>
-                                        <input type="checkbox" value="checkbox-5" name="form-checkboxes"
-                                            id="checkbox-5">
+                                        <label class="checkbox-container" for="checkbox-1"><span>Form div 1</span>
+                                            <input type="checkbox" tabindex="0" value="1" name="form-checkboxs" id="checkbox-1"
+                                                checked>
+                                            <div class="checkmark"></div>
+                                        </label>
+                                        <label class="checkbox-container" for="checkbox-2"><span>Form div 2</span>
+                                            <input type="checkbox" tabindex="0" value="2" name="form-checkboxs" id="checkbox-2"
+                                                checked>
+                                            <div class="checkmark"></div>
+                                        </label>
+                                        <label class="checkbox-container" for="checkbox-3"><span>Form div 3</span>
+                                            <input type="checkbox" tabindex="0" value="3" name="form-checkboxs" id="checkbox-3"
+                                                checked>
+                                            <div class="checkmark"></div>
+                                        </label>
 
                                     </fieldset>
                                 </div>
@@ -160,21 +161,26 @@
                     <div class="controls accent color-inverted">
                         <fieldset>
                             <legend class="sr-only">Controls to select form's parts</legend>
-                            <label  class="radio-label" for="control-1"><span class="sr-only">Form div 1</span>
-                                <input type="radio" tabindex="0" value="1" name="form-controls" id="control-1" checked>
-                                <div class="symbol"></div></label>
-                            <label  class="radio-label" for="control-2"><span class="sr-only">Form div 2</span>
+                            <label class="radio-label" for="control-1"><span class="sr-only">Form div 1</span>
+                                <input type="radio" tabindex="0" value="1" name="form-controls" id="control-1" >
+                                <div class="symbol"></div>
+                            </label>
+                            <label class="radio-label" for="control-2"><span class="sr-only">Form div 2</span>
                                 <input type="radio" tabindex="0" value="2" name="form-controls" id="control-2">
-                                <div class="symbol error"></div></label>
-                            <label  class="radio-label" for="control-3"><span class="sr-only">Form div 3</span>
-                                <input type="radio" tabindex="0" value="3" name="form-controls" id="control-3">
-                                <div class="symbol"></div></label>
-                            <label  class="radio-label" for="control-4"><span class="sr-only">Form div 4</span>
-                                <input type="radio" tabindex="0" value="4" name="form-controls" id="control-4">
-                                <div class="symbol"></div></label>
-                            <label  class="radio-label" for="control-5"><span class="sr-only">Form div 5</span>
+                                <div class="symbol error"></div>
+                            </label>
+                            <label class="radio-label" for="control-3"><span class="sr-only">Form div 3</span>
+                                <input type="radio" tabindex="0" value="3" name="form-controls" id="control-3" checked>
+                                <div class="symbol"></div>
+                            </label>
+                            <label class="radio-label" for="control-4"><span class="sr-only">Form div 4</span>
+                                <input type="radio" tabindex="0" value="4" name="form-controls" id="control-4" >
+                                <div class="symbol"></div>
+                            </label>
+                            <label class="radio-label" for="control-5"><span class="sr-only">Form div 5</span>
                                 <input type="radio" tabindex="0" value="5" name="form-controls" id="control-5">
-                                <div class="symbol"></div></label>
+                                <div class="symbol"></div>
+                            </label>
                         </fieldset>
                     </div>
                 </div>

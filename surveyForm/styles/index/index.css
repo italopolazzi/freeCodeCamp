@@ -1463,6 +1463,14 @@ button {
           user-select: none;
 }
 
+.radio-container .checkmark:before, .checkbox-container .checkmark:before, .radio-container .checkmark:after, .checkbox-container .checkmark:after {
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: -1;
+}
+
 @media screen and (min-width: 0px) {
   .xs-align-baseline {
     -webkit-box-align: baseline !important;
@@ -3613,6 +3621,106 @@ select {
 
 .symbol.error {
   background: red !important;
+}
+
+.radio-container, .checkbox-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  background: transparent;
+  margin-bottom: 1em;
+  position: relative;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.radio-container:last-of-type, .checkbox-container:last-of-type {
+  margin-bottom: 0;
+}
+
+.radio-container input, .checkbox-container input {
+  -webkit-box-ordinal-group: 4;
+      -ms-flex-order: 3;
+          order: 3;
+  opacity: 0;
+  position: absolute;
+  width: 0;
+  height: 0;
+}
+
+.radio-container span, .checkbox-container span {
+  -webkit-box-ordinal-group: 3;
+      -ms-flex-order: 2;
+          order: 2;
+}
+
+.radio-container input:checked ~ .checkmark:after, .checkbox-container input:checked ~ .checkmark:after {
+  opacity: 1;
+}
+
+.radio-container .checkmark, .checkbox-container .checkmark {
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1;
+  min-width: 2em;
+  height: 2em;
+  background: white;
+  margin-right: 1em;
+  position: static;
+  border-radius: 50%;
+}
+
+.radio-container .checkmark:before, .checkbox-container .checkmark:before {
+  z-index: 1;
+  border-radius: 999999px;
+  -webkit-box-shadow: 0 0 0 0.25em black;
+          box-shadow: 0 0 0 0.25em black;
+}
+
+.radio-container .checkmark:after, .checkbox-container .checkmark:after {
+  width: 1em;
+  height: 1em;
+  opacity: 0;
+  background: red;
+  z-index: 1;
+}
+
+.radio-container .checkmark:after {
+  border-radius: 50%;
+}
+
+.checkbox-container .checkmark:after {
+  border-radius: 0.25em;
+}
+
+.checkmark {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.checkmark:before {
+  -ms-flex-item-align: start;
+      align-self: flex-start;
 }
 
 @media (max-width: 960px) {

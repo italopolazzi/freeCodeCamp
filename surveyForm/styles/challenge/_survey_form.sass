@@ -113,6 +113,72 @@ select
 .symbol.error
     background: red!important
 
+.radio-container, .checkbox-container
+    display: flex
+    align-items: center
+    justify-content: flex-start
+    background: transparent
+    margin-bottom: 1em
+    position: relative
+    cursor: pointer
+    user-select: none
+    &:last-of-type
+        margin-bottom: 0
+    input
+        // opacity: 0
+        order: 3
+        opacity: 0
+        position: absolute
+        width: 0
+        height: 0
+
+    span
+        order: 2
+    input:checked ~ .checkmark:after
+        opacity: 1
+    .checkmark
+        order: 1
+        min-width: 2em
+        height: 2em
+        background: white
+        margin-right: 1em
+        position: static
+        border-radius: 50%
+        @extend %basic-before
+        @extend %basic-after
+        &:before
+            z-index: 1
+            border-radius: 999999px
+            // border-radius: 50%
+            // background: yellow
+            box-shadow: 0 0 0 0.25em black
+
+        // &:after
+        //     z-index: 1
+        //     background: pink
+
+.radio-container, .checkbox-container
+    .checkmark:after
+        width: 1em
+        height: 1em
+        opacity: 0
+        background: red
+        z-index: 1
+
+.radio-container .checkmark:after
+        border-radius: 50%
+.checkbox-container .checkmark:after
+        border-radius: 0.25em
+
+
+.checkmark
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: center
+    &:before
+        align-self: flex-start
+
 
 @media (max-width: map-get($breakpoints-sizes, md))
     .input, .form-box
