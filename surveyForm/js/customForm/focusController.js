@@ -9,15 +9,15 @@ const handleFocusWhenKeyDown = e => {
         e.target.click()
     }
 }
-const checkTheRadioCorrespondingToTheForm = () =>{
+const checkTheRadioCorrespondingToTheForm = () => {
     const parent_element_id = document.querySelector(variables.parent_element_activated).id
     const parent_element_id_number = parent_element_id.match(/\d+/g)
-    
+
     const query = `input[id="control-${parent_element_id_number}"]`
     document.querySelector(query).checked = true
 }
 
-const handleFocusWhenKeyUp = e => {
+const handleFocus = e => {
     const current_element = functions.elementHasXParent(variables.parent_element, e.target)
 
     if (current_element) {
@@ -32,5 +32,6 @@ const handleFocusWhenKeyUp = e => {
 
 export default () => {
     window.addEventListener('keydown', e => handleFocusWhenKeyDown(e))
-    window.addEventListener('keyup', e => handleFocusWhenKeyUp(e))
+    const inputs = [...document.querySelectorAll('.custom-form input, .custom-form textarea, .custom-form select')]
+    inputs.forEach(input => input.addEventListener('focus', e => handleFocus(e)))
 }

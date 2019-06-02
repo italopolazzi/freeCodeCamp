@@ -15,14 +15,14 @@ const alternateIconMenu = (icon_container) => {
     alternateClasses(icon_container, ['mdi-dots-vertical', 'mdi-close'])
 }
 const buttonMaxMin = (event, attribute) => {
-    const input_number = event.target.closest('.input').querySelector('input[type=number]')
+    const input_number = event.target.closest('.input-container').querySelector('input[type=number]')
     if (input_number) {
         const input_attribute_value = input_number.getAttribute(attribute)
         input_number.value = input_attribute_value
     }
 }
 const buttonClear = event => {
-    const input = event.target.closest('.input').querySelector('input')
+    const input = event.target.closest('.input-container').querySelector('input')
     if (input) {
         input.value = ''
     }

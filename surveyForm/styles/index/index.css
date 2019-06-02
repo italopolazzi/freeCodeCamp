@@ -1431,7 +1431,7 @@ hr {
   border-style: solid;
 }
 
-.icon, .input-container .row, .input-container .input-menu .button,
+.icon, .input-container .row, .input-container .input-action .button,
 .input-container .input-options .button {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1441,7 +1441,7 @@ hr {
           align-items: center;
 }
 
-.icon, .input-container .row, .input-container .input-menu .button,
+.icon, .input-container .row, .input-container .input-action .button,
 .input-container .input-options .button {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -3452,6 +3452,11 @@ pre {
   -moz-osx-font-smoothing: grayscale;
 }
 
+.input-container .input-label {
+  font-weight: bolder;
+  font-size: 1.2em;
+}
+
 .custom-form {
   width: 100%;
   height: 40rem;
@@ -3461,7 +3466,8 @@ pre {
 .custom-form form,
 .custom-form form > fieldset,
 .custom-form .controls,
-.custom-form .form-div {
+.custom-form .form-div,
+.custom-form .fieldset-content {
   position: relative;
   width: 100%;
   height: 100%;
@@ -3476,6 +3482,10 @@ pre {
 .custom-form .controls {
   height: auto;
   padding: 2rem;
+}
+
+.custom-form legend {
+  font-size: 2.2em;
 }
 
 .form-div {
@@ -3512,10 +3522,6 @@ pre {
 
 .form-div .content {
   position: relative;
-}
-
-textarea {
-  resize: vertical;
 }
 
 select {
@@ -3729,8 +3735,17 @@ select {
       align-self: flex-start;
 }
 
+input#submit, select {
+  background: white;
+  border: none;
+  padding: 1em;
+}
+
+input#submit {
+  border-radius: 9999px;
+}
+
 .input-container {
-  background: yellow;
   margin-bottom: 1rem;
   width: 100%;
   height: auto;
@@ -3755,15 +3770,17 @@ select {
   -webkit-box-flex: 1;
       -ms-flex: 1 0 100%;
           flex: 1 0 100%;
-  background: red;
 }
 
-.input-container .input-label,
 .input-container .input-message,
 .input-container .input-item,
 .input-container .input-options,
-.input-container .input-menu {
+.input-container .input-action {
   padding: 0.5em;
+}
+
+.input-container .input-label {
+  padding-bottom: 0.5em;
 }
 
 .input-container .row {
@@ -3772,13 +3789,32 @@ select {
   height: auto;
 }
 
-.input-container .input-item {
+.input-container input.input-item,
+.input-container textarea.input-item {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
   -webkit-box-flex: 1;
       -ms-flex: 1 0 auto;
           flex: 1 0 auto;
+  padding: 1.25em;
+  border: none;
 }
 
-.input-container .input-menu,
+.input-container textarea.input-item {
+  resize: vertical;
+}
+
+.input-container input.input-item {
+  padding-right: 3.25rem;
+  margin-right: -4.75em;
+}
+
+.input-container .input-action {
+  background: transparent;
+}
+
+.input-container .input-action,
 .input-container .input-options {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
@@ -3787,11 +3823,10 @@ select {
   -webkit-box-flex: 0;
       -ms-flex: 0 1 auto;
           flex: 0 1 auto;
-  background: green;
   border-radius: .75rem;
 }
 
-.input-container .input-menu .button,
+.input-container .input-action .button,
 .input-container .input-options .button {
   cursor: pointer;
   -webkit-user-select: none;
@@ -3804,12 +3839,13 @@ select {
   margin-bottom: .75em;
 }
 
-.input-container .input-menu .button:last-of-type,
+.input-container .input-action .button:last-of-type,
 .input-container .input-options .button:last-of-type {
   margin-bottom: 0;
 }
 
 .input-container .input-options {
+  background: green;
   position: absolute;
   right: 0;
   top: 0;
@@ -3829,6 +3865,10 @@ select {
   visibility: visible;
   -webkit-transform: translateX(-100%);
           transform: translateX(-100%);
+}
+
+.input-container .input-message {
+  display: none;
 }
 
 @media print {

@@ -1,7 +1,14 @@
 @import 'radio_checks'
 
+input#submit, select
+    background: white
+    border: none
+    padding: 1em
+input#submit
+    border-radius: 9999px
+
 .input-container
-    background: yellow
+    // background: yellow
     margin-bottom: 1rem
     width: 100%
     height: auto
@@ -10,28 +17,40 @@
     justify-content: flex-start
     align-items: flex-start
     position: relative
+    .input-label
+        @extend %input-title
     .input-label,
     .input-message
         flex: 1 0 100%
-        background: red
-    .input-label,
     .input-message,
     .input-item,
     .input-options,
-    .input-menu
+    .input-action
         padding: 0.5em
+    .input-label
+        padding-bottom: 0.5em
     .row
         position: relative
         width: 100%
         height: auto
         @extend %centralize-all
-    .input-item
+    input.input-item,
+    textarea.input-item
+        appearance: none
         flex: 1 0 auto
-    .input-menu,
+        padding: 1.25em
+        border: none
+    textarea.input-item
+        resize: vertical
+    input.input-item
+        padding-right: 3.25rem
+        margin-right: -4.75em
+    .input-action
+        background: transparent
+    .input-action,
     .input-options
         flex-flow: column nowrap
         flex: 0 1 auto
-        background: green
         border-radius: .75rem
         .button
             cursor: pointer
@@ -44,6 +63,7 @@
             &:last-of-type
                 margin-bottom: 0
     .input-options
+        background: green
         position: absolute
         right: 0
         top: 0
@@ -56,3 +76,5 @@
         opacity: 1
         visibility: visible
         transform: translateX(-100%)
+    .input-message
+        display: none

@@ -1,4 +1,5 @@
 import focusController from './focusController.js'
+import validateController from './validateController.js'
 import * as variables from './variables.js'
 
 const removeFormDivActivatedClass = () => {
@@ -34,5 +35,6 @@ export default () => {
 
         initListeners()
         focusController()
+        // validateController()
     })
 }

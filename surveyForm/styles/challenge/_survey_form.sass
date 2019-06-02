@@ -10,7 +10,8 @@ $half-padding: (2rem / 2)
     form,
     form > fieldset,
     .controls,
-    .form-div
+    .form-div,
+    .fieldset-content
         position: relative
         width: 100%
         height: 100%
@@ -21,6 +22,8 @@ $half-padding: (2rem / 2)
     .controls
         height: auto
         padding: $padding
+    legend
+        font-size: 2.2em
 
 .form-div
     position: absolute!important
@@ -39,9 +42,6 @@ $half-padding: (2rem / 2)
         opacity: 1
     .content
         position: relative
-
-textarea
-    resize: vertical
 
 select
     appearance: none
