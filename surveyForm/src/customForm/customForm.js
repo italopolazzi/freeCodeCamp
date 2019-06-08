@@ -35,6 +35,6 @@ export default () => {
 
         initListeners()
         focusController()
-        // validateController()
+        validateController()
     })
 }

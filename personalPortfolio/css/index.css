@@ -2345,6 +2345,12 @@ form#contact fieldset textarea {
           flex: 0 1 70%;
 }
 
+.input input[type=submit] {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 auto;
+          flex: 0 1 auto;
+}
+
 @media (max-width: 600px) {
   .input {
     -webkit-box-orient: vertical;

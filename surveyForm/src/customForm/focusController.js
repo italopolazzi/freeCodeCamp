@@ -9,13 +9,6 @@ const handleFocusWhenKeyDown = e => {
         e.target.click()
     }
 }
-const checkTheRadioCorrespondingToTheForm = () => {
-    const parent_element_id = document.querySelector(variables.parent_element_activated).id
-    const parent_element_id_number = parent_element_id.match(/\d+/g)
-
-    const query = `input[id="control-${parent_element_id_number}"]`
-    document.querySelector(query).checked = true
-}
 
 const handleFocus = e => {
     const current_element = functions.elementHasXParent(variables.parent_element, e.target)
@@ -25,7 +18,7 @@ const handleFocus = e => {
             functions.removeTheClassForAll(activated_element)
         }
         functions.addTheClassForAll(current_element)
-        checkTheRadioCorrespondingToTheForm()
+        functions.checkRadioButtons()
         activated_element = current_element;
     }
 }

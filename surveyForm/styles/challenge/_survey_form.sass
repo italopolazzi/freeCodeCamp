@@ -4,7 +4,7 @@ $half-padding: (2rem / 2)
 
 .custom-form
     width: 100%
-    height: 40rem
+    height: 40em
     position: relative
     // overflow: hidden
     form,
@@ -19,9 +19,11 @@ $half-padding: (2rem / 2)
         padding: 1rem
         overflow: hidden
         font-size: 1.2em
+    .fieldset-content
+        margin-top: 2rem
     .controls
         height: auto
-        padding: $padding
+        padding: 1rem 0
     legend
         font-size: 2.2em
 
@@ -33,7 +35,7 @@ $half-padding: (2rem / 2)
     display: flex
     flex-direction: column
     align-items: stretch
-    justify-content: center
+    justify-content: flex-start
     transform: translateX(-100%)
     opacity: 0
     transition: transform .3s linear, opacity .1s linear

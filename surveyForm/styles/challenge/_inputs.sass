@@ -63,7 +63,7 @@ input#submit
             &:last-of-type
                 margin-bottom: 0
     .input-options
-        background: green
+        background: $secondary
         position: absolute
         right: 0
         top: 0
@@ -78,3 +78,10 @@ input#submit
         transform: translateX(-100%)
     .input-message
         display: none
+        color: $error
+
+fieldset.error, .input-container.error
+    input, select, textarea
+        border: 0.25em solid $error!important
+    .input-message
+        display: block
