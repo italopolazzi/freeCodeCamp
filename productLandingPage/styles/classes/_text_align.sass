@@ -1,8 +1,0 @@
-$display-flex: (align-items: (baseline, center, flex-start, flex-end, stretch), justify-content: (flex-start, flex-end, space-between, space-around, space-evenly, center, stretch), flex-direction: (row, column, row-reverse, column-reverse), flex-wrap: (nowrap, wrap, wrap-reverse), text-align: (center, left, right, justify))
-
-@each $breakpoint-key, $size-in-px in $breakpoints-sizes
-    @media screen and (min-width: $size-in-px)
-        @each $flex-property, $flex-property-values in $display-flex
-            @each $value in $flex-property-values
-                .#{$breakpoint-key}-#{$flex-property}-#{$value}
-                    #{$flex-property}: $value!important

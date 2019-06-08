@@ -7,7 +7,7 @@ $grid-column-gap: 1em
     display: grid
     grid-template-columns: 100%
     grid-template-rows: auto
-    grid-column-gap: 1em
+    grid-column-gap: 0
     grid-row-gap: 2em
     justify-content: space-around
 
@@ -15,7 +15,8 @@ $grid-column-gap: 1em
     max-width: 100%
     figure
         height: $figure-box-size
-        width: $figure-box-size
+        min-width: $figure-box-size!important
+        max-width: $figure-box-size!important
         margin: -($half-figure-box-size + 1) auto 0
         img
             @extend %max-it
@@ -59,3 +60,12 @@ $grid-column-gap: 1em
     font-weight: bold
     .mdi
         margin-right: 1em!important
+
+#main-pricing.animation-activated
+    .icon-box
+        transform: translateX(0)!important
+
+#main-pricing .icon-box:nth-child(2n)
+    transform: translateX(100%)
+#main-pricing .icon-box:nth-child(2n+1)
+    transform: translateX(-100%)

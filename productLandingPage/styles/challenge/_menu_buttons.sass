@@ -1,0 +1,40 @@
+#nav-bar-controller ~ .background
+    transform: translateX(-100%)
+#options-controller ~ .background
+    transform: translateX(100%)
+
+.custom-menu-button
+    @extend %centralize-all
+    position: relative
+    width: 3em
+    height: 3em
+    border-radius: 50%
+    overflow: hidden
+    *
+        transition: all .5s ease!important
+        @extend %cursor-pointer
+    &:hover, &:focus
+        .background
+            transform: translateX(0)!important
+            background: $accent
+    &:active, &:focus-within
+        .background
+            transform: translateX(0)!important
+            background: $accent
+    button, a
+        @extend %max-it
+        // opacity: 0
+        position: absolute
+        z-index: 2
+        font-size: 1.2em
+        background: transparent
+        border: none
+        color: inherit
+        @extend %centralize-all
+    .background
+        @extend %max-it
+        @extend %super-absolute
+        z-index: 0
+    // button:checked + .background
+    //     transform: translateX(0)!important
+    //     background: red

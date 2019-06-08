@@ -1,0 +1,51 @@
+.button
+    font-weight: bolder
+    height: auto
+    border-radius: $border-radius
+    padding: $padding-1-3
+    display: flex
+    flex-direction: row
+    align-items: center
+    justify-content: center
+    border: $border-0125
+    background: inherit
+    position: relative
+    z-index: 1
+    overflow: hidden
+    &:before
+        @extend %basic-before
+        transition: all .3s ease-in
+        background: map-get($light, main)!important
+        transform:  translateX(-100%)
+        z-index: -1
+    &:hover:before, &:focus:before
+        transform: translateX(100%)
+    &:active:before, &:focus-within:before
+        transform: translateX(0)
+        background: map-get($light, inverted)!important
+    &:active, &:focus-within
+
+.input-button
+    width: auto
+    height: auto
+    position: relative
+    // padding: 0.5em
+    overflow: hidden
+    border-radius: 1em
+    border: $border-0125
+    @extend %basic-before
+    .button
+        border: none
+        padding: $padding-1-3
+    &:before
+        @extend %basic-before
+        transition: all .3s ease-in
+        background: map-get($light, main)!important
+        transform:  translateX(-100%)
+        z-index: 0
+    &:hover:before, &:focus:before
+        transform: translateX(100%)
+    &:active:before, &:focus-within:before
+        transform: translateX(0)
+        background: map-get($light, inverted)!important
+    &:active, &:focus-within

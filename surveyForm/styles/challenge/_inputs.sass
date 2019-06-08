@@ -1,0 +1,87 @@
+@import 'radio_checks'
+
+input#submit, select
+    background: white
+    border: none
+    padding: 1em
+input#submit
+    border-radius: 9999px
+
+.input-container
+    // background: yellow
+    margin-bottom: 1rem
+    width: 100%
+    height: auto
+    display: flex
+    flex-flow: column nowrap
+    justify-content: flex-start
+    align-items: flex-start
+    position: relative
+    .input-label
+        @extend %input-title
+    .input-label,
+    .input-message
+        flex: 1 0 100%
+    .input-message,
+    .input-item,
+    .input-options,
+    .input-action
+        padding: 0.5em
+    .input-label
+        padding-bottom: 0.5em
+    .row
+        position: relative
+        width: 100%
+        height: auto
+        @extend %centralize-all
+    input.input-item,
+    textarea.input-item
+        appearance: none
+        flex: 1 0 auto
+        padding: 1.25em
+        border: none
+    textarea.input-item
+        resize: vertical
+    input.input-item
+        padding-right: 3.25rem
+        margin-right: -4.75em
+    .input-action
+        background: transparent
+    .input-action,
+    .input-options
+        flex-flow: column nowrap
+        flex: 0 1 auto
+        border-radius: .75rem
+        .button
+            cursor: pointer
+            user-select: none
+            @extend %centralize-all
+            border-radius: 100%
+            padding: .75rem
+            background: white
+            margin-bottom: .75em
+            &:last-of-type
+                margin-bottom: 0
+    .input-options
+        background: $secondary
+        position: absolute
+        right: 0
+        top: 0
+        flex-direction: row!important
+        transform: translateX(100%)
+        opacity: 0
+        z-index: 10
+        visibility: hidden
+    .input-options.activated
+        opacity: 1
+        visibility: visible
+        transform: translateX(-100%)
+    .input-message
+        display: none
+        color: $error
+
+fieldset.error, .input-container.error
+    input, select, textarea
+        border: 0.25em solid $error!important
+    .input-message
+        display: block

@@ -1,0 +1,74 @@
+#form
+    &,
+    & fieldset
+        position: relative
+    fieldset
+        width: 100%
+        height: 100%
+        @extend %vertical-center
+        flex-direction: column
+    *
+        font-size: 1.1em
+        font-weight: bolder
+        font-family: monospace
+        outline: none
+    legend
+        font-size: 2em
+    input, textarea
+        width: 100%
+        background: transparent
+    textarea
+        min-height: 4em!important
+        resize: vertical
+    input[type=submit]
+        // background: red
+
+.input
+    @extend %horizontal-center
+    justify-content: space-between
+    align-items: flex-start
+    width: 100%
+    label
+        flex: 1 0 30%
+        text-align: left
+    input, textarea
+        flex: 0 1 70%
+        padding: 0.5em
+        border: 0.125em solid currentColor
+        border-radius: 1em
+        &:hover
+            box-shadow: 0.125em 0.125em 0 0 currentColor
+        &:focus
+            box-shadow: 0.5em 0.5em 0 0 currentColor
+
+@media (max-width: map-get($breakpoints-sizes, sm))
+    .input
+        flex-direction: column
+        align-items: flex-start
+        label
+            margin-bottom: inherit
+
+.input-button
+    width: auto
+    height: auto
+    position: relative
+    // padding: 0.5em
+    overflow: hidden
+    border-radius: 1em
+    border: $border-0125
+    @extend %basic-before
+    .button
+        border: none
+        padding: $padding-1-3
+    &:before
+        @extend %basic-before
+        transition: all .3s ease-in
+        background: map-get($light, main)!important
+        transform:  translateX(-100%)
+        z-index: 0
+    &:hover:before, &:focus:before
+        transform: translateX(100%)
+    &:active:before, &:focus-within:before
+        transform: translateX(0)
+        background: map-get($light, inverted)!important
+    &:active, &:focus-within

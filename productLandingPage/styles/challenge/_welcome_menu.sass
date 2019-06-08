@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css?family=Ceviche+One&display=swap')
+
+#circles-container
+    width: 100%
+    display: flex
+    align-items: center
+    justify-content: center
+    min-height: 100vh
+
+#title-img-container,
+#links-container
+    font-family: 'Ceviche One', cursive
+    background: transparent
+    position: absolute
+    font-size: 40vmin
+    color: map-get($light, main)
+    text-align: center
+    // text-shadow: 0.1em 0.1em #BD251D
+
+
+#title-img-container,
+#links-container
+    animation-name: opacity
+    animation-duration: 10s
+    animation-delay: 0
+    animation-iteration-count: infinite
+    animation-timing-function: ease
+    animation-direction: normal
+    animation-fill-mode: backwards
+
+#title-img-container
+    z-index: 1
+    animation-direction: reverse
+#links-container
+    z-index: 0
+    font-size: 20vmin!important
+
+// #main-welcome
+//     animation-name: invert
+//     animation-duration: 10s
+//     animation-delay: 0
+//     animation-iteration-count: infinite
+//     animation-timing-function: ease
+//     animation-direction: normal
+//     animation-fill-mode: backwards
+
+// @keyframes invert
+//     0%
+//         filter: hue-rotate(0deg)
+//     100%
+//         filter: hue-rotate(180deg)
+
+@keyframes opacity
+    0%
+        opacity: 0
+    49.99999%
+        opacity: 0
+    50%
+        opacity: 1
+    100%
+        opacity: 1
+
+@media (max-width: map-get($breakpoints-sizes, md))
+    #title-img-container,
+    #links-container
+        font-size: 20vmin
+        word-break: break-all

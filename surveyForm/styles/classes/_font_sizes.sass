@@ -1,0 +1,8 @@
+$html-font-size: 1rem
+$line-height: map-get($goldens-map, golden28)
+
+// HEADINGS FONT-SIZES
+$h-font-sizes: (h1: golden50, h2: golden37, h3: golden28, h4: golden21, h5: golden16, h6: golden16)
+@each $h-key, $h-value in $h-font-sizes
+    #{$h-key}
+      font-size: map-get($goldens-map, $h-value)

@@ -1,7 +1,7 @@
 /* Color Theme Swatches in Hex */
-$accent: #FFC107
-$primary: #E91E63
-$secondary: #009688
+$accent: #F7CE03
+$primary: #ABD4D2
+$secondary: #9885ED
 
 /* Color Theme Swatches in RGBA */
 // $accent: rgba(77,54,40, 1)
@@ -13,39 +13,56 @@ $light: (main: #F2F2F2, inverted: #0D090A)
 $dark: (main: #0D090A, inverted: #F2F2F2)
 
 // Define the other colors
-$main-palette-light: (primary: $primary, accent: $accent, secondary: $secondary)
-$main-palette-dark: (primary: darken($primary, 50%), accent: darken($accent, 50%), secondary: darken($secondary, 50%))
+$palette-light: (primary: $primary, accent: $accent, secondary: $secondary)
+$palette-dark: (primary: darken($primary, 50%), accent: darken($accent, 50%), secondary: darken($secondary, 50%))
 
 // Merge the other colors with the light and dark colors
-$main-palette-light: join($main-palette-light, $light)
-$main-palette-dark: join($main-palette-dark, $dark)
+$palette-light: join($palette-light, $light)
+$palette-dark: join($palette-dark, $dark)
 
-=theme_light_color($color-key, $color)
+=light-color($color-key, $color)
     .color-#{$color-key},
     .before-color-#{$color-key}:before,
     .after-color-#{$color-key}:after,
         color: $color!important
         
-=theme_light_background($color-key, $color)
+=light-background($color-key, $color)
     .#{$color-key},
     .before-#{$color-key}:before,
     .after-#{$color-key}:after,
         background: $color!important
 
-=theme_dark_color($color-key, $color)
+=dark-color($color-key, $color)
     .dark.color-#{$color-key},
     .dark .color-#{$color-key}
         color: $color!important
 
-=theme_dark_background($color-key, $color)
+=dark-background($color-key, $color)
     .dark.#{$color-key},
     .dark .#{$color-key}
         background: $color!important
 
-@each $color_key, $color in $main-palette-light
-    +theme_light_color($color_key, $color)
-    +theme_light_background($color_key, $color)
+=alpha-color($color-key, $color, $number)
+    .alpha-color-#{$color-key}-#{$number}
+        color: $color!important
 
-@each $color_key, $color in $main-palette-dark
-    +theme_dark_color($color_key, $color)
-    +theme_dark_background($color_key, $color)
+=alpha-background($color-key, $color, $number)
+    .alpha-#{$color-key}-#{$number}
+        background: $color!important
+
+=theme-creator($palette, $theme)
+    @for $i from 1 through 9
+        @each $color-key, $color in $palette
+            @if $theme == light 
+                +light-color($color-key, $color)
+                +light-background($color-key, $color)
+            @if $theme == dark 
+                +dark-color($color-key, $color)
+                +dark-background($color-key, $color)
+            @if $theme == alpha 
+                +alpha-color($color-key, transparentize($color, 0.1 * $i), $i)
+                +alpha-background($color-key, transparentize($color, 0.1 * $i), $i)
+
++theme-creator($palette-light, light)
++theme-creator($palette-dark, dark)
++theme-creator($palette-light, alpha)

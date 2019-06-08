@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">
+    <meta name="author" content="Ítalo Polazzi">
+    <meta name="description" content="A Survey Form project as part of the challenges os FreeCodeCamp">
+    <title>Survey Form</title>
+    <link rel="stylesheet" href="./styles/index/materialdesignicons.min.css">
+    <link rel="stylesheet" href="./styles/index/reset.css">
+    <link rel="stylesheet" href="./styles/index/index.css">
+
+    <script src="./dist/main.js"></script>
+</head>
+
+<body class="accent">
+    <ul class="sr-only">
+        <li><a href="#main">Skip to main content</a></li>
+    </ul>
+
+    <main id="main">
+        <section class="row mt16">
+
+            <div class="col-xs10 offset-xs1 col-md4 offset-md1">
+                <h1 id="title">Consequuntur mollitia reprehenderit architecto consequatur dolorem et, labore ducimus
+                    obcaecati
+                    alias officia quo.</h1>
+                <p id="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam saepe ipsum ipsa
+                    maiores
+                    cupiditate cumque odio nesciunt quidem! Perferendis quasi architecto maiores saepe molestiae aperiam
+                    cum.
+                    Quia quod quas accusamus?</p>
+            </div>
+
+            <div class="col-xs10 offset-xs1 col-md4 offset-md1">
+                <!-- <div class="col-xs12 pa4"> -->
+                <div class="custom-form">
+                                        <div class="controls accent color-inverted">
+                                            <fieldset>
+                                                <legend class="sr-only">Controls to select form's parts</legend>
+                                                <label class="radio-label" for="control-1"><span class="sr-only">Form
+                                                        div 1</span>
+                                                    <input type="radio" tabindex="0" value="1" name="form-controls"
+                                                        id="control-1" checked>
+                                                    <div class="symbol"></div>
+                                                </label>
+                                                <label class="radio-label" for="control-2"><span class="sr-only">Form
+                                                        div 2</span>
+                                                    <input type="radio" tabindex="0" value="2" name="form-controls"
+                                                        id="control-2">
+                                                    <div class="symbol"></div>
+                                                </label>
+                                                <label class="radio-label" for="control-3"><span class="sr-only">Form
+                                                        div 3</span>
+                                                    <input type="radio" tabindex="0" value="3" name="form-controls"
+                                                        id="control-3">
+                                                    <div class="symbol"></div>
+                                                </label>
+                                                <label class="radio-label" for="control-4"><span class="sr-only">Form
+                                                        div 4</span>
+                                                    <input type="radio" tabindex="0" value="4" name="form-controls"
+                                                        id="control-4">
+                                                    <div class="symbol"></div>
+                                                </label>
+                                                <label class="radio-label" for="control-5"><span class="sr-only">Form
+                                                        div 5</span>
+                                                    <input type="radio" tabindex="0" value="5" name="form-controls"
+                                                        id="control-5">
+                                                    <div class="symbol"></div>
+                                                </label>
+                                            </fieldset>
+                                        </div>
+                    <form action="" method="POST" id="survey-form" class="main color-inverted">
+                        <fieldset>
+                            <legend>The survey form's title</legend>
+
+                            <div class="fieldset-content">
+                                <!-- INPUTS -->
+                                <div class="form-div" id="form-div-1">
+                                    <div class="content">
+
+                                        <div class="input-container">
+                                            <label class="input-label" id="name-label" for="name">Name</label>
+                                            <div class="row">
+                                                <input class="input-item" type="text" id="name" name="form-name"
+                                                    placeholder="Your name here" required>
+                                                <div class="input-action">
+                                                    <div role="button" tabindex="0" aria-label="Clear the input"
+                                                        class="button clear"><i class="mdi mdi-close"></i></div>
+                                                </div>
+                                            </div>
+                                            <div class="input-message">Lorem ipsum dolor sit, amet consectetur
+                                                adipisicing
+                                                elit.</div>
+                                        </div>
+                                        <div class="input-container">
+                                            <label class="input-label" id="email-label" for="email">E-mail</label>
+                                            <div class="row">
+                                                <input class="input-item" type="email" id="email" name="form-email"
+                                                    placeholder="E-mail" required>
+                                                <div class="input-action">
+                                                    <div role="button" tabindex="0" aria-label="Clear the input"
+                                                        class="button clear"><i class="mdi mdi-close"></i></div>
+                                                </div>
+                                            </div>
+                                            <div class="input-message">Lorem ipsum dolor sit, amet consectetur
+                                                adipisicing
+                                                elit.</div>
+                                        </div>
+                                        <div class="input-container">
+                                            <label class="input-label" id="number-label" for="number">Number</label>
+                                            <div class="row">
+                                                <input class="input-item" type="number" id="number" name="form-number"
+                                                    min="10" max="100" placeholder="Number" required>
+                                                <div class="input-action input-menu">
+                                                    <div role="button" tabindex="0" aria-label="Input options"
+                                                        class="button menu">
+                                                        <i class="mdi mdi-dots-vertical"></i>
+                                                    </div>
+                                                </div>
+                                                <div class="input-options">
+                                                    <div role="button" tabindex="0"
+                                                        aria-label="Fill with minimum number" class="button min"><i
+                                                            class="mdi mdi-minus"></i></div>
+                                                    <div role="button" tabindex="0"
+                                                        aria-label="Fill with maximum number" class="button max"><i
+                                                            class="mdi mdi-plus"></i></div>
+                                                    <div role="button" tabindex="0" aria-label="Clear the input"
+                                                        class="button clear"><i class="mdi mdi-close"></i></div>
+                                                </div>
+                                            </div>
+                                            <div class="input-message">Lorem ipsum dolor sit, amet consectetur
+                                                adipisicing
+                                                elit.</div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- SELECT -->
+                                <div class="form-div color-inverted" id="form-div-2">
+                                    <div class="content">
+                                        <fieldset class="form-box">
+                                            <legend>Some request here?</legend>
+
+                                            <select name="form-dropdown" id="dropdown" required>
+                                                <option value="" disabled selected hidden>Choose here</option>
+                                                <optgroup label="Group 1">
+                                                    <option value="1">Test 1</option>
+                                                    <option value="2">Test 2</option>
+                                                    <option value="3">Test 3</option>
+                                                    <option value="4">Test 4</option>
+                                                    <option value="5">Test 5</option>
+                                                </optgroup>
+                                                <optgroup label="Group 2" disabled>
+                                                    <option value="1">Test 1</option>
+                                                    <option value="2">Test 2</option>
+                                                    <option value="3">Test 3</option>
+                                                    <option value="4">Test 4</option>
+                                                    <option value="5">Test 5</option>
+                                                </optgroup>
+                                            </select>
+
+                                        </fieldset>
+                                    </div>
+                                </div>
+
+                                <!-- RADIOS -->
+                                <div class="form-div color-inverted" id="form-div-3">
+                                    <div class="content">
+
+                                        <fieldset class="form-box">
+                                            <legend>Some question here? </legend>
+
+                                            <label class="radio-container" for="radio-1"><span>Form div 1</span>
+                                                <input type="radio" tabindex="0" value="1" name="form-radios"
+                                                    id="radio-1">
+                                                <div class="checkmark"></div>
+                                            </label>
+                                            <label class="radio-container" for="radio-2"><span>Form div 2</span>
+                                                <input type="radio" tabindex="0" value="2" name="form-radios"
+                                                    id="radio-2">
+                                                <div class="checkmark"></div>
+                                            </label>
+                                            <label class="radio-container" for="radio-3"><span>Form div 3</span>
+                                                <input type="radio" tabindex="0" value="3" name="form-radios"
+                                                    id="radio-3">
+                                                <div class="checkmark"></div>
+                                            </label>
+
+                                        </fieldset>
+                                    </div>
+                                </div>
+
+                                <!-- CHECKBOXES -->
+                                <div class="form-div color-inverted" id="form-div-4">
+                                    <div class="content">
+
+                                        <fieldset class="form-box">
+                                            <legend>Some other question here?</legend>
+
+                                            <label class="checkbox-container" for="checkbox-1"><span>Form div 1</span>
+                                                <input type="checkbox" tabindex="0" value="1" name="form-checkboxs"
+                                                    id="checkbox-1">
+                                                <div class="checkmark"></div>
+                                            </label>
+                                            <label class="checkbox-container" for="checkbox-2"><span>Form div 2</span>
+                                                <input type="checkbox" tabindex="0" value="2" name="form-checkboxs"
+                                                    id="checkbox-2">
+                                                <div class="checkmark"></div>
+                                            </label>
+                                            <label class="checkbox-container" for="checkbox-3"><span>Form div 3</span>
+                                                <input type="checkbox" tabindex="0" value="3" name="form-checkboxs"
+                                                    id="checkbox-3">
+                                                <div class="checkmark"></div>
+                                            </label>
+
+                                        </fieldset>
+                                    </div>
+                                </div>
+
+                                <!-- TEXTAREA -->
+                                <div class="form-div color-inverted" id="form-div-5">
+                                    <div class="content">
+                                        <div class="input-container">
+                                            <label class="input-label" id="comments-label" for="comments">Space for
+                                                comments</label>
+                                            <div class="row">
+                                                <textarea class="input-item" id="comments" name="form-comments"
+                                                    cols="30" rows="10"></textarea>
+                                            </div>
+                                            <div class="input-message">Lorem ipsum dolor sit, amet consectetur
+                                                adipisicing elit.</div>
+                                        </div>
+                                        <div class="form-actions">
+                                            <input type="submit" value="Send" name="form-submit" id="submit">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </fieldset>
+
+                    </form>
+
+                </div>
+            </div>
+        </section>
+
+    </main>
+</body>
+
+</html>

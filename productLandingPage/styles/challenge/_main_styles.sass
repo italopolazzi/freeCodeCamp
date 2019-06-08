@@ -10,6 +10,8 @@ section[id^=main-]
     overflow: hidden
     h2
         text-transform: uppercase
+    & *
+        transition: transform 2s ease!important
 .box, .register
     *
         border: none
@@ -41,14 +43,15 @@ section[id^=main-]
         background: map-get($light, inverted)!important
     &:active, &:focus-within
         color: map-get($light, main)!important
+        border-color: map-get($light, inverted)!important
 
 .animation-activated
     transition: all 1s linear!important
 
-#main-how-it-works,
-#main-pricing,
-#main-contact
-    opacity: 0
+// #main-how-it-works,
+// #main-pricing,
+// #main-contact
+//     opacity: 0
 
 #main-how-it-works.animation-activated,
 #main-pricing.animation-activated,
@@ -59,3 +62,8 @@ section[id^=main-]
 *[class*=box]:focus-within
     background: map-get($light, main)!important
     outline: none
+
+@media (max-width: map-get($breakpoints-sizes, md))
+    .box
+        margin-left: 1em!important
+        margin-right: 1em!important
