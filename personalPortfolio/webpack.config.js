@@ -12,7 +12,8 @@ module.exports = {
         alias: {
             '@': path.resolve(__dirname, 'src'),
             '@img': path.resolve(__dirname, 'src', 'img'),
-            '@styles': path.resolve(__dirname, 'src', 'styles')
+            '@styles': path.resolve(__dirname, 'src', 'styles'),
+            '@js': path.resolve(__dirname, 'src', 'js'),
         }
     },
     module: {
@@ -31,13 +32,13 @@ module.exports = {
                 use: [{
                     loader: 'html-loader',
                     options: {
-                        minimize: true,
+
                         interpolate: true
                     }
                 }]
             },
             {
-                test: /\.(png|jpe?g|gif)$/,
+                test: /\.(png|jpe?g|gif|svg)$/,
                 use: [{
                     loader: 'file-loader',
                     options: {},
@@ -55,7 +56,12 @@ module.exports = {
     plugins: [
         new HtmlWebPackPlugin({
             template: "./src/index.html",
-            filename: "./index.html"
+            filename: "./index.html",
+            title: 'Ítalo Polazzi - Web Developer',
+            meta: {
+                viewport: 'width=device-width, initial-scale=1, shrink-to-fit=no'
+            },
+            inject: 'body'
         })
     ]
 }
