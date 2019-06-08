@@ -36,8 +36,7 @@ module.exports = {
                         interpolate: true
                     }
                 }]
-            },
-            {
+            }, {
                 test: /\.(png|jpe?g|gif|svg)$/,
                 use: [{
                     loader: 'file-loader',
