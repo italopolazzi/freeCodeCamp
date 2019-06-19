@@ -239,6 +239,13 @@ form#contact:before {
   left: 0;
 }
 
+a.button {
+  border-bottom-left-radius: 99999px;
+  border-bottom-right-radius: 99999px;
+  border-top-left-radius: 99999px;
+  border-top-right-radius: 99999px;
+}
+
 .ma0 {
   margin: 0rem !important;
 }
@@ -1721,6 +1728,18 @@ form#contact fieldset textarea {
           flex: 0 1 70%;
 }
 
+.input.input-submit {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.input.input-submit input {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 auto;
+          flex: 0 1 auto;
+}
+
 @media (max-width: 600px) {
   .input {
     -webkit-box-orient: vertical;
@@ -1734,6 +1753,19 @@ form#contact fieldset textarea {
   .input label {
     margin-bottom: inherit;
   }
+}
+
+a.button {
+  width: auto;
+  height: auto;
+  padding: 0.75rem 1.25rem;
+  border: 0.25em solid currentColor;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  font-weight: bold;
 }
 
 @font-face {
@@ -1778,6 +1810,7 @@ main {
   background-size: 140%;
   background-position: left top;
   background-repeat: no-repeat;
+  overflow: hidden;
 }
 
 .svg-background {
@@ -1803,7 +1836,7 @@ section#welcome-section *:not(.svg-background) {
 
 @media (max-width: 960px) {
   #welcome-section > div {
-    margin-top: 14em !important;
+    margin-top: 0 !important;
   }
   #welcome-section .svg-background {
     display: none;

@@ -1,45 +1,9 @@
 a.button
-    @extend %centralize-all
-    flex: 0 1 0
-    flex-flow: row nowrap
     width: auto
-    // padding: 0.2em 0.6em
-    width: 2em
-    height: 2em
+    height: auto
+    padding: 0.75rem 1.25rem
+    border: 0.25em solid currentColor
+    @extend %super_radius
+    cursor: pointer
+    user-select: none
     font-weight: bold
-    border-radius: 50%//calculateRem(4)
-    position: relative
-    overflow: hidden
-    z-index: 1
-    // box-shadow: 0 0 20px -7px #000
-    &:active
-        box-shadow: 0 0 0 0 #000
-    &:before
-        @extend %centralize-all
-        content: ''
-        width: 0
-        height: 100%
-        background: linear-gradient(to left, rgba(0,0,0,0), currentColor)
-        opacity: 0.4
-        position: absolute
-        top: 0
-        left: 0
-        z-index: -1
-    &:hover:before
-        width: 100%
-    &:after
-        content: ''
-        width: 100%
-        height: 100%
-        top: 0
-        left: 0
-        z-index: -2
-    .icon
-        margin-right: 1em
-    span
-        width: 0
-        display: none
-        // color: transparent
-    &:hover span
-        // width: 200px
-        // color: black

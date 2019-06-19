@@ -19,6 +19,7 @@ main
     background-size: 140%
     background-position: left top
     background-repeat: no-repeat
+    overflow: hidden
 
 .svg-background 
 	position: absolute 
@@ -39,7 +40,7 @@ section#welcome-section
 @media (max-width: map-get($breakpoints-sizes, md))
     #welcome-section 
         & > div
-            margin-top: 14em!important
+            margin-top: 0!important
         .svg-background
             display: none
 
