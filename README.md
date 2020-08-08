@@ -1,21 +1,32 @@
-# Free Code Camp - course's codes
+# FreeCodeCamp - códigos do curso
 
-In this repository have some of my codes for the propose exercises and will be update with all the challenge projects. The course covers topics such as Web Accessibility, ES6 and Functional Programming.
+<img src="https://github.com/italopolazzi/italopolazzi/blob/master/SeBANNER_LINE.png" alt="" width="100%"   />
 
-The Web Design projects are:
+Este repositório possui alguns dos meus códigos para os exercícios de desafios e foi atualizado com todos os projetos. O curso cobre tópicos como acessibilidade na Web, ES6 e Programação Funcional.
 
-  - A tribute page
-  - A Survey Form
-  - A product Landing Page
-  - A Technical Documentation Page
-  - A Personal Portfolio Webpage
+Os projetos de Web Design Responsivo são:
+- [A tribute page](#the-monster)
+https://codepen.io/italopolazzi/full/Mdbgaa
 
-The JavaScript Algorithms and Data Structures projects are:
+- [A Survey Form](#to-do-list)
+https://codepen.io/italopolazzi/full/zQeqjE
+- [A product Landing Page](#stock-trader)
+https://codepen.io/italopolazzi/full/qGzdPO
+- [A Technical Documentation Page](#calculator)
+https://codepen.io/italopolazzi/full/MdJVVE
+- [A Personal Portfolio Webpage](#meu-portfólio)
+https://codepen.io/italopolazzi/full/GardgZ
 
-  - A Palindrome Checker
-  - A Roman Numeral Converter
-  - A Caesars Cipher
-  - A Telephone Number Validator
-  - A Cash Register
 
-**The other folders contain some of the exercises' codes.**
+
+Os projetos de algoritmos e estruturas de dados com JavaScript são:
+
+  - Um verificador de palíndromos
+  - Um conversor para números romanos
+  - Uma criptografia usando Cifra de César
+  - Um validador de números de telefone
+  - Um simulador de caixa registradora
+
+**As outras pastas incluem arquivos de projetos**
+
+<img width="20%" src="https://media1.giphy.com/media/RkKAxMrrDVxuQnwhgs/source.gif" alt=""/>
