@@ -5,17 +5,16 @@
 Este repositório possui alguns dos meus códigos para os exercícios de desafios e foi atualizado com todos os projetos. O curso cobre tópicos como acessibilidade na Web, ES6 e Programação Funcional.
 
 Os projetos de Web Design Responsivo são:
-- [A tribute page](#the-monster)
-https://codepen.io/italopolazzi/full/Mdbgaa
+- [Uma página de tributo](https://codepen.io/italopolazzi/full/Mdbgaa)
 
-- [A Survey Form](#to-do-list)
-https://codepen.io/italopolazzi/full/zQeqjE
-- [A product Landing Page](#stock-trader)
-https://codepen.io/italopolazzi/full/qGzdPO
-- [A Technical Documentation Page](#calculator)
-https://codepen.io/italopolazzi/full/MdJVVE
-- [A Personal Portfolio Webpage](#meu-portfólio)
-https://codepen.io/italopolazzi/full/GardgZ
+- [https://codepen.io/italopolazzi/full/zQeqjE](Um formulário de pesquisa)
+
+- [Uma landing page](https://codepen.io/italopolazzi/full/qGzdPO)
+
+- [Uma página de documentação](https://codepen.io/italopolazzi/full/MdJVVE)
+
+- [Uma página pessoal de portfolio](https://codepen.io/italopolazzi/full/GardgZ)
+
 
 
 
