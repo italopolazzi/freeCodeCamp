@@ -26,6 +26,6 @@ Os projetos de algoritmos e estruturas de dados com JavaScript são:
   - Um validador de números de telefone
   - Um simulador de caixa registradora
 
-**As outras pastas incluem arquivos de projetos**
+**As outras pastas incluem arquivos de exercícios**
 
 <img width="20%" src="https://media1.giphy.com/media/RkKAxMrrDVxuQnwhgs/source.gif" alt=""/>
