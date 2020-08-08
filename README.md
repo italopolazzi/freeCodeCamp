@@ -7,9 +7,9 @@ Este repositório possui alguns dos meus códigos para os exercícios de desafio
 Os projetos de Web Design Responsivo são:
 - [Uma página de tributo](https://codepen.io/italopolazzi/full/Mdbgaa)
 
-- [https://codepen.io/italopolazzi/full/zQeqjE](Um formulário de pesquisa)
+- [Um formulário de pesquisa](https://codepen.io/italopolazzi/full/zQeqjE)
 
-- [Uma landing page](https://codepen.io/italopolazzi/full/qGzdPO)
+- [Uma Landing Page](https://codepen.io/italopolazzi/full/qGzdPO)
 
 - [Uma página de documentação](https://codepen.io/italopolazzi/full/MdJVVE)
 
